@@ -3,14 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "mybook"
-  author: "Norah Jones"
+  title: "Mastering Python for Bioinformatics (KO)"
+  author: "Ken Youens-Clark (Trans. Gemini CLI)"
   date: "1/24/2026"
   chapters:
+    - index_ko.qmd
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
 
 bibliography: references.bib
 
@@ -23,4 +21,3 @@ format:
 
 execute:
   freeze: auto
-

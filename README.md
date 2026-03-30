@@ -1,66 +1,56 @@
-# Quarto Book Template
+# Mastering Python for Bioinformatics (Korean Translation)
 
-This repository is a template for creating a Quarto book hosted on GitHub Pages, with dependencies managed by [Pixi](https://prefix.dev/).
+이 저장소는 Ken Youens-Clark의 저서 **"Mastering Python for Bioinformatics"**의 내용을 한국어로 번역하고, Quarto를 사용하여 웹북 형태로 호스팅하기 위한 템플릿입니다.
 
-## Project Structure
+## 프로젝트 구조
 
-- `mybook/`: Contains the Quarto book source files (`.qmd`).
-- `pixi.toml`: Manages dependencies (Quarto, Python/R libraries).
-- `.github/workflows/publish.yml`: GitHub Action to automatically build and publish the book.
+- `mybook/`: Quarto 책 소스 파일들이 포함되어 있습니다.
+  - `index_ko.qmd`: 한국어 번역본 메인 파일.
+  - `index.qmd`: 영문 원본 파일.
+- `images/`: 책에 사용된 이미지 파일들에 대한 심볼릭 링크.
+- `pixi.toml`: 의존성 관리 도구 ([Pixi](https://prefix.dev/)) 설정 파일.
+- `.github/workflows/publish.yml`: GitHub Pages에 자동으로 책을 빌드하고 게시하는 워크플로.
 
-## Usage
+## 사용법
 
-### Prerequisites
+### 필수 조건
 
-- [Pixi](https://prefix.dev/) installed on your machine.
+- 시스템에 [Pixi](https://prefix.dev/)가 설치되어 있어야 합니다.
 
-### Local Development
+### 로컬 개발 및 미리보기
 
-1.  **Clone the repository:**
+1.  **저장소 클론:**
 
     ```bash
-    git clone https://github.com/your-username/quarto-book-template.git
-    cd quarto-book-template
+    git clone https://github.com/partrita/mastering-python-bioinformatics.git
+    cd mastering-python-bioinformatics
     ```
 
-2.  **Preview the book:**
+2.  **책 미리보기:**
 
-    Run the following command to install Quarto (if not already cached) and start a live preview server:
+    Pixi를 사용하여 Quarto를 실행하고 라이브 미리보기 서버를 시작합니다:
 
     ```bash
     pixi run quarto preview mybook
     ```
 
-    Or if you just want to run the quarto command directly:
+3.  **렌더링 (정적 파일 생성):**
 
     ```bash
     pixi run quarto render mybook
     ```
 
-### Dependencies
+### 의존성 관리
 
-This project uses `pixi` to manage dependencies. The default `pixi.toml` includes `quarto`.
-
-To add Python or R dependencies:
+이 프로젝트는 `pixi`를 사용하여 의존성을 관리합니다.
 
 ```bash
-pixi add python pandas  # Example for Python
-# or
-pixi add r-base r-tidyverse  # Example for R
+pixi add python pandas biopython  # 필요한 라이브러리 추가 예시
 ```
 
-## Deployment
+## 배포
 
-This repository is configured to automatically publish the book to GitHub Pages using GitHub Actions.
+`main` 브랜치에 푸시하면 GitHub Actions가 자동으로 `mybook` 디렉토리의 내용을 빌드하여 `gh-pages` 브랜치로 배포합니다.
 
-1.  **GitHub Settings:**
-    *   Go to your repository **Settings** > **Pages**.
-    *   Under **Build and deployment**, usually you can leave it as "Deploy from a branch".
-    *   After the first successful run of the action, a `gh-pages` branch will be created.
-    *   Ensure the **Branch** is set to `gh-pages` and folder to `/(root)`.
-
-2.  **Triggering the Build:**
-    *   Pushing to the `main` branch will trigger the workflow.
-    *   You can also manually trigger it from the **Actions** tab.
-
-The workflow is defined in `.github/workflows/publish.yml`. It uses the `quarto-dev/quarto-actions/publish` action to build the project in the `mybook` directory and push the result to the `gh-pages` branch.
+---
+**번역 및 유지보수:** Gemini CLI Agent
