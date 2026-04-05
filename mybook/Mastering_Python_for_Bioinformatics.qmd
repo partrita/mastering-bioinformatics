@@ -1,514 +1,7 @@
 ---
 title: "생명정보학을 위한 파이썬 마스터하기"
-author: ""
+author: "Ken Youens-Clark"
 ---
-# Mastering Python for Bioinformatics
-
-How to Write Flexible, Documented, Tested Python Code for Research Computing
-
-Ken Youens-Clark
-
-# Mastering Python for Bioinformatics
-
-Life scientists today urgently need training in bioinformatics skills. Too many bioinformatics programs are poorly written and barely maintained—usually by students and researchers who've never learned basic programming skills. This practical guide shows postdoc bioinformatics professionals and students how to exploit the best parts of Python to solve problems in biology while creating documented, tested, reproducible software.
-
-Ken Youens-Clark, author of Tiny Python Projects (Manning), demonstrates not only how to write effective Python code but also how to use tests to write and refactor scientific programs. You'll learn the latest Python features and tools— including linters, formatters, type checkers, and tests—to create documented and tested programs. You'll also tackle 14 challenges in Rosalind, a problem-solving platform for learning bioinformatics and programming.
-
-Create command-line Python programs to document and validate parameters   
-Write tests to verify refactor programs and confirm they're correct   
-Address bioinformatics ideas using Python data structures and modules such as Biopython   
-Create reproducible shortcuts and workflows using makefiles   
-Parse essential bioinformatics file formats such as FASTA and FASTQ   
-Find patterns of text using regular expressions   
-Use higher-order functions in Python like filter(), map(), and reduce()
-
-"Ken's extensive teaching background and proven expertise in bioinformatics and Python make these complex topics approachable and fun. Whether you're experienced or new to Python, you'll learn best practices to solve bioinformatics challenges. Highly recommended."
-
-—AlScherer
-
-Technology Director, Follett
-
-Ken Youens-Clark is a data engineer at Critical Path Institute, helping partners in industry, academia, and government find novel drug therapies for diseases ranging from cancer and tuberculosis to thousands of rare diseases. While working as a senior scientific programmer at the University of Arizona, he completed an MS in biosystems engineering. Ken's first book, Tiny Python Projects, uses a test-driven development approach for teaching Python.
-
-BIOINFORMATICS / PYTHON
-
-US $89.99
-
-CAN $118.99
-
-ISBN: 978-1-098-10088-9
-
-![](images/3cccb519897fb04d820d02aa9559efceeaed9bd4bf634cb3930fb01262cb1fb7.jpg)
-
-![](images/6bd3421daa1bf3da80960d8db3c6961a937f04f44038e8058e12871ec577f78d.jpg)
-
-Twitter: @oreillymedia
-
-facebook.com/oreilly
-
-# Mastering Python for Bioinformatics
-
-How to Write Flexible, Documented, Tested Python Code for Research Computing
-
-Ken Youens-Clark
-
-# Mastering Python for Bioinformatics
-
-by Ken Youens-Clark
-
-Copyright $^ ©$ 2021 Charles Kenneth Youens-Clark. All rights reserved.
-
-Printed in the United States of America.
-
-Published by O’Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol, CA 95472.
-
-O’Reilly books may be purchased for educational, business, or sales promotional use. Online editions are also available for most titles (http://oreilly.com). For more information, contact our corporate/institutional sales department: 800-998-9938 or corporate@oreilly.com.
-
-Acquisitions Editor: Michelle Smith
-
-Development Editor: Corbin Collins
-
-Production Editor: Caitlin Ghegan
-
-Copyeditor: Sonia Saruba
-
-Proofreader: Rachel Head
-
-Indexer: Sue Klefstad
-
-Interior Designer: David Futato
-
-Cover Designer: Karen Montgomery
-
-Illustrator: Kate Dullea
-
-May 2021:
-
-First Edition
-
-# Revision History for the First Edition
-
-2021-05-04: First Release
-
-See http://oreilly.com/catalog/errata.csp?isbn 9781098100889 for release details.
-
-The O’Reilly logo is a registered trademark of O’Reilly Media, Inc. Mastering Python for Bioinformatics, the cover image, and related trade dress are trademarks of O’Reilly Media, Inc.
-
-The views expressed in this work are those of the author, and do not represent the publisher’s views. While the publisher and the author have used good faith efforts to ensure that the information and instructions contained in this work are accurate, the publisher and the author disclaim all responsibility for errors or omissions, including without limitation responsibility for damages resulting from the use of or reliance on this work. Use of the information and instructions contained in this work is at your own risk. If any code samples or other technology this work contains or describes is subject to open source licenses or the intellectual property rights of others, it is your responsibility to ensure that your use thereof complies with such licenses and/or rights.
-
-# Table of Contents
-
-Preface. . xi
-
-# Part I. The Rosalind.info Challenges
-
-# 1. Tetranucleotide Frequency: Counting Things. . . . . . . 3
-
-Getting Started 4
-
-Creating the Program Using new.py 5
-
-Using argparse 7
-
-Tools for Finding Errors in the Code 10
-
-Introducing Named Tuples 12
-
-Adding Types to Named Tuples 15
-
-Representing the Arguments with a NamedTuple 16
-
-Reading Input from the Command Line or a File 18
-
-Testing Your Program 20
-
-Running the Program to Test the Output 23
-
-Solution 1: Iterating and Counting the Characters in a String 25
-
-Counting the Nucleotides 26
-
-Writing and Verifying a Solution 28
-
-Additional Solutions 30
-
-Solution 2: Creating a count() Function and Adding a Unit Test 30
-
-Solution 3: Using str.count() 34
-
-Solution 4: Using a Dictionary to Count All the Characters 35
-
-Solution 5: Counting Only the Desired Bases 38
-
-Solution 6: Using collections.defaultdict() 39
-
-Solution 7: Using collections.Counter() 41
-
-Going Further 42
-
-Review 42
-
-# 2. Transcribing DNA into mRNA: Mutating Strings, Reading and Writing Files. . . . . . . . 45
-
-Getting Started 46
-
-Defining the Program’s Parameters 47
-
-Defining an Optional Parameter 47
-
-Defining One or More Required Positional Parameters 48
-
-Using nargs to Define the Number of Arguments 49
-
-Using argparse.FileType() to Validate File Arguments 49
-
-Defining the Args Class 50
-
-Outlining the Program Using Pseudocode 51
-
-Iterating the Input Files 52
-
-Creating the Output Filenames 52
-
-Opening the Output Files 54
-
-Writing the Output Sequences 55
-
-Printing the Status Report 57
-
-Using the Test Suite 57
-
-Solutions 60
-
-Solution 1: Using str.replace() 60
-
-Solution 2: Using re.sub() 62
-
-Benchmarking 64
-
-Going Further 65
-
-Review 65
-
-# 3. Reverse Complement of DNA: String Manipulation. . . . . . 67
-
-Getting Started 68
-
-Iterating Over a Reversed String 70
-
-Creating a Decision Tree 72
-
-Refactoring 73
-
-Solutions 74
-
-Solution 1: Using a for Loop and Decision Tree 75
-
-Solution 2: Using a Dictionary Lookup 75
-
-Solution 3: Using a List Comprehension 78
-
-Solution 4: Using str.translate() 78
-
-Solution 5: Using Bio.Seq 81
-
-Review 82
-
-# 4. Creating the Fibonacci Sequence: Writing, Testing, and Benchmarking Algorithms. 83
-
-Getting Started 84
-
-An Imperative Approach 89
-
-Solutions 91
-
-Solution 1: An Imperative Solution Using a List as a Stack 91
-
-Solution 2: Creating a Generator Function 93
-
-Solution 3: Using Recursion and Memoization 96
-
-Benchmarking the Solutions 100
-
-Testing the Good, the Bad, and the Ugly 102
-
-Running the Test Suite on All the Solutions 103
-
-Going Further 109
-
-Review 109
-
-# 5. Computing GC Content: Parsing FASTA and Analyzing Sequences. . . . . . . . . . 111
-
-Getting Started 112
-
-Get Parsing FASTA Using Biopython 115
-
-Iterating the Sequences Using a for Loop 118
-
-Solutions 120
-
-Solution 1: Using a List 120
-
-Solution 2: Type Annotations and Unit Tests 123
-
-Solution 3: Keeping a Running Max Variable 127
-
-Solution 4: Using a List Comprehension with a Guard 129
-
-Solution 5: Using the filter() Function 130
-
-Solution 6: Using the map() Function and Summing Booleans 130
-
-Solution 7: Using Regular Expressions to Find Patterns 131
-
-Solution 8: A More Complex find_gc() Function 132
-
-Benchmarking 134
-
-Going Further 134
-
-Review 135
-
-# 6. Finding the Hamming Distance: Counting Point Mutations. . . . . 137
-
-Getting Started 138
-
-Iterating the Characters of Two Strings 141
-
-Solutions 142
-
-Solution 1: Iterating and Counting 142
-
-Solution 2: Creating a Unit Test 143
-
-Solution 3: Using the zip() Function 145
-
-Solution 4: Using the zip_longest() Function 147
-
-Solution 5: Using a List Comprehension 148
-
-Solution 6: Using the filter() Function 149
-
-Solution 7: Using the map() Function with zip_longest() 150
-
-Solution 8: Using the starmap() and operator.ne() Functions 151
-
-Going Further 153
-
-Review 153
-
-# 7. Translating mRNA into Protein: More Functional Programming. . . . . . . . . . 155
-
-Getting Started 155
-
-K-mers and Codons 157
-
-Translating Codons 160
-
-Solutions 161
-
-Solution 1: Using a for Loop 161   
-Solution 2: Adding Unit Tests 162   
-Solution 3: Another Function and a List Comprehension 165   
-Solution 4: Functional Programming with the map(), partial(), and takewhile() Functions 167   
-Solution 5: Using Bio.Seq.translate() 169
-
-Benchmarking 170
-
-Going Further 170
-
-Review 170
-
-# 8. Find a Motif in DNA: Exploring Sequence Similarity. . . . . . 171
-
-Getting Started 171
-
-Finding Subsequences 173
-
-Solutions 175
-
-Solution 1: Using the str.find() Method 176   
-Solution 2: Using the str.index() Method 177   
-Solution 3: A Purely Functional Approach 179   
-Solution 4: Using K-mers 181   
-Solution 5: Finding Overlapping Patterns Using Regular Expressions 183
-
-Benchmarking 184
-
-Going Further 185
-
-Review 185
-
-# 9. Overlap Graphs: Sequence Assembly Using Shared K-mers. . . . . . . . 187
-
-Getting Started 188
-
-Managing Runtime Messages with STDOUT, STDERR, and Logging 192   
-Finding Overlaps 195   
-Grouping Sequences by the Overlap 196
-
-Solutions 200
-
-Solution 1: Using Set Intersections to Find Overlaps 200   
-Solution 2: Using a Graph to Find All Paths 203
-
-Going Further 208
-
-Review 208
-
-# 10. Finding the Longest Shared Subsequence: Finding K-mers, Writing Functions, and Using Binary Search. . 211
-
-Getting Started 211
-
-Finding the Shortest Sequence in a FASTA File 213   
-Extracting K-mers from a Sequence 215
-
-Solutions 217
-
-Solution 1: Counting Frequencies of K-mers 217
-
-Solution 2: Speeding Things Up with a Binary Search 220
-
-Going Further 226
-
-Review 226
-
-# 11. Finding a Protein Motif: Fetching Data and Using Regular Expressions. . . . . . . . . . . 227
-
-Getting Started 227
-
-Downloading Sequences Files on the Command Line 230
-
-Downloading Sequences Files with Python 233
-
-Writing a Regular Expression to Find the Motif 235
-
-Solutions 237
-
-Solution 1: Using a Regular Expression 237
-
-Solution 2: Writing a Manual Solution 239
-
-Going Further 244
-
-Review 244
-
-# 12. Inferring mRNA from Protein: Products and Reductions of Lists. . . . . . . . . 245
-
-Getting Started 245
-
-Creating the Product of Lists 247
-
-Avoiding Overflow with Modular Multiplication 249
-
-Solutions 251
-
-Solution 1: Using a Dictionary for the RNA Codon Table 251
-
-Solution 2: Turn the Beat Around 257
-
-Solution 3: Encoding the Minimal Information 259
-
-Going Further 260
-
-Review 261
-
-# 13. Location Restriction Sites: Using, Testing, and Sharing Code. . . . . . . . . . 263
-
-Getting Started 264
-
-Finding All Subsequences Using K-mers 266
-
-Finding All Reverse Complements 267
-
-Putting It All Together 267
-
-Solutions 268
-
-Solution 1: Using the zip() and enumerate() Functions 268
-
-Solution 2: Using the operator.eq() Function 270
-
-Solution 3: Writing a revp() Function 271
-
-Testing the Program 272
-
-Going Further 274
-
-Review 274
-
-# 14. Finding Open Reading Frames. . . . . 275
-
-Getting Started 275
-
-Translating Proteins Inside Each Frame 277
-
-Finding the ORFs in a Protein Sequence 279 Solutions 280 Solution 1: Using the str.index() Function 280 Solution 2: Using the str.partition() Function 282 Solution 3: Using a Regular Expression 284 Going Further 286 Review 286
-
-# Part II. Other Programs
-
-15. Seqmagique: Creating and Formatting Reports. . 289 Using Seqmagick to Analyze Sequence Files 290 Checking Files Using MD5 Hashes 291 Getting Started 293 Formatting Text Tables Using tabulate() 295 Solutions 296 Solution 1: Formatting with tabulate() 296 Solution 2: Formatting with rich 303 Going Further 305 Review 306   
-16. FASTX grep: Creating a Utility Program to Select Sequences. . . 307 Finding Lines in a File Using grep 308 The Structure of a FASTQ Record 308 Getting Started 311 Guessing the File Format 315 Solution 317 Going Further 327 Review 327   
-17. DNA Synthesizer: Creating Synthetic Data with Markov Chains. . . 329 Understanding Markov Chains 329 Getting Started 332 Understanding Random Seeds 335 Reading the Training Files 337 Generating the Sequences 340 Structuring the Program 343 Solution 343 Going Further 347 Review 347
-
-# 18. FASTX Sampler: Randomly Subsampling Sequence Files. . . . . 349
-
-Getting Started 349
-
-Reviewing the Program Parameters 350
-
-Defining the Parameters 352
-
-Nondeterministic Sampling 354
-
-Structuring the Program 356
-
-Solutions 356
-
-Solution 1: Reading Regular Files 357
-
-Solution 2: Reading a Large Number of Compressed Files 358
-
-Going Further 360
-
-Review 360
-
-# 19. Blastomatic: Parsing Delimited Text Files. . . . 361
-
-Introduction to BLAST 361
-
-Using csvkit and csvchk 364
-
-Getting Started 368
-
-Defining the Arguments 371
-
-Parsing Delimited Text Files Using the csv Module 373
-
-Parsing Delimited Text Files Using the pandas Module 377
-
-Solutions 383
-
-Solution 1: Manually Joining the Tables Using Dictionaries 383
-
-Solution 2: Writing the Output File with csv.DictWriter() 384
-
-Solution 3: Reading and Writing Files Using pandas 385
-
-Solution 4: Joining Files Using pandas 387
-
-Going Further 390
-
-Review 390
-
-# A. Documenting Commands and Creating Workows with make. . . . . . . . . . . 391
-
-# B. Understanding $PATH and Installing Command-Line Programs. . . . . . . . . 405
-
-# Epilogue. . . . 409
-
-# Index. . . 411
 
 # Preface
 
@@ -526,12 +19,12 @@ When it comes to programming languages, Python hits a sweet spot in that it’s 
 
 This book has been written for the aspiring bioinformatics programmer who wants to learn about Python’s best practices and tools such as the following:
 
-• Since Python 3.6, you can add type hints to indicate, for instance, that a variable should be a type like a number or a list, and you can use the mypy tool to ensure the types are used correctly.   
-• Testing frameworks like pytest can exercise your code with both good and bad data to ensure that it reacts in some predictable way.
+* Since Python 3.6, you can add type hints to indicate, for instance, that a variable should be a type like a number or a list, and you can use the mypy tool to ensure the types are used correctly.   
+* Testing frameworks like pytest can exercise your code with both good and bad data to ensure that it reacts in some predictable way.
 
-• Tools like pylint and flake8 can find potential errors and stylistic problems that would make your programs more difficult to understand.   
-• The argparse module can document and validate the arguments to your programs.   
-• The Python ecosystem allows you to leverage hundreds of existing modules like Biopython to shorten programs and make them more reliable.
+* Tools like pylint and flake8 can find potential errors and stylistic problems that would make your programs more difficult to understand.   
+* The argparse module can document and validate the arguments to your programs.   
+* The Python ecosystem allows you to leverage hundreds of existing modules like Biopython to shorten programs and make them more reliable.
 
 Using these tools practices individually will improve your programs, but combining them all will improve your code in compounding ways. This book is not a textbook on bioinformatics per se. The focus is on what Python offers that makes it suitable for writing scientific programs that are reproducible. That is, I’ll show you how to design and test programs that will always produce the same outputs given the same inputs. Bioinformatics is saturated with poorly written, undocumented programs, and my goal is to reverse this trend, one program at a time.
 
@@ -818,13 +311,13 @@ Counting the bases in DNA is perhaps the “Hello, World!” of bioinformatics. 
 
 In this chapter, you’ll learn:
 
-• How to start a new program using new.py   
-• How to define and validate command-line arguments using argparse   
-• How to run a test suite using pytest   
-• How to iterate the characters of a string   
-• Ways to count elements in a collection   
-• How to create a decision tree using if/elif statements   
-• How to format strings
+* How to start a new program using new.py   
+* How to define and validate command-line arguments using argparse   
+* How to run a test suite using pytest   
+* How to iterate the characters of a string   
+* Ways to count elements in a collection   
+* How to create a decision tree using if/elif statements   
+* How to format strings
 
 # Getting Started
 
@@ -2280,19 +1773,19 @@ The solutions that used dictionaries to count all available characters would app
 
 This was kind of a monster chapter. The following chapters will be a bit shorter, as I’ll build upon many of the foundational ideas I’ve covered here:
 
-• You can use the new.py program to create the basic structure of a Python pro‐ gram that accepts and validates command-line arguments using argparse.
+* You can use the new.py program to create the basic structure of a Python pro‐ gram that accepts and validates command-line arguments using argparse.
 
-• The pytest module will run all functions with names starting with test_ and will report the results of how many tests pass.   
-• Unit tests are for functions, and integration tests check if a program works as a whole.   
-• Programs like pylint, flake8, and mypy can find various kinds of errors in your code. You can also have pytest automatically run tests to see if your code passes these checks.   
-• Complicated commands can be stored as a target in a Makefile and executed using the make command.   
-• You can create a decision tree using a series of if/else statements.   
-• There are many ways to count all the characters in a string. Using the collec tions.Counter() function is perhaps the simplest method to create a dictionary of letter frequencies.   
-• You can annotate variables and functions with types, and use mypy to ensure the types are used correctly.   
-• The Python REPL is an interactive tool for executing code examples and reading documentation.   
-• The Python community generally follows style guidelines such as PEP8. Tools like yapf and black can automatically format code according to these sugges‐ tions, and tools like pylint and flake8 will report deviations from the guidelines.   
-• Python strings, lists, tuples, and dictionaries are very powerful data structures, each with useful methods and copious documentation.   
-• You can create a custom, immutable, typed class derived from named tuples.
+* The pytest module will run all functions with names starting with test_ and will report the results of how many tests pass.   
+* Unit tests are for functions, and integration tests check if a program works as a whole.   
+* Programs like pylint, flake8, and mypy can find various kinds of errors in your code. You can also have pytest automatically run tests to see if your code passes these checks.   
+* Complicated commands can be stored as a target in a Makefile and executed using the make command.   
+* You can create a decision tree using a series of if/else statements.   
+* There are many ways to count all the characters in a string. Using the collec tions.Counter() function is perhaps the simplest method to create a dictionary of letter frequencies.   
+* You can annotate variables and functions with types, and use mypy to ensure the types are used correctly.   
+* The Python REPL is an interactive tool for executing code examples and reading documentation.   
+* The Python community generally follows style guidelines such as PEP8. Tools like yapf and black can automatically format code according to these sugges‐ tions, and tools like pylint and flake8 will report deviations from the guidelines.   
+* Python strings, lists, tuples, and dictionaries are very powerful data structures, each with useful methods and copious documentation.   
+* You can create a custom, immutable, typed class derived from named tuples.
 
 You may be wondering which is the best of the seven solutions. As with many things in life, it depends. Some programs are shorter to write and easier to understand but may fare poorly when confronting large datasets. In Chapter 2, I’ll show you how to benchmark programs, pitting them against each other in multiple runs using large inputs to determine which performs the best.
 
@@ -2308,11 +1801,11 @@ You already saw in Chapter 1 how to write a program to accept a DNA sequence fro
 
 In this chapter, you will learn:
 
-• How to write a program to require one or more file inputs   
-• How to create directories
+* How to write a program to require one or more file inputs   
+* How to create directories
 
-• How to read and write files   
-• How to modify strings
+* How to read and write files   
+* How to modify strings
 
 # Getting Started
 
@@ -2391,8 +1884,8 @@ $ wc -l rna/*
 
 As you can see from the preceding usage, your program should accept the following parameters:
 
-• One or more positional arguments, which must be readable text files each con‐ taining strings of DNA to transcribe.   
-• An optional -o or --out_dir argument that names an output directory to write the sequences of RNA into. The default should be out.
+* One or more positional arguments, which must be readable text files each con‐ taining strings of DNA to transcribe.   
+* An optional -o or --out_dir argument that names an output directory to write the sequences of RNA into. The default should be out.
 
 You are free to write and structure your programs however you like (so long as they pass the tests), but I will always start a program using new.py and the structure I showed in the first chapter. The --force flag indicates that the existing rna.py should be overwritten:
 
@@ -2998,14 +2491,14 @@ Modify your program to print the lengths of the sequences to the output file rat
 
 Key points from this chapter:
 
-• The argparse.FileType option will validate file arguments.   
-• The nargs option to argparse allows you to define the number of valid argu‐ ments for a parameter.   
-• The os.path.isdir() function can detect if a directory exists.   
-• The os.makedirs() function will create a directory structure.   
-• The open() function by default allows only reading files. The w option must be used to write to the filehandle, and the a option is for appending values to an existing file.
+* The argparse.FileType option will validate file arguments.   
+* The nargs option to argparse allows you to define the number of valid argu‐ ments for a parameter.   
+* The os.path.isdir() function can detect if a directory exists.   
+* The os.makedirs() function will create a directory structure.   
+* The open() function by default allows only reading files. The w option must be used to write to the filehandle, and the a option is for appending values to an existing file.
 
-• File handles can be opened with the t option for text (the default) or b for bytes, such as when reading image files.   
-• Strings are immutable, and there are many methods to alter strings into new strings, including str.replace() and re.sub().
+* File handles can be opened with the t option for text (the default) or b for bytes, such as when reading image files.   
+* Strings are immutable, and there are many methods to alter strings into new strings, including str.replace() and re.sub().
 
 # Reverse Complement of DNA: String Manipulation
 
@@ -3016,14 +2509,14 @@ Figure 3-1. The reverse complement of DNA is the complement read from the opposi
 
 Although you can find many existing tools to generate the reverse complement of DNA—and I’ll drop a spoiler alert that the final solution will use a function from the Biopython library—the point of writing our own algorithm is to explore Python. In this chapter, you will learn:
 
-• How to implement a decision tree using a dictionary as a lookup table   
-• How to dynamically generate a list or a string   
-• How to use the reversed() function, which is an example of an iterator   
-• How Python treats strings and lists similarly   
-• How to use a list comprehension to generate a list   
-• How to use str.maketrans() and str.translate() to transform a string   
-• How to use Biopython’s Bio.Seq module   
-• That the real treasure is the friends you make along the way
+* How to implement a decision tree using a dictionary as a lookup table   
+* How to dynamically generate a list or a string   
+* How to use the reversed() function, which is an example of an iterator   
+* How Python treats strings and lists similarly   
+* How to use a list comprehension to generate a list   
+* How to use str.maketrans() and str.translate() to transform a string   
+* How to use Biopython’s Bio.Seq module   
+* That the real treasure is the friends you make along the way
 
 # Getting Started
 
@@ -3288,11 +2781,11 @@ It’s equally important to read and understand the testing code as it is to lea
 
 While the algorithm in the preceding section will produce the correct answer, it is not an elegant solution. Still, it’s a place to start that passes the tests. Now that you per‐ haps have a better idea of the challenge, it’s time to refactor the program. Some of the solutions I present are as short as one or two lines of code. Here are some ideas you might consider:
 
-• Use a dictionary as a lookup table instead of the if/elif chain.   
-• Rewrite the for loop as a list comprehension.
+* Use a dictionary as a lookup table instead of the if/elif chain.   
+* Rewrite the for loop as a list comprehension.
 
-• Use the str.translate() method to complement the bases.   
-• Create a Bio.Seq object and find the method that will do this for you.
+* Use the str.translate() method to complement the bases.   
+* Create a Bio.Seq object and find the method that will do this for you.
 
 There’s no hurry to read ahead. Take your time to try other solutions. I haven’t intro‐ duced all these ideas yet, so I encourage you to research any unknowns and see if you can figure them out on your own.
 
@@ -3630,24 +3123,24 @@ Adding a mypy.ini file to any working directory allows you to make changes to th
 
 Manually creating the reverse complement of DNA is something of a rite of passage. Here’s what I showed:
 
-• You can write a decision tree using a series of if/else statements or by using a dictionary as a lookup table.   
-• Strings and lists are very similar. Both can be iterated using a for loop, and the $+ =$ operator can be used to append to both.   
-• A list comprehension uses a for loop to iterate a sequence and generate a new list.   
-• The reversed() function is a lazy function that will return an iterator of the ele‐ ments of a sequence in reverse order.   
-• You can use the list() function in the REPL to coerce lazy functions, iterators, and generators to generate their values.   
-• The str.maketrans() and str.translate() functions can perform string sub‐ stitution and generate a new string.   
-• The ord() function returns the ordinal value of a character, and conversely, the chr() function returns the character for a given ordinal value.   
-• Biopython is a collection of modules and functions specific to bioinformatics. The preferred way to create the reverse complement of DNA is to use the Bio.Seq.reverse_complement() function.
+* You can write a decision tree using a series of if/else statements or by using a dictionary as a lookup table.   
+* Strings and lists are very similar. Both can be iterated using a for loop, and the $+ =$ operator can be used to append to both.   
+* A list comprehension uses a for loop to iterate a sequence and generate a new list.   
+* The reversed() function is a lazy function that will return an iterator of the ele‐ ments of a sequence in reverse order.   
+* You can use the list() function in the REPL to coerce lazy functions, iterators, and generators to generate their values.   
+* The str.maketrans() and str.translate() functions can perform string sub‐ stitution and generate a new string.   
+* The ord() function returns the ordinal value of a character, and conversely, the chr() function returns the character for a given ordinal value.   
+* Biopython is a collection of modules and functions specific to bioinformatics. The preferred way to create the reverse complement of DNA is to use the Bio.Seq.reverse_complement() function.
 
 # Creating the Fibonacci Sequence: Writing, Testing, and Benchmarking Algorithms
 
 Writing an implementation of the Fibonacci sequence is another step in the hero’s journey to becoming a coder. The Rosalind Fibonacci description notes that the gene‐ sis for the sequence was a mathematical simulation of breeding rabbits that relies on some important (and unrealistic) assumptions:
 
-• The first month starts with a pair of newborn rabbits.   
-• Rabbits can reproduce after one month.   
-• Every month, every rabbit of reproductive age mates with another rabbit of reproductive age.   
-• Exactly one month after two rabbits mate, they produce a litter of the same size.   
-• Rabbits are immortal and never stop mating.
+* The first month starts with a pair of newborn rabbits.   
+* Rabbits can reproduce after one month.   
+* Every month, every rabbit of reproductive age mates with another rabbit of reproductive age.   
+* Exactly one month after two rabbits mate, they produce a litter of the same size.   
+* Rabbits are immortal and never stop mating.
 
 The sequence always begins with the numbers 0 and 1. The subsequent numbers can be generated ad infinitum by adding the two immediately previous values in the list, as shown in Figure 4-1.
 
@@ -3658,12 +3151,12 @@ If you search the internet for solutions, you’ll find dozens of different ways
 
 You will learn:
 
-• How to manually validate arguments and throw errors   
-• How to use a list as a stack   
-• How to write a generator function   
-• How to write a recursive function   
-• Why recursive functions can be slow and how to fix this with memoization   
-• How to use function decorators
+* How to manually validate arguments and throw errors   
+* How to use a list as a stack   
+* How to write a generator function   
+* How to write a recursive function   
+* Why recursive functions can be slow and how to fix this with memoization   
+* How to use function decorators
 
 # Getting Started
 
@@ -3688,8 +3181,8 @@ optional arguments:
 
 This will be the first program to accept arguments that are not strings. The Rosalind challenge indicates that the program should accept two positive integer values:
 
-• $\mathsf { n } \leq 4 0$ representing the number of generations   
-• $\mathsf { k } \leq 5$ representing the litter size produced by mate pairs
+* $\mathsf { n } \leq 4 0$ representing the number of generations   
+* $\mathsf { k } \leq 5$ representing the litter size produced by mate pairs
 
 Try to pass noninteger values and notice how the program fails:
 
@@ -4520,14 +4013,14 @@ There are many different styles of programming, such as procedural, functional, 
 
 Key points from this chapter:
 
-• Inside the get_args() function, you can perform manual validation of argu‐ ments and use the parser.error() function to manually generate argparse errors.   
-• You can use a list as a stack by pushing and popping elements.   
-• Using yield in a function turns it into a generator. When the function yields a value, the value is returned and the state of the function is preserved until the next value is requested. Generators can be used to create a potentially infinite stream of values.   
-• A recursive function calls itself, and the recursion can cause serious performance issues. One solution is to use memoization to cache values and avoid recomputa‐ tion.   
-• Higher-order functions are functions that take other functions as arguments.   
-• Python’s function decorators apply HOFs to other functions.   
-• Benchmarking is an important technique for determining the best-performing algorithm. The hyperfine and bench tools allow you to compare runtimes of commands over many iterations.   
-• The random module offers many functions for the pseudorandom selection of values.
+* Inside the get_args() function, you can perform manual validation of argu‐ ments and use the parser.error() function to manually generate argparse errors.   
+* You can use a list as a stack by pushing and popping elements.   
+* Using yield in a function turns it into a generator. When the function yields a value, the value is returned and the state of the function is preserved until the next value is requested. Generators can be used to create a potentially infinite stream of values.   
+* A recursive function calls itself, and the recursion can cause serious performance issues. One solution is to use memoization to cache values and avoid recomputa‐ tion.   
+* Higher-order functions are functions that take other functions as arguments.   
+* Python’s function decorators apply HOFs to other functions.   
+* Benchmarking is an important technique for determining the best-performing algorithm. The hyperfine and bench tools allow you to compare runtimes of commands over many iterations.   
+* The random module offers many functions for the pseudorandom selection of values.
 
 # Computing GC Content: Parsing FASTA and Analyzing Sequences
 
@@ -4535,14 +4028,14 @@ In Chapter 1, you counted all the bases in a string of DNA. In this exercise, yo
 
 # You will learn:
 
-• How to parse FASTA format using Bio.SeqIO   
-• How to read STDIN (pronounced standard in)   
-• Several ways to express the notion of a for loop using list comprehensions, filter(), and map()   
-• How to address runtime challenges such as memory allocation when parsing large files   
-• More about the sorted() function   
-• How to include formatting instructions in format strings   
-• How to use the sum() function to add a list of numbers   
-• How to use regular expressions to count the occurrences of a pattern in a string
+* How to parse FASTA format using Bio.SeqIO   
+* How to read STDIN (pronounced standard in)   
+* Several ways to express the notion of a for loop using list comprehensions, filter(), and map()   
+* How to address runtime challenges such as memory allocation when parsing large files   
+* More about the sorted() function   
+* How to include formatting instructions in format strings   
+* How to use the sum() function to add a list of numbers   
+* How to use regular expressions to count the occurrences of a pattern in a string
 
 # Getting Started
 
@@ -4887,8 +4380,8 @@ Or, to execute the code directly inside an f-string:
 
 To figure out the sequence with the maximum GC count, you have a couple of options, both of which I’ll demonstrate in the solutions:
 
-• Make a list of all the IDs and their GC content (a list of tuples would serve well). Sort the list by GC content and take the maximum value.   
-• Keep track of the ID and GC content of the maximum value. Overwrite this when a new maximum is found.
+* Make a list of all the IDs and their GC content (a list of tuples would serve well). Sort the list by GC content and take the maximum value.   
+* Keep track of the ID and GC content of the maximum value. Overwrite this when a new maximum is found.
 
 I think that should be enough for you to finish a solution. You can do this. Fear is the mind killer. Keep going until you pass all the tests, including those for linting and type checking. Your test output should look something like this:
 
@@ -5169,11 +4662,11 @@ cgc.py::test_gc PASSED [100%]
 
 # This is TDD:
 
-• Define a function to test.   
-• Write the test.   
-• Ensure the function fails the test.   
-• Make the function work.   
-• Ensure the function passes the test (and all your previous tests still pass).
+* Define a function to test.   
+* Write the test.   
+* Ensure the function fails the test.   
+* Make the function work.   
+* Ensure the function passes the test (and all your previous tests still pass).
 
 If I later encounter sequences that trigger bugs in my code, I’ll fix the code and add those as more tests. I shouldn’t have to worry about weird cases like the find_gc() function receiving a None or a list of integers because I used type annotations. Testing is useful. Type annotations are useful. Combining tests and types leads to code that is easier to verify and comprehend.
 
@@ -5553,16 +5046,16 @@ You can run make test or pytest to verify that everything at least runs. Copy th
 
 Key points from this chapter:
 
-• You can read STDIN from the open filehandle sys.stdin.   
-• The Bio.SeqIO.parse() function will parse FASTA-formatted sequence files into records, which provides access to the record’s ID and sequence.   
-• You can use several constructs to visit all the elements of iterables, including for loops, list comprehensions, and the functions filter() and map().   
-• A list comprehension with a guard will only produce elements that return a tru‐ thy value for the guard. This can also be expressed using the filter() function.   
-• Avoid writing algorithms that attempt to store all the data from an input file, as you could exceed the available memory on your machine.   
-• The sorted() function will sort homogeneous lists of strings and numbers lexi‐ cographically and numerically, respectively. It can also sort homogeneous lists of tuples using each position of the tuples in order.   
-• Formatting templates for strings can include printf()-like instructions to con‐ trol how output values are presented.   
-• The sum() function will add a list of numbers.   
-• Booleans in Python are actually integers.   
-• Regular expressions can find patterns of text.
+* You can read STDIN from the open filehandle sys.stdin.   
+* The Bio.SeqIO.parse() function will parse FASTA-formatted sequence files into records, which provides access to the record’s ID and sequence.   
+* You can use several constructs to visit all the elements of iterables, including for loops, list comprehensions, and the functions filter() and map().   
+* A list comprehension with a guard will only produce elements that return a tru‐ thy value for the guard. This can also be expressed using the filter() function.   
+* Avoid writing algorithms that attempt to store all the data from an input file, as you could exceed the available memory on your machine.   
+* The sorted() function will sort homogeneous lists of strings and numbers lexi‐ cographically and numerically, respectively. It can also sort homogeneous lists of tuples using each position of the tuples in order.   
+* Formatting templates for strings can include printf()-like instructions to con‐ trol how output values are presented.   
+* The sum() function will add a list of numbers.   
+* Booleans in Python are actually integers.   
+* Regular expressions can find patterns of text.
 
 # Finding the Hamming Distance: Counting Point Mutations
 
@@ -5587,11 +5080,11 @@ This program will always compare strings strictly from their beginnings, which l
 
 In this chapter, you will learn:
 
-• How to use the abs() and min() functions   
-• How to combine the elements from two lists of possibly unequal lengths   
-• How to write map() using lambda or existing functions   
-• How to use functions from the operator module   
-• How to use the itertools.starmap() function
+* How to use the abs() and min() functions   
+* How to combine the elements from two lists of possibly unequal lengths   
+* How to write map() using lambda or existing functions   
+* How to use functions from the operator module   
+* How to use the itertools.starmap() function
 
 # Getting Started
 
@@ -6174,20 +5667,20 @@ This final solution relies entirely on fitting four functions that I didn’t wr
 
 # Going Further
 
-• Without looking at the source code, write a version of zip_longest(). Be sure to start with a test, then write the function that satisfies the test.   
-• Expand your program to handle more than two input sequences. Have your pro‐ gram print the Hamming distance between every pair of sequences. That means the program will print n choose $k$ numbers which will be n! $/ \ k ! ( n - k ) !$ . For three sequences, your program will print $3 ! / \left( 2 ! ( 3 - 2 ) ! \right) = 6 / 2 = 3$ distance pairs.   
-• Try writing a sequence alignment algorithm that will show there is, for instance, just one difference between the sequences AAACCCGGGTTT and AACCCGGGTTTA.
+* Without looking at the source code, write a version of zip_longest(). Be sure to start with a test, then write the function that satisfies the test.   
+* Expand your program to handle more than two input sequences. Have your pro‐ gram print the Hamming distance between every pair of sequences. That means the program will print n choose $k$ numbers which will be n! $/ \ k ! ( n - k ) !$ . For three sequences, your program will print $3 ! / \left( 2 ! ( 3 - 2 ) ! \right) = 6 / 2 = 3$ distance pairs.   
+* Try writing a sequence alignment algorithm that will show there is, for instance, just one difference between the sequences AAACCCGGGTTT and AACCCGGGTTTA.
 
 # Review
 
 This was a rather deep rabbit hole to go down just to find the Hamming distance, but it highlights lots of interesting bits about Python functions:
 
-• The built-in zip() function will combine two or more lists into a list of tuples, grouping elements at common positions. It stops at the shortest sequence, so use the itertools.zip_longest() function if you want to go to the longest sequence.   
-• Both map() and filter() apply a function to some iterable of values. The map() function will return a new sequence transformed by the function, while filter() will only return those elements that return a truthy value when the function is applied.
+* The built-in zip() function will combine two or more lists into a list of tuples, grouping elements at common positions. It stops at the shortest sequence, so use the itertools.zip_longest() function if you want to go to the longest sequence.   
+* Both map() and filter() apply a function to some iterable of values. The map() function will return a new sequence transformed by the function, while filter() will only return those elements that return a truthy value when the function is applied.
 
-• The function passed to map() and filter() can be an anonymous function cre‐ ated by lambda or an existing function.   
-• The operator module contains many functions like ne() (not equal) that can be used with map() and filter().   
-• The functools.starmap() function works just like map() but will splat the func‐ tion’s incoming values to expand them into a list of values.
+* The function passed to map() and filter() can be an anonymous function cre‐ ated by lambda or an existing function.   
+* The operator module contains many functions like ne() (not equal) that can be used with map() and filter().   
+* The functools.starmap() function works just like map() but will splat the func‐ tion’s incoming values to expand them into a list of values.
 
 # Translating mRNA into Protein: More Functional Programming
 
@@ -6195,11 +5688,11 @@ According to the Central Dogma of molecular biology, DNA makes mRNA, and mRNA ma
 
 Mostly I’m going to focus on how to write, test, and compose small functions to cre‐ ate solutions. You’ll learn:
 
-• How to extract codons/k-mers from a sequence using string slices   
-• How to use a dictionary as a lookup table   
-• How to translate a for loop into a list comprehension and a map() expression   
-• How to use the takewhile() and partial() functions   
-• How to use the Bio.Seq module to translate mRNA into proteins
+* How to extract codons/k-mers from a sequence using string slices   
+* How to use a dictionary as a lookup table   
+* How to translate a for loop into a list comprehension and a map() expression   
+* How to use the takewhile() and partial() functions   
+* How to use the Bio.Seq module to translate mRNA into proteins
 
 # Getting Started
 
@@ -6749,13 +6242,13 @@ Add a --frame-shift argument that defaults to 0 and allows values 0-2 (inclusive
 
 The focus of this chapter was really on how to write, test, and compose functions to solve the problem at hand. I wrote functions to find codons in a sequence and trans‐ late RNA. Then I showed how to use higher-order functions to compose other func‐ tions, and finally, I used an off-the-shelf function from Biopython.
 
-• K-mers are all the $k$ -length subsequences of a sequence.   
-• Codons are 3-mers that do not overlap in a particular frame.   
-• Dictionaries are useful as lookup tables, such as for translating a codon to an amino acid.   
-• A for loop, a list comprehension, and map() are all methods for transforming one sequence into another.   
-• The takewhile() function is similar to the filter() function in accepting values from a sequence based on a predicate or test of the values.   
-• The partial() function allows one to partially apply the arguments to a function.   
-• The Bio.Seq.translate() function will translate an RNA sequence into a pro‐ tein sequence.
+* K-mers are all the $k$ -length subsequences of a sequence.   
+* Codons are 3-mers that do not overlap in a particular frame.   
+* Dictionaries are useful as lookup tables, such as for translating a codon to an amino acid.   
+* A for loop, a list comprehension, and map() are all methods for transforming one sequence into another.   
+* The takewhile() function is similar to the filter() function in accepting values from a sequence based on a predicate or test of the values.   
+* The partial() function allows one to partially apply the arguments to a function.   
+* The Bio.Seq.translate() function will translate an RNA sequence into a pro‐ tein sequence.
 
 # Find a Motif in DNA: Exploring Sequence Similarity
 
@@ -6763,11 +6256,11 @@ In the Rosalind SUBS challenge, I’ll be searching for any occurrences of one s
 
 In this chapter, I’ll demonstrate:
 
-• How to use str.find(), str.index(), and string slices   
-• How to use sets to create unique collections of elements   
-• How to combine higher-order functions   
-• How to find subsequences using k-mers   
-• How to find possibly overlapping sequences using regular expressions
+* How to use str.find(), str.index(), and string slices   
+* How to use sets to create unique collections of elements   
+* How to combine higher-order functions   
+* How to find subsequences using k-mers   
+* How to find possibly overlapping sequences using regular expressions
 
 # Getting Started
 
@@ -7380,10 +6873,10 @@ Expand the program to look for a subsequence pattern. For example, you might sea
 
 Key points from this chapter:
 
-• The str.find() and str.index() methods can determine if a subsequence is present in a given string.   
-• Sets can be used to create unique collections of elements.   
-• By definition, k-mers are subsequences and are relatively quick to extract and compare.   
-• Regular expressions can find overlapping sequences by using a look-ahead asser‐ tion combined with a capture group.
+* The str.find() and str.index() methods can determine if a subsequence is present in a given string.   
+* Sets can be used to create unique collections of elements.   
+* By definition, k-mers are subsequences and are relatively quick to extract and compare.   
+* Regular expressions can find overlapping sequences by using a look-ahead asser‐ tion combined with a capture group.
 
 # Overlap Graphs: Sequence Assembly Using Shared K-mers
 
@@ -7391,13 +6884,13 @@ A graph is a structure used to represent pairwise relationships between objects.
 
 You will learn:
 
-• How to use k-mers to create overlap graphs   
-• How to log runtime messages to a file   
-• How to use collections.defaultdict()   
-• How to use set intersection to find common elements between collections   
-• How to use itertools.product() to create Cartesian products of lists   
-• How to use the iteration_utilities.starfilter() function   
-• How to use Graphviz to model and visualize graph structures
+* How to use k-mers to create overlap graphs   
+* How to log runtime messages to a file   
+* How to use collections.defaultdict()   
+* How to use set intersection to find common elements between collections   
+* How to use itertools.product() to create Cartesian products of lists   
+* How to use the iteration_utilities.starfilter() function   
+* How to use Graphviz to model and visualize graph structures
 
 # Getting Started
 
@@ -7827,15 +7320,15 @@ A dictionary of the various ending sequences and the IDs.
 
 The correct pairs for this input file and the overlapping 3-mers are as follows:
 
-• Rosalind_0498, Rosalind_2391: AAA   
-• Rosalind_0498, Rosalind_0442: AAA   
-• Rosalind_2391, Rosalind_2323: TTT
+* Rosalind_0498, Rosalind_2391: AAA   
+* Rosalind_0498, Rosalind_0442: AAA   
+* Rosalind_2391, Rosalind_2323: TTT
 
 When you combine, for instance, the sequence ending with AAA (0498) with those starting with this sequence (0498, 2391, 0442), you wind up with the following pairs:
 
-• Rosalind_0498, Rosalind_0498   
-• Rosalind_0498, Rosalind_2391   
-• Rosalind_0498, Rosalind_0442
+* Rosalind_0498, Rosalind_0498   
+* Rosalind_0498, Rosalind_2391   
+* Rosalind_0498, Rosalind_0442
 
 Since I can’t join a sequence to itself, the first pair is disqualified. Find the next end and start sequence in common, then iterate all the sequence pairs. I’ll leave you to finish this exercise by finding all the start and end keys that are in common and then combining all the sequence IDs to print the pairs that can be joined. The pairs can be in any order and still pass the tests. I just want to wish you good luck. We’re all count‐ ing on you.
 
@@ -8113,16 +7606,16 @@ Add a Hamming distance option that will allow the overlapping sequence to have t
 
 Key points from this chapter:
 
-• To find overlapping regions, I used k-mers to find the first and last $k$ bases of each sequence.   
-• The logging module makes it easy to turn on and off the logging of runtime messages to a file.   
-• I used defaultdict(list) to create a dictionary that would auto-vivify any key not present with a default value of the empty list.   
-• Set intersection can find common elements between collections, such as the keys shared between two dictionaries.   
-• The itertools.product() function found all the possible pairs of sequences.   
-• The iteration_utilities.starfilter() function will splat the argument to the lambda for filter(), just as the itertools.starmap() function does for map().
+* To find overlapping regions, I used k-mers to find the first and last $k$ bases of each sequence.   
+* The logging module makes it easy to turn on and off the logging of runtime messages to a file.   
+* I used defaultdict(list) to create a dictionary that would auto-vivify any key not present with a default value of the empty list.   
+* Set intersection can find common elements between collections, such as the keys shared between two dictionaries.   
+* The itertools.product() function found all the possible pairs of sequences.   
+* The iteration_utilities.starfilter() function will splat the argument to the lambda for filter(), just as the itertools.starmap() function does for map().
 
-• The Graphviz tool can efficiently represent and visualize complex graph structures.   
-• Graphs can be textually represented using the Dot language, and the dot pro‐ gram can generate visualizations of graphs in various formats.   
-• Overlap graphs can be used to create a complete assembly of two or more sequences.
+* The Graphviz tool can efficiently represent and visualize complex graph structures.   
+* Graphs can be textually represented using the Dot language, and the dot pro‐ gram can generate visualizations of graphs in various formats.   
+* Overlap graphs can be used to create a complete assembly of two or more sequences.
 
 # Finding the Longest Shared Subsequence: Finding K-mers, Writing Functions, and Using Binary Search
 
@@ -8130,11 +7623,11 @@ As described in the Rosalind LCSM challenge, the goal of this exercise is to fin
 
 You will learn:
 
-• How to use k-mers to find shared subsequences   
-• How to use itertools.chain() to concatenate lists of lists   
-• How and why to use a binary search   
-• One way to maximize a function   
-• How to use the key option with min() and max()
+* How to use k-mers to find shared subsequences   
+* How to use itertools.chain() to concatenate lists of lists   
+* How and why to use a binary search   
+* One way to maximize a function   
+* How to use the key option with min() and max()
 
 # Getting Started
 
@@ -8743,11 +8236,11 @@ As with the suggestion in Chapter 9, add a Hamming distance option that will all
 
 Key points from this chapter:
 
-• K-mers can be used to find conserved regions of sequences.   
-• Lists of lists can be combined into a single list using itertools.chain().   
-• A binary search can be used on sorted values to find a value more quickly than searching through the list linearly.   
-• Hill climbing is one way to maximize the input to a function.   
-• The key option for min() and max() is a function that is applied to the values before comparing them.
+* K-mers can be used to find conserved regions of sequences.   
+* Lists of lists can be combined into a single list using itertools.chain().   
+* A binary search can be used on sorted values to find a value more quickly than searching through the list linearly.   
+* Hill climbing is one way to maximize the input to a function.   
+* The key option for min() and max() is a function that is applied to the values before comparing them.
 
 # Finding a Protein Motif: Fetching Data and Using Regular Expressions
 
@@ -8755,9 +8248,9 @@ We’ve spent quite a bit of time now looking for sequence motifs. As described 
 
 You will learn:
 
-• How to programmatically fetch data from the internet   
-• How to write a regular expression to find the N-glycosylation motif   
-• How to manually find the N-glycosylation motif
+* How to programmatically fetch data from the internet   
+* How to write a regular expression to find the N-glycosylation motif   
+* How to manually find the N-glycosylation motif
 
 # Getting Started
 
@@ -9405,11 +8898,11 @@ The Eukaryotic Linear Motifs database example provides regexes to find motifs th
 
 Key points from this chapter:
 
-• You can use command-line utilities like curl and wget to fetch data from the internet. Sometimes it makes sense to write a shell script for such tasks, and sometimes it’s better to encode this using a language like Python.   
-• A regular expression can find the N-glycosylation motif, but it’s necessary to wrap it in a look-ahead assertion and capturing parentheses to find overlapping matches.   
-• It’s possible to manually find the N-glycosylation motif, but it’s not easy.   
-• The os.path.splitext() function is useful when you need to separate a file‐ name from the extension.   
-• File extensions are conventions and may be unreliable.
+* You can use command-line utilities like curl and wget to fetch data from the internet. Sometimes it makes sense to write a shell script for such tasks, and sometimes it’s better to encode this using a language like Python.   
+* A regular expression can find the N-glycosylation motif, but it’s necessary to wrap it in a look-ahead assertion and capturing parentheses to find overlapping matches.   
+* It’s possible to manually find the N-glycosylation motif, but it’s not easy.   
+* The os.path.splitext() function is useful when you need to separate a file‐ name from the extension.   
+* File extensions are conventions and may be unreliable.
 
 # Inferring mRNA from Protein: Products and Reductions of Lists
 
@@ -9417,11 +8910,11 @@ As described in the Rosalind mRNA challenge, the goal of this program is to find
 
 # You will learn:
 
-• How to use the functools.reduce() function to create a mathematical product() function for multiplying numbers   
-• How to use Python’s modulo (%) operator   
-• About buffer overflow problems   
-• What monoids are   
-• How to reverse a dictionary by flipping the keys and values
+* How to use the functools.reduce() function to create a mathematical product() function for multiplying numbers   
+* How to use Python’s modulo (%) operator   
+* About buffer overflow problems   
+* What monoids are   
+* How to reverse a dictionary by flipping the keys and values
 
 # Getting Started
 
@@ -10059,12 +9552,12 @@ Could you write a tool that would combine many regular expression patterns into 
 
 Key points from this chapter:
 
-• The itertools.product() function will create the Cartesian product of a list of iterables.   
-• functools.reduce() is a higher-order function that provides a way to combine progressive pairs of elements from an iterable.   
-• Python’s % (modulo) operator will return the remainder after division.   
-• Homogeneous lists of numbers and strings can be reduced under monoidal oper‐ ations like addition, multiplication, and concatenation to a single value.   
-• A dictionary with unique values can be reversed by flipping the keys and values.   
-• The size of integer values in Python is limited only by the available memory.
+* The itertools.product() function will create the Cartesian product of a list of iterables.   
+* functools.reduce() is a higher-order function that provides a way to combine progressive pairs of elements from an iterable.   
+* Python’s % (modulo) operator will return the remainder after division.   
+* Homogeneous lists of numbers and strings can be reduced under monoidal oper‐ ations like addition, multiplication, and concatenation to a single value.   
+* A dictionary with unique values can be reversed by flipping the keys and values.   
+* The size of integer values in Python is limited only by the available memory.
 
 # Location Restriction Sites: Using, Testing, and Sharing Code
 
@@ -10087,9 +9580,9 @@ functional programming techniques helps to create a short, elegant solution. I w
 
 You will learn:
 
-• How to find a reverse palindrome   
-• How to create modules to share common functions   
-• About the PYTHONPATH environment variable
+* How to find a reverse palindrome   
+* How to create modules to share common functions   
+* About the PYTHONPATH environment variable
 
 # Getting Started
 
@@ -10528,8 +10021,8 @@ Write a program that can identify English palindromes such as “A man, a plan, 
 
 Key points from this chapter:
 
-• You can reuse functions by placing them into a module and importing them as needed.   
-• The PYTHONPATH environment variable indicates directories which Python should search when looking for modules of code.
+* You can reuse functions by placing them into a module and importing them as needed.   
+* The PYTHONPATH environment variable indicates directories which Python should search when looking for modules of code.
 
 # Finding Open Reading Frames
 
@@ -10537,9 +10030,9 @@ The ORF challenge is the last Rosalind problem I’ll tackle in this book. The g
 
 You will learn:
 
-• How to truncate a sequence to a length evenly divisible by a codon size   
-• How to use the str.find() and str.partition() functions   
-• How to document a regular expression using code formatting, comments, and Python’s implicit string concatenation
+* How to truncate a sequence to a length evenly divisible by a codon size   
+* How to use the str.find() and str.partition() functions   
+* How to document a regular expression using code formatting, comments, and Python’s implicit string concatenation
 
 # Getting Started
 
@@ -10960,10 +10453,10 @@ Expand the program to process multiple input files, writing all the unique ORFs 
 
 Key points from this chapter:
 
-• The Bio.Seq.translate() function will print warnings if the input sequence is not evenly divisible by three, so I wrote a truncate() function to trim the protein.   
-• The str.find() and str.partition() functions each present ways to find sub‐ sequences in a string.   
-• A regular expression remains my preferred method to find a pattern in some text.   
-• A complicated regex can be written over multiple lines with comments so that Python will implicitly concatenate them into a single string.
+* The Bio.Seq.translate() function will print warnings if the input sequence is not evenly divisible by three, so I wrote a truncate() function to trim the protein.   
+* The str.find() and str.partition() functions each present ways to find sub‐ sequences in a string.   
+* A regular expression remains my preferred method to find a pattern in some text.   
+* A complicated regex can be written over multiple lines with comments so that Python will implicitly concatenate them into a single string.
 
 # Other Programs
 
@@ -10975,12 +10468,12 @@ Often in bioinformatics projects, you’ll find yourself staring at a directory 
 
 You will learn:
 
-• How to install the seqmagick tool   
-• How to use MD5 hashes   
-• How to use choices in argparse to constrain arguments   
-• How to use the numpy module   
-• How to mock a filehandle   
-• How to use the tabulate and rich modules to format output tables
+* How to install the seqmagick tool   
+* How to use MD5 hashes   
+* How to use choices in argparse to constrain arguments   
+* How to use the numpy module   
+* How to mock a filehandle   
+* How to use the tabulate and rich modules to format output tables
 
 # Using Seqmagick to Analyze Sequence Files
 
@@ -11454,10 +10947,10 @@ def main() -> None:
 
 To test this program, I run it with the following inputs:
 
-• The empty file   
-• The file with one sequence   
-• The file with two sequences   
-• All the input files
+* The empty file   
+* The file with one sequence   
+* The file with two sequences   
+* All the input files
 
 To start, I run all these with the default table style. Then I need to verify that all 10 of the table styles are created correctly. Combining all the possible test inputs with all the table styles creates a high degree of cyclomatic complexity—the number of differ‐ ent ways that parameters can be combined.
 
@@ -11608,13 +11101,13 @@ The seqmagick tool has many other useful options. Implement your own versions of
 
 Key points from this chapter:
 
-• The seqmagick tool provides many ways to examine sequence files.   
-• There are many ways to verify that your input files are complete and not corrup‐ ted, from examining file sizes to using message digests such as MD5 hashes.   
-• The choices option for argparse parameters will force the user to select a value from a given list.   
-• The tabulate and rich modules can create text tables of data.   
-• The numpy module is useful for many mathematical operations.   
-• The io.StringIO() and unittest.mock.mock_open() functions offer two ways to mock a filehandle for testing.   
-• Regression testing verifies that a program continues to work as it did before.
+* The seqmagick tool provides many ways to examine sequence files.   
+* There are many ways to verify that your input files are complete and not corrup‐ ted, from examining file sizes to using message digests such as MD5 hashes.   
+* The choices option for argparse parameters will force the user to select a value from a given list.   
+* The tabulate and rich modules can create text tables of data.   
+* The numpy module is useful for many mathematical operations.   
+* The io.StringIO() and unittest.mock.mock_open() functions offer two ways to mock a filehandle for testing.   
+* Regression testing verifies that a program continues to work as it did before.
 
 # FASTX grep: Creating a Utility Program to Select Sequences
 
@@ -11622,10 +11115,10 @@ A colleague asked me once to find all the RNA sequences in a FASTQ file that had
 
 In this chapter, you will learn:
 
-• About the structure of a FASTQ file   
-• How to perform a case-insensitive regular expression match   
-• About DWIM (Do What I Mean) and DRY (Don’t Repeat Yourself) ideas in code   
-• How to use and and or operations to reduce Boolean values and bits
+* About the structure of a FASTQ file   
+* How to perform a case-insensitive regular expression match   
+* About DWIM (Do What I Mean) and DRY (Don’t Repeat Yourself) ideas in code   
+* How to use and and or operations to reduce Boolean values and bits
 
 # Finding Lines in a File Using grep
 
@@ -11633,9 +11126,11 @@ The grep program can find all the lines in a file matching a given pattern. If I
 
 $ grep LSU tests/inputs/lsu.fq
 
+```txt
 @ITSLSUmock2p.ITS_M01380:138:000000000-C9GKM:1:1101:14440:2042 2:N:0
 
 @ITSLSUmock2p.ITS_M01384:138:000000000-C9GKM:1:1101:14440:2043 2:N:0
+```
 
 If the goal were only to find how many sequences contain this string, I could pipe this into wc (word count) to count the lines using the -l option:
 
@@ -11980,8 +11475,8 @@ Instead, I’d prefer to use the re.sub() function I first introduced in Chapter
 
 As shown in Table 16-1, there are four common extensions for FASTA files which I can represent using one compact regular expression. Recall that there are two func‐ tions in the re module for searching:
 
-• re.match() finds a match from the beginning of a string.   
-• re.search() finds a match anywhere inside a string.
+* re.match() finds a match from the beginning of a string.   
+* re.search() finds a match anywhere inside a string.
 
 In this example, I’m using the re.match() function to ensure that the pattern (the first argument) is found at the beginning of the extension (the second argument):
 
@@ -12320,12 +11815,12 @@ Alter the program to select sequences with some minimum length and quality score
 
 Key points from this chapter:
 
-• The FASTQ file format requires each record to be represented by four lines: a header, the sequence, a separator, and the quality scores.   
-• Regular expression matches can accept flags that control, for example, whether to perform a case-insensitive match. By default, regexes are case-sensitive.   
-• To indicate multiple regex flags, use the | (or) bitwise operator to combine the integer values of the flags.   
-• Boolean values can be reduced using and and or operations as well as the any() and all() functions.   
-• The DWIM (Do What I Mean) aesthetic means you try to anticipate what your user would want a program to do naturally and intelligently.   
-• The DRY (Don’t Repeat Yourself) principle means that you never duplicate the same idea in your code but rather isolate it to one locus or function.
+* The FASTQ file format requires each record to be represented by four lines: a header, the sequence, a separator, and the quality scores.   
+* Regular expression matches can accept flags that control, for example, whether to perform a case-insensitive match. By default, regexes are case-sensitive.   
+* To indicate multiple regex flags, use the | (or) bitwise operator to combine the integer values of the flags.   
+* Boolean values can be reduced using and and or operations as well as the any() and all() functions.   
+* The DWIM (Do What I Mean) aesthetic means you try to anticipate what your user would want a program to do naturally and intelligently.   
+* The DRY (Don’t Repeat Yourself) principle means that you never duplicate the same idea in your code but rather isolate it to one locus or function.
 
 # DNA Synthesizer: Creating Synthetic Data with Markov Chains
 
@@ -12333,10 +11828,10 @@ A Markov chain is a model for representing a sequence of possibilities found in 
 
 In this exercise, you will:
 
-• Read some number of input sequence files to find all the unique k-mers for a given $k$ .   
-• Create a Markov chain using these k-mers to produce some number of novel sequences of lengths bounded by a minimum and maximum.   
-• Learn about generators.   
-• Use a random seed to replicate random selections.
+* Read some number of input sequence files to find all the unique k-mers for a given $k$ .   
+* Create a Markov chain using these k-mers to produce some number of novel sequences of lengths bounded by a minimum and maximum.   
+* Learn about generators.   
+* Use a random seed to replicate random selections.
 
 # Understanding Markov Chains
 
@@ -12980,9 +12475,9 @@ Now that you understand Markov chains, you might be interested to see how they a
 
 Key points from this chapter:
 
-• Random seeds are used to replicate pseudorandom selections.   
-• Markov chains can be used to encode the probabilities that a node in a graph can move to another node or state.   
-• A list comprehension can be made into a lazy generator by replacing the square brackets with parentheses.
+* Random seeds are used to replicate pseudorandom selections.   
+* Markov chains can be used to encode the probabilities that a node in a graph can move to another node or state.   
+* A list comprehension can be made into a lazy generator by replacing the square brackets with parentheses.
 
 # FASTX Sampler: Randomly Subsampling Sequence Files
 
@@ -12990,7 +12485,7 @@ Sequence datasets in genomics and metagenomics can get dauntingly large, requiri
 
 You will learn about:
 
-• Nondeterministic sampling
+* Nondeterministic sampling
 
 # Getting Started
 
@@ -13387,9 +12882,9 @@ This program always produces FASTA output. Add an --outfmt output format option 
 
 # Review
 
-• The $>$ record marker in a FASTA file is also the redirect operator in bash, so care must be taken to quote this value on the command line.   
-• Deterministic approaches always produce the same output for the given input. Nondeterministic approaches produce different outputs for the same inputs.   
-• The random module has functions to select numbers from various distributions, such as the uniform and normal distributions.
+* The $>$ record marker in a FASTA file is also the redirect operator in bash, so care must be taken to quote this value on the command line.   
+* Deterministic approaches always produce the same output for the given input. Nondeterministic approaches produce different outputs for the same inputs.   
+* The random module has functions to select numbers from various distributions, such as the uniform and normal distributions.
 
 # Blastomatic: Parsing Delimited Text Files
 
@@ -13397,8 +12892,8 @@ Delimited text files are a standard way to encode columnar data. You are likely 
 
 In this exercise, you will learn:
 
-• How to use csvkit and csvchk to view delimited text files   
-• How to use the csv and pandas modules to parse delimited text files
+* How to use csvkit and csvchk to view delimited text files   
+* How to use the csv and pandas modules to parse delimited text files
 
 # Introduction to BLAST
 
@@ -13498,19 +12993,19 @@ You may find yourself wondering why the tabular output file does not contain the
 
 So what are the column names? I must parse through hundreds of lines of the blastn usage to find that “Options 6, 7, 10 and 17 can be additionally configured” to include any of 53 optional fields. If the fields are not specified, then the default fields are as follows:
 
-• qaccver: Query sequence accession/ID   
-• saccver: Subject sequence accession/ID   
-• pident: Percentage of identical matches   
-• length: Alignment length
+* qaccver: Query sequence accession/ID   
+* saccver: Subject sequence accession/ID   
+* pident: Percentage of identical matches   
+* length: Alignment length
 
-• mismatch: Number of mismatches   
-• gapopen: Number of gap openings   
-• qstart: Start of alignment in query   
-• qend: End of alignment in query   
-• sstart: Start of alignment in subject   
-• send: End of alignment in subject   
-• evalue: Expect value   
-• bitscore: Bit score
+* mismatch: Number of mismatches   
+* gapopen: Number of gap openings   
+* qstart: Start of alignment in query   
+* qend: End of alignment in query   
+* sstart: Start of alignment in subject   
+* send: End of alignment in subject   
+* evalue: Expect value   
+* bitscore: Bit score
 
 If you look again at the usage for csvchk, you’ll find there is an option to name the -f|--fieldnames for the record. Following is how I could view the first record from a hits file and specify column names:
 
@@ -14426,11 +13921,11 @@ Default to including all the columns from both files in the output file, and add
 
 Key points from this chapter:
 
-• Shell aliases can be used to create shortcuts for common commands.   
-• Delimited text files do not always have column headers. This is the case with BLAST’s tabular output formats.   
-• The csv and pandas modules can read and write delimited text files.   
-• Datasets can be joined on common columns using the join command-line tool or in Python by using common keys from dictionaries or common indexes in pandas dataframes.   
-• pandas is a good choice for reading delimited files if you need access to all the data in memory—for example, if you need to perform statistical analysis of the data or want to quickly access all the values for a column. If you need to parse very large delimited files and can process records independently, then use the csv module for better performance.
+* Shell aliases can be used to create shortcuts for common commands.   
+* Delimited text files do not always have column headers. This is the case with BLAST’s tabular output formats.   
+* The csv and pandas modules can read and write delimited text files.   
+* Datasets can be joined on common columns using the join command-line tool or in Python by using common keys from dictionaries or common indexes in pandas dataframes.   
+* pandas is a good choice for reading delimited files if you need access to all the data in memory—for example, if you need to perform statistical analysis of the data or want to quickly access all the values for a column. If you need to parse very large delimited files and can process records independently, then use the csv module for better performance.
 
 # Documenting Commands and Creating Workows with make
 
@@ -14798,11 +14293,11 @@ I won’t bother commenting on all the commands. Mostly I want to demonstrate ho
 
 As you bump up against the limitations of make, you may choose to move to a work‐ flow manager. There are many to choose from. For example:
 
-• Snakemake extends the basic concepts of make with Python.   
-• The Common Workflow Language (CWL) defines workflows and parameters in a configuration file (in YAML), and you use tools like cwltool or cwl-runner (both implemented in Python) to execute the workflow with another configura‐ tion file that describes the arguments.   
-• The Workflow Description Language (WDL) takes a similar approach to describe workflows and arguments and can be run with the Cromwell engine.   
-• Pegasus allows you to use Python code to describe a workflow that then is written to an XML file, which is the input for the engine that will run your code.   
-• Nextflow is similar in that you use a full programming language called Groovy (a subset of Java) to write a workflow that can be run by the Nextflow engine.
+* Snakemake extends the basic concepts of make with Python.   
+* The Common Workflow Language (CWL) defines workflows and parameters in a configuration file (in YAML), and you use tools like cwltool or cwl-runner (both implemented in Python) to execute the workflow with another configura‐ tion file that describes the arguments.   
+* The Workflow Description Language (WDL) takes a similar approach to describe workflows and arguments and can be run with the Cromwell engine.   
+* Pegasus allows you to use Python code to describe a workflow that then is written to an XML file, which is the input for the engine that will run your code.   
+* Nextflow is similar in that you use a full programming language called Groovy (a subset of Java) to write a workflow that can be run by the Nextflow engine.
 
 All of these systems follow the same basic ideas as make, so understanding how make works and how to write the pieces of your workflow and how they interact is the basis for any larger analysis workflow you may create.
 
@@ -14810,9 +14305,9 @@ All of these systems follow the same basic ideas as make, so understanding how m
 
 Here are some other resources you can use to learn about make:
 
-• The GNU Make Manual   
-• The GNU Make Book by John Graham-Cumming (No Starch Press, 2015)   
-• Managing Projects with GNU Make by Robert Mecklenburg (O’Reilly, 2004)
+* The GNU Make Manual   
+* The GNU Make Book by John Graham-Cumming (No Starch Press, 2015)   
+* Managing Projects with GNU Make by Robert Mecklenburg (O’Reilly, 2004)
 
 # Understanding $PATH and Installing Command-Line Programs
 
