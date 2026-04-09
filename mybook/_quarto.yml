@@ -16,6 +16,8 @@ book:
     - Bioinformatics_and_Computational_Biology_Solutions_Using_R_and_Bioconductor.md
     - Bioinformatics_and_Drug_Discovery.md
     - Deep_Learning_for_Biology_Harness_AI_to_Solve_Real_World_Biology_Problems.qmd
+    - Large_Language_Models_in_Protein_Bioinformatics.md
+    - Streamlining_Your_Research_Laboratory_with_Python.md
 
 bibliography: references.bib
 

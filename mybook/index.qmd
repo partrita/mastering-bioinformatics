@@ -1,4 +1,4 @@
-# 환영합니다 (Welcome) {.unnumbered}
+# 환영합니다 {.unnumbered}
 
 Mastering Bioinformatics에 오신 것을 환영합니다!
 
