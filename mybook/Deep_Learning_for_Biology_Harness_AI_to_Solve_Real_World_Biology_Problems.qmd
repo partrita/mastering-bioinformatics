@@ -10942,6 +10942,7 @@ def compute_gradients_l2_norm(grads):
 ```
 
 훈련 단계 내에서의 사용 예시:
+
 ```python
 loss, grads = jax.value_and_grad(loss_fn)(state.params)
 grad_norm = compute_gradients_l2_norm(grads)
