@@ -58,7 +58,6 @@ book:
         - seq-biopython/index.qmd
         - manage-biodata/index.qmd
         - streamline-lab-py/index.qmd
-        - research-lab-python/index.qmd
         - dl-biology/index.qmd
         - llm-protein/index.qmd
         - practical-bioinformatics-lab/index.qmd

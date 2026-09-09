@@ -255,7 +255,7 @@ var anotherEmptyArray = [String]()
 - 길이/개수: `numbers.count` (Swift) vs `len(numbers)` (파이썬)
 
 #### Dictionary (딕셔너리)
-순서 없는 키-값 쌍의 컬렉션입니다. 키는 같은 타입이어야 하고, 값도 같은 타입이어야 합니다.
+순서 없는 키-값 쌍의 컬렉션입니다. 키는 같은 타입이어야 하고 값도 같은 타입이어야 합니다.
 
 **파이썬 (dict):**
 ```python
@@ -500,7 +500,7 @@ for name in names[2...] { // "Brian", "Jack"
 ### 조건문
 
 #### `if`, `else if`, `else`
-구문은 유사하지만 Swift는 조건이 한 문장이라도 중괄호 `{}`를 요구합니다. 조건 주위의 괄호는 선택 사항이고, 명확성을 위해 붙이는 경우도 많습니다.
+구문은 유사하지만 Swift는 조건이 한 문장이라도 중괄호 `{}`를 요구합니다. 조건 주위의 괄호는 선택 사항이고 명확성을 위해 붙이는 경우도 많습니다.
 
 **파이썬:**
 ```python
@@ -2075,7 +2075,7 @@ let stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 ### Async/Await 기본 개념
 
-Swift의 `async/await`은 파이썬과 유사합니다. 비동기로 작동하는 함수는 `async`로 표시하고, 그 결과가 반환될 때까지 기다릴 때는 `await`를 사용합니다.
+Swift의 `async/await`은 파이썬과 유사합니다. 비동기로 작동하는 함수는 `async`로 표시하고 그 결과가 반환될 때까지 기다릴 때는 `await`를 사용합니다.
 
 **파이썬:**
 ```python
@@ -2629,7 +2629,7 @@ func addMultipleNumbers(a: Int, b: Int, expected: Int) {
 
 ### PythonKit 소개
 
-`PythonKit`은 Swift에서 파이썬 인터프리터의 API를 감싸서 파이썬 패키지를 Swift 환경으로 불러오고, 마치 파이썬처럼 문법을 쓸 수 있게 해주는 마법 같은 패키지입니다.
+`PythonKit`은 Swift에서 파이썬 인터프리터의 API를 감싸서 파이썬 패키지를 Swift 환경으로 불러오고 마치 파이썬처럼 문법을 쓸 수 있게 해주는 마법 같은 패키지입니다.
 
 ### Swift에서 Python Pandas 사용하기
 

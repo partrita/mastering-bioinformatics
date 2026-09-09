@@ -137,7 +137,7 @@ fn func() -> String {
 
 ### 코드 분석 및 주요 포인트
 1. **`#[pyfunction]`**: Rust 함수를 Python에서 호출 가능한 함수로 노출합니다. 반환값으로 `PyResult<T>`를 사용하여 에러 발생 시 Python 예외를 발생시킬 수 있습니다.
-2. **`Bound<'_, PyModule>` (PyO3 v0.21+ / v0.24)**: PyO3의 신규 메모리 관리 API로, GIL 수명주기와 안전하게 바인딩된 스마트 포인터입니다.
+2. **`Bound<'_, PyModule>` (PyO3 v0.21+ / v0.24)**: PyO3의 신규 메모리 관리 API로 GIL 수명주기와 안전하게 바인딩된 스마트 포인터입니다.
 3. **`wrap_pyfunction!`**: `#[pyfunction]`으로 정의된 Rust 함수를 Python 모듈 객체에 등록하기 위한 래퍼 매크로입니다.
 4. **서브모듈 등록 (`PyModule::new` & `add_submodule`)**: `parent_module.child_module.func()` 형태로 Python 계층형 네임스페이스를 Rust 단에서 구성할 수 있습니다.
 
@@ -145,7 +145,7 @@ fn func() -> String {
 
 ## 2. `fibonacci` - 연산 성능 가속 비교 {.unnumbered}
 
-`fibonacci` 프로젝트는 반복문 기반 피보나치 계산을 Rust로 작성하고, Python 순수 구현과의 실행 속도를 비교 측정합니다.
+`fibonacci` 프로젝트는 반복문 기반 피보나치 계산을 Rust로 작성하고 Python 순수 구현과의 실행 속도를 비교 측정합니다.
 
 ### Rust 소스 코드 (`fibonacci/src/lib.rs`)
 
@@ -209,7 +209,7 @@ assert python_result == rust_result, "계산 결과가 일치하지 않습니다
 
 ### 코드 분석 및 주요 포인트
 - **컴파일 최적화 효과**: Rust의 `u64` 레지스터 직접 연산 및 루프 언롤링 최적화 덕분에 반복 연산에서 Python 대비 수십~수백 배 빠른 성능을 발휘합니다.
-- **타입 자동 변환**: Python의 정수형(`int`)은 Rust의 `u64`로 자동 역직렬화(Unmarshaling)되고, 반환 시 다시 Python 객체로 래핑됩니다.
+- **타입 자동 변환**: Python의 정수형(`int`)은 Rust의 `u64`로 자동 역직렬화(Unmarshaling)되고 반환 시 다시 Python 객체로 래핑됩니다.
 
 ***
 
@@ -513,7 +513,7 @@ if __name__ == "__main__":
 ### 프로젝트 특징
 - **`#[pyclass]` 및 `#[pymethods]`**: Rust 구조체를 Python 인스턴스화 가능한 클래스로 노출 (`Quiver(filename, mode)`).
 - **스트리밍 I/O 성능**: 수 GB 크기의 바이오 데이터셋을 처리할 때 Python 반복문 대신 Rust의 `BufReader`와 바이트 단위 쓰기를 사용하여 메모리 점유율을 낮추고 I/O 처리량을 극대화합니다.
-- **Python CLI 생태계 활용**: Rust의 성능으로 파싱하고, Python의 `click` 라이브러리로 사용자 친화적 터미널 UI를 구축합니다.
+- **Python CLI 생태계 활용**: Rust의 성능으로 파싱하고 Python의 `click` 라이브러리로 사용자 친화적 터미널 UI를 구축합니다.
 
 ***
 
@@ -741,7 +741,7 @@ class Collection:
 - CPU 바운드 연산이나 대기 시간이 긴 I/O 작업은 반드시 `py.allow_threads`로 감싸서 GIL을 해제해야 Python 멀티스레드 환경의 응답성을 해치지 않습니다.
 
 ## 3. 명확한 예외 매핑 {.unnumbered}
-- Rust의 `Result<T, E>`는 PyO3의 `PyResult<T>`로 변환하고, 상황에 맞는 표준 Python 예외(`PyValueError`, `PyTypeError`, `PyIOError`, `PyRuntimeError`)를 적절히 매핑해야 Python 사용자가 직관적인 에러 핸들링(`try-except`)을 구현할 수 있습니다.
+- Rust의 `Result<T, E>`는 PyO3의 `PyResult<T>`로 변환하고 상황에 맞는 표준 Python 예외(`PyValueError`, `PyTypeError`, `PyIOError`, `PyRuntimeError`)를 적절히 매핑해야 Python 사용자가 직관적인 에러 핸들링(`try-except`)을 구현할 수 있습니다.
 
 ***
 

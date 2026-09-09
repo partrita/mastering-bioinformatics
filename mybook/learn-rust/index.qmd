@@ -158,7 +158,7 @@ fn main() {
                 let mut ans_input = String::new();
                 // 표준 입력(stdin)으로부터 한 줄을 읽어 ans_input 변수에 저장합니다. unwrap()은 에러 시 패닉을 발생시킵니다.
                 std::io::stdin().read_line(&mut ans_input).unwrap();
-                // 입력값 앞뒤의 공백/줄바꿈 문자를 제거(.trim())하고, 32비트 정수형(i32)으로 변환(.parse::<i32>())합니다.
+                // 입력값 앞뒤의 공백/줄바꿈 문자를 제거(.trim())하고 32비트 정수형(i32)으로 변환(.parse::<i32>())합니다.
                 let ans_input = ans_input.trim().parse::<i32>().unwrap();
                 // 입력한 값이 두 피연산자의 합과 같다면 정답 처리합니다.
                 if ans_input == op1 + op2 {
@@ -168,7 +168,7 @@ fn main() {
                     // 현재 루프(loop)를 탈출하여 다음 문제로 넘어갑니다.
                     break;
                 } else {
-                    // 입력값이 틀린 경우 오답 메시지를 출력하고, 이 문제(loop)를 다시 풉니다.
+                    // 입력값이 틀린 경우 오답 메시지를 출력하고 이 문제(loop)를 다시 풉니다.
                     println!("오답!");
                 }
             },
@@ -196,7 +196,7 @@ fn main() {
                     // 현재 루프를 탈출하여 다음 문제로 넘어갑니다.
                     break;
                 } else {
-                    // 틀린 경우 오답 메시지를 출력하고, 이 문제(loop)를 다시 풉니다.
+                    // 틀린 경우 오답 메시지를 출력하고 이 문제(loop)를 다시 풉니다.
                     println!("오답!");
                 }
             },
@@ -540,7 +540,7 @@ fn print_output(value: f64) {
     println!("  => {}", value);
 }
 
-// 메모리에 특정 값을 누적(가산/감산)하고, 누적된 결과를 출력하는 헬퍼 함수입니다.
+// 메모리에 특정 값을 누적(가산/감산)하고 누적된 결과를 출력하는 헬퍼 함수입니다.
 // memory는 수정이 필요하므로 가변 참조(&mut f64)로 전달받습니다.
 fn add_and_print_memory(memory: &mut f64, prev_result: f64) {
     // 참조 역참조 연산자(*)를 사용하여 실제 메모리 값을 업데이트합니다.
@@ -631,12 +631,12 @@ fn main() {
 
         // 메모리 관련 명령인지 확인 (예: "memA+", "memB-" 등)
         let is_memory = tokens[0].starts_with("mem");
-        // 메모리 연산이고, 맨 끝 문자가 '+'인 경우 (예: memA+는 이전 결과를 memA 메모리에 더함)
+        // 메모리 연산이고 맨 끝 문자가 '+'인 경우 (예: memA+는 이전 결과를 memA 메모리에 더함)
         if is_memory && tokens[0].ends_with('+') {
             let result = memory.add(tokens[0], prev_result);
             print_output(result);
             continue; // 아래 일반 수식 계산을 건너뛰고 다음 입력으로 넘어갑니다.
-        // 메모리 연산이고, 맨 끝 문자가 '-'인 경우 (예: memA-는 이전 결과를 memA 메모리에서 뺌)
+        // 메모리 연산이고 맨 끝 문자가 '-'인 경우 (예: memA-는 이전 결과를 memA 메모리에서 뺌)
         } else if is_memory && tokens[0].ends_with('-') {
             // 빼야 하므로 음수값(-prev_result)을 넘겨서 더해줍니다.
             let result = memory.add(tokens[0], -prev_result);
@@ -645,7 +645,7 @@ fn main() {
         }
 
         // 수식 계산
-        // 왼쪽 토큰을 평가합니다. "memA"와 같이 mem으로 시작하면 메모리에서 불러오고, 아니면 숫자로 변환합니다.
+        // 왼쪽 토큰을 평가합니다. "memA"와 같이 mem으로 시작하면 메모리에서 불러오고 아니면 숫자로 변환합니다.
         let left: f64 = eval_token(tokens[0], &memory);
         // 오른쪽 토큰을 평가합니다.
         let right: f64 = eval_token(tokens[2], &memory);
@@ -880,7 +880,7 @@ impl Memory {
 
     // 특정 메모리 슬롯의 값을 가져오는 메서드
     fn get(&self, slot_name: &str) -> f64 {
-        // 값을 복사해서 가져오고, 없으면 0.0을 반환합니다.
+        // 값을 복사해서 가져오고 없으면 0.0을 반환합니다.
         self.slots.get(slot_name).copied().unwrap_or(0.0)
     }
 }
@@ -1358,10 +1358,10 @@ fuzzy-matcher = "0.3.7"
 ### `chapter7/my_library/src/lib.rs`
 
 - **파일 위치**: `rust-insighbook/chapter7/my_library/src/lib.rs`
-- **주요 주석 및 개요**: 'library' 모듈을 정의하고, 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다. 이 선언은 같은 디렉터리에 있는 'library.rs' 파일이나 'library/mod.rs' 파일을 모듈로 가져옵니다.
+- **주요 주석 및 개요**: 'library' 모듈을 정의하고 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다. 이 선언은 같은 디렉터리에 있는 'library.rs' 파일이나 'library/mod.rs' 파일을 모듈로 가져옵니다.
 
 ```rust
-// 'library' 모듈을 정의하고, 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다.
+// 'library' 모듈을 정의하고 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다.
 // 이 선언은 같은 디렉터리에 있는 'library.rs' 파일이나 'library/mod.rs' 파일을 모듈로 가져옵니다.
 pub mod library;
 ```
@@ -1465,7 +1465,7 @@ impl Bookshelf {
         let mut found_books = vec![];
         // books 벡터의 각 요소에 대해 반복문(for)을 돕니다. 불변 참조(&self.books)이므로 요소도 참조(&book)가 됩니다.
         for book in &self.books {
-            // 퍼지 매칭 점수를 계산합니다. 일치하는 경우 Some(score)를 반환하고, 일치하지 않으면 None을 반환합니다.
+            // 퍼지 매칭 점수를 계산합니다. 일치하는 경우 Some(score)를 반환하고 일치하지 않으면 None을 반환합니다.
             let match_result = self.matcher.fuzzy_match(&book.title, title_query);
             // match_result가 Some인 경우 score 값을 바인딩하여 조건문을 실행합니다(if let 패턴 매칭).
             if let Some(score) = match_result {
@@ -1742,7 +1742,7 @@ impl Schedule {
     // 겹치면 true, 겹치지 않으면 false를 반환합니다.
     fn intersects(&self, other: &Schedule) -> bool {
         // [self.start, self.end]와 [other.start, other.end]가 겹치기 위한 조건:
-        // 내 시작 시간이 상대방 종료 시간보다 이전이고, 상대방 시작 시간이 내 종료 시간보다 이전이어야 함
+        // 내 시작 시간이 상대방 종료 시간보다 이전이고 상대방 시작 시간이 내 종료 시간보다 이전이어야 함
         self.start < other.end && other.start < self.end
     }
 }
@@ -2088,7 +2088,7 @@ mod tests {
             }],
         };
         assert_eq!(expected, calendar);
-        // 마지막으로 ID = 2번 일정을 삭제하고, 삭제 성공(true)이 잘 리턴되는지 확인합니다.
+        // 마지막으로 ID = 2번 일정을 삭제하고 삭제 성공(true)이 잘 리턴되는지 확인합니다.
         assert!(delete_schedule(&mut calendar, 2));
         // 삭제하면 캘린더가 텅 비어야 합니다.
         let expected = Calendar { schedules: vec![] };
@@ -2173,7 +2173,7 @@ impl Schedule {
     // 겹치면 true, 겹치지 않으면 false를 반환합니다.
     fn intersects(&self, other: &Schedule) -> bool {
         // [self.start, self.end]와 [other.start, other.end]가 겹치기 위한 조건:
-        // 내 시작 시간이 상대방 종료 시간보다 이전이고, 상대방 시작 시간이 내 종료 시간보다 이전이어야 함
+        // 내 시작 시간이 상대방 종료 시간보다 이전이고 상대방 시작 시간이 내 종료 시간보다 이전이어야 함
         self.start < other.end && other.start < self.end
     }
 }
@@ -2550,7 +2550,7 @@ mod tests {
             }],
         };
         assert_eq!(expected, calendar);
-        // 마지막으로 ID = 2번 일정을 삭제하고, 삭제 성공(true)이 잘 리턴되는지 확인합니다.
+        // 마지막으로 ID = 2번 일정을 삭제하고 삭제 성공(true)이 잘 리턴되는지 확인합니다.
         assert!(delete_schedule(&mut calendar, 2));
         // 삭제하면 캘린더가 텅 비어야 합니다.
         let expected = Calendar { schedules: vec![] };
@@ -3062,14 +3062,14 @@ edition = "2024"
 // 표준 라이브러리의 동기화(sync) 및 스레드(thread) 관련 도구를 가져옵니다.
 use std::{
     // Arc: 여러 스레드 간에 데이터의 소유권을 안전하게 공유할 수 있는 원자적 참조 카운팅(Atomic Reference Counting) 포인터입니다.
-    // Mutex: 여러 스레드가 동시에 데이터에 접근하는 것을 막고, 한 번에 하나의 스레드만 데이터를 수정할 수 있도록 보장하는 상호 배제(Mutual Exclusion) 락입니다.
+    // Mutex: 여러 스레드가 동시에 데이터에 접근하는 것을 막고 한 번에 하나의 스레드만 데이터를 수정할 수 있도록 보장하는 상호 배제(Mutual Exclusion) 락입니다.
     sync::{Arc, Mutex},
     // OS 스레드를 생성하고 관리하기 위한 스레드 모듈을 가져옵니다.
     thread,
 };
 
 fn main() {
-    // 0으로 초기화된 Mutex를 생성하고, 이를 Arc로 감싸서 여러 스레드가 공동으로 소유할 수 있는 counter 변수를 만듭니다.
+    // 0으로 초기화된 Mutex를 생성하고 이를 Arc로 감싸서 여러 스레드가 공동으로 소유할 수 있는 counter 변수를 만듭니다.
     let counter = Arc::new(Mutex::new(0));
 
     // 생성할 스레드들의 핸들(Handle)을 보관하여 나중에 모든 스레드가 종료될 때까지 기다릴 수 있도록 벡터를 선언합니다.
@@ -3179,7 +3179,7 @@ fn main() {
     // 각 스레드로 작업(이미지 경로)을 보낼 송신단(Sender)들을 담을 벡터입니다.
     let mut channels = vec![];
     // 처리된 이미지 개수를 누적해서 메인 스레드에 전달할 채널을 생성합니다.
-    // counter_tx는 각 스레드가 작업을 끝낼 때마다 1을 송신하고, counter_rx는 이를 수신합니다.
+    // counter_tx는 각 스레드가 작업을 끝낼 때마다 1을 송신하고 counter_rx는 이를 수신합니다.
     let (counter_tx, counter_rx) = channel::<usize>();
 
     // 4개의 워커 스레드를 생성하여 병렬로 이미지를 처리하도록 세팅합니다.
@@ -3232,7 +3232,7 @@ fn main() {
     }
 
     // 메인 스레드가 모든 파일 전송을 마쳤으므로, 작업 채널들의 송신기를 명시적으로 소멸(drop)시킵니다.
-    // 송신기가 다 닫히면 워커 스레드들의 rx.recv()가 에러를 반환하며 while 루프가 끝나고, 각 스레드는 종료됩니다.
+    // 송신기가 다 닫히면 워커 스레드들의 rx.recv()가 에러를 반환하며 while 루프가 끝나고 각 스레드는 종료됩니다.
     for channel in channels {
         drop(channel);
     }
@@ -3335,7 +3335,7 @@ fn main() {
         // 이미지 파일을 엽니다. (디코딩 및 읽기 작업)
         let img = image::open(&path);
 
-        // 이미지 오픈에 성공하면 썸네일을 만들어 저장하고, 성공의 의미로 1을 반환합니다.
+        // 이미지 오픈에 성공하면 썸네일을 만들어 저장하고 성공의 의미로 1을 반환합니다.
         if let Ok(img) = img {
             // 이미지 비율을 유지하면서 64x64 크기로 축소합니다.
             let thumbnail = img.thumbnail(64, 64);
@@ -3417,7 +3417,7 @@ fn main() {
     // 처리된 이미지 개수를 세기 위한 카운터 변수를 초기화합니다.
     let mut processed_count = 0;
 
-    // 입력 디렉터리 내부를 읽고, 각 항목(파일 또는 폴더)을 하나씩 순회합니다.
+    // 입력 디렉터리 내부를 읽고 각 항목(파일 또는 폴더)을 하나씩 순회합니다.
     // read_dir은 Result를 반환하므로 unwrap()으로 성공 시의 ReadDir 반복자를 가져옵니다.
     for item in read_dir(&args.input).unwrap() {
         // 반복자가 반환하는 각 항목도 Result 타입이므로 unwrap()을 통해 DirEntry를 가져옵니다.
