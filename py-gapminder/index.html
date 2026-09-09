@@ -412,11 +412,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1211,8 +1206,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>여러분의 기기에서 JupyterLab 서버를 시작합니다.</li>
 <li>웹 브라우저를 사용하여 JupyterLab 서버에 연결되는 특수한 localhost URL을 엽니다.</li>
-<li>JupyterLab 서버가 작업을 수행하고, 웹 브라우저가 결과를 렌더링(화면에 표시)합니다.</li>
-<li>브라우저에 코드를 입력하고, JupyterLab 서버가 코드 실행을 마치면 그 결과를 확인합니다.</li>
+<li>JupyterLab 서버가 작업을 수행하고 웹 브라우저가 결과를 렌더링(화면에 표시)합니다.</li>
+<li>브라우저에 코드를 입력하고 JupyterLab 서버가 코드 실행을 마치면 그 결과를 확인합니다.</li>
 </ul>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1314,7 +1309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p align="center">
 <img alt="JupyterLab Main Work Area" src="images/0_jupyterlab_main_work_area.jpg" width="750">
 </p>
-<p>탭을 끌어다 패널 가운데로 놓으면 그 패널 안으로 옮겨지고, 패널의 왼쪽·오른쪽·위·아래 가장자리로 드래그하면 탭 패널이 여러 화면으로 나뉩니다. 메인 작업 영역에는 지금 활성화된 단일 활동(Current activity)이 있으며 이 탭의 위쪽 테두리에는 색이 표시되어(기본값은 파란색) 찾기 쉽습니다.</p>
+<p>탭을 끌어다 패널 가운데로 놓으면 그 패널 안으로 옮겨지고 패널의 왼쪽·오른쪽·위·아래 가장자리로 드래그하면 탭 패널이 여러 화면으로 나뉩니다. 메인 작업 영역에는 지금 활성화된 단일 활동(Current activity)이 있으며 이 탭의 위쪽 테두리에는 색이 표시되어(기본값은 파란색) 찾기 쉽습니다.</p>
 </section>
 </section>
 <section id="파이썬-스크립트-만들기" class="level2">
@@ -1324,7 +1319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>메뉴 바의 <em>File</em> 메뉴에서 <em>New -&gt; Text File</em>을 선택해서 평범한 기존 포맷 없는 텍스트 파일(Plain text file)을 만들 수도 있습니다.</li>
 </ul></li>
-<li>이렇게 만든 텍스트 파일을 파이썬 프로그램용으로 바꾸려면 메뉴 바의 <em>File</em> 메뉴에서 <em>Save File As…</em>를 선택하고, 파일명 끝의 확장자가 <code>.py</code>로 끝나도록 새 이름을 짓습니다.
+<li>이렇게 만든 텍스트 파일을 파이썬 프로그램용으로 바꾸려면 메뉴 바의 <em>File</em> 메뉴에서 <em>Save File As…</em>를 선택하고 파일명 끝의 확장자가 <code>.py</code>로 끝나도록 새 이름을 짓습니다.
 <ul>
 <li><code>.py</code> 확장자는 이 파일이 파이썬 스크립트임을 운영체제를 포함한 모두에게 명확히 알려줍니다.</li>
 <li>이것만으로 엄격한 제한 규약이 생긴다기보다 단순한 관습적 역할입니다.</li>
@@ -1653,7 +1648,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>파이썬 코드 셀에 코드를 입력하다가 중간에 셀 유형을 마크다운 형식으로 변경하면 과연 무슨 일이 일어날까요? 먼저 새 코드 셀에 아래 파이썬 코드를 직접 입력해 보세요:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">7</span> <span class="op">+</span> <span class="dv">12</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>입력 후 <kbd>Shift</kbd> + <kbd>Return(엔터)</kbd>를 사용하여 그 구간이 코드로 올바르게 작동하는지 결과를 확인합니다. 그다음 셀 바깥 테두리를 선택하고 <kbd>Esc</kbd>로 명령 모드에 들어간 뒤 <kbd>m</kbd> 키를 눌러 셀 유형을 ’마크다운 텍스트 영역’으로 바꾸고, 다시 <kbd>Shift</kbd> + <kbd>Return(엔터)</kbd> 키로 렌더링해 보세요. 무슨 일이 일어났나요? 또한 셀 유형을 이렇게 바꾸는 기능이 실제로는 왜 유용할까요?</p>
+<p>입력 후 <kbd>Shift</kbd> + <kbd>Return(엔터)</kbd>를 사용하여 그 구간이 코드로 올바르게 작동하는지 결과를 확인합니다. 그다음 셀 바깥 테두리를 선택하고 <kbd>Esc</kbd>로 명령 모드에 들어간 뒤 <kbd>m</kbd> 키를 눌러 셀 유형을 ’마크다운 텍스트 영역’으로 바꾸고 다시 <kbd>Shift</kbd> + <kbd>Return(엔터)</kbd> 키로 렌더링해 보세요. 무슨 일이 일어났나요? 또한 셀 유형을 이렇게 바꾸는 기능이 실제로는 왜 유용할까요?</p>
 <div class="callout callout-style-default callout-caution callout-titled" title="해답">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1701,7 +1696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <section id="해답-5" class="level2 callout-body-container callout-body">
 <h2 class="anchored" data-anchor-id="해답-5">해답</h2>
-<p>이 노트북은 입력된 공식을 LaTeX(라텍스) 수식 규칙에 맞춰 렌더링합니다. 앞뒤에 붙은 달러(<code>$</code>) 기호는 이 구역의 기호들이 일반 텍스트가 아니라 LaTeX 형식의 특수 수식임을 시스템 엔진에 알려줍니다. LaTeX 기호 문법에 낯선 분들은 참고하세요: 밑줄(<code>_</code>) 기호는 아래 첨자(subscripts)로 기능하고, 해시 기호(<code>^</code>)는 위로 솟은 제곱수나 윗 첨자 형태(superscripts)를 표기합니다. 중괄호 <code>{</code> 와 <code>}</code>는 묶음 용도로 쓰여, 안쪽의 <code>i=1</code>을 통째로 하나로 묶습니다. 덕분에 밑부분 전체가 아래 첨자로 들어가고 오른쪽 문자 <code>N</code>과 분리되어 보입니다. 오른쪽의 <code>{-i}</code> 부분도 중괄호로 분리되어 숫자 <code>2</code> 위에 놓이는 윗 첨자로 기능합니다. 마지막으로 <code>\sum</code>이나 <code>\approx</code> 같은 문구는 라텍스 언어 안에서 약속된 특수 명령어입니다. 합을 뜻하는 큰 수학 기호 “시그마(sum over)”, “대략 근사하는(approximate)” 의미의 특수 기호로 화면에 예쁘게 인쇄해 줍니다!</p>
+<p>이 노트북은 입력된 공식을 LaTeX(라텍스) 수식 규칙에 맞춰 렌더링합니다. 앞뒤에 붙은 달러(<code>$</code>) 기호는 이 구역의 기호들이 일반 텍스트가 아니라 LaTeX 형식의 특수 수식임을 시스템 엔진에 알려줍니다. LaTeX 기호 문법에 낯선 분들은 참고하세요: 밑줄(<code>_</code>) 기호는 아래 첨자(subscripts)로 기능하고 해시 기호(<code>^</code>)는 위로 솟은 제곱수나 윗 첨자 형태(superscripts)를 표기합니다. 중괄호 <code>{</code> 와 <code>}</code>는 묶음 용도로 쓰여, 안쪽의 <code>i=1</code>을 통째로 하나로 묶습니다. 덕분에 밑부분 전체가 아래 첨자로 들어가고 오른쪽 문자 <code>N</code>과 분리되어 보입니다. 오른쪽의 <code>{-i}</code> 부분도 중괄호로 분리되어 숫자 <code>2</code> 위에 놓이는 윗 첨자로 기능합니다. 마지막으로 <code>\sum</code>이나 <code>\approx</code> 같은 문구는 라텍스 언어 안에서 약속된 특수 명령어입니다. 합을 뜻하는 큰 수학 기호 “시그마(sum over)”, “대략 근사하는(approximate)” 의미의 특수 기호로 화면에 예쁘게 인쇄해 줍니다!</p>
 </section>
 </div>
 </div>
@@ -2164,7 +2159,7 @@ print('three squared is', 3.0 ** 2)</code></pre>
 <li><code>//</code>: 정수 나눗셈 (몫만 반환)</li>
 <li><code>%</code>: 나머지 연산 (나머지만 반환)</li>
 </ul>
-<p>참가자 수(<code>num_subjects</code>)가 600명이고, 설문지 한 장당 최대 인원(<code>num_per_survey</code>)이 42명일 때, 모든 인원을 조사하기 위해 필요한 최소 설문지 수를 구하는 식을 작성해 보세요.</p>
+<p>참가자 수(<code>num_subjects</code>)가 600명이고 설문지 한 장당 최대 인원(<code>num_per_survey</code>)이 42명일 때, 모든 인원을 조사하기 위해 필요한 최소 설문지 수를 구하는 식을 작성해 보세요.</p>
 <div class="callout callout-style-default callout-caution callout-titled" title="해답">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2434,7 +2429,7 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))</code></pre>
 </div>
 <section id="데이터-타입과-함수" class="level2 callout-body-container callout-body">
 <h2 class="anchored" data-anchor-id="데이터-타입과-함수">데이터 타입과 함수</h2>
-<p>다음 코드의 결과를 예측해 보고, <code>max(len(rich), poor)</code>와 같이 실행했을 때 어떤 일이 벌어질지 생각해 보세요.</p>
+<p>다음 코드의 결과를 예측해 보고 <code>max(len(rich), poor)</code>와 같이 실행했을 때 어떤 일이 벌어질지 생각해 보세요.</p>
 <pre class="{python}"><code>#| eval: false
 easy_string = "abc"
 print(max(easy_string))
@@ -2839,7 +2834,7 @@ print(data_oceania_country)</code></pre>
 </div>
 <section id="데이터-읽기-및-확인" class="level2 callout-body-container callout-body">
 <h2 class="anchored" data-anchor-id="데이터-읽기-및-확인">데이터 읽기 및 확인</h2>
-<p><code>data/gapminder_gdp_americas.csv</code> 파일을 읽어 <code>data_americas</code> 변수에 저장하고, 국가명을 인덱스로 지정한 뒤 요약 통계를 확인해 보세요.</p>
+<p><code>data/gapminder_gdp_americas.csv</code> 파일을 읽어 <code>data_americas</code> 변수에 저장하고 국가명을 인덱스로 지정한 뒤 요약 통계를 확인해 보세요.</p>
 <div class="callout callout-style-default callout-caution callout-titled" title="해답">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2956,7 +2951,7 @@ print(data_americas.describe())</code></pre>
 <ul>
 <li><strong>데이터프레임(DataFrame)</strong>은 Pandas에서 표(table) 형태의 데이터를 다루는 기본 구조입니다.</li>
 <li><strong>시리즈(Series)</strong>는 데이터프레임의 각 열(column)을 나타내는 1차원 데이터 구조입니다.</li>
-<li>Pandas는 Numpy 라이브러리를 기반으로 하여 강력한 수치 계산 능력을 갖추었고, 인덱싱, 누락된 데이터 처리, 데이터 병합 등 데이터 분석에 최적화된 기능을 제공합니다.</li>
+<li>Pandas는 Numpy 라이브러리를 기반으로 하여 강력한 수치 계산 능력을 갖추었고 인덱싱, 누락된 데이터 처리, 데이터 병합 등 데이터 분석에 최적화된 기능을 제공합니다.</li>
 </ul>
 </section>
 <section id="데이터-선택하기" class="level2">
@@ -4387,7 +4382,7 @@ print('data 디렉터리 안의 모든 csv 파일:', glob.glob('data/*.csv'))</c
 </div>
 <section id="최소-레코드-수-찾기" class="level2 callout-body-container callout-body">
 <h2 class="anchored" data-anchor-id="최소-레코드-수-찾기">최소 레코드 수 찾기</h2>
-<p>아래 프로그램을 수정하여, 데이터의 행(레코드) 수가 가장 적은 파일의 행 수를 출력하도록 만드세요.</p>
+<p>아래 프로그램을 수정하여 데이터의 행(레코드) 수가 가장 적은 파일의 행 수를 출력하도록 만드세요.</p>
 <pre class="{python}"><code>#| eval: false
 import glob
 import pandas as pd
@@ -4577,7 +4572,7 @@ print(p.suffix)  # 확장자</code></pre>
 <li>파이썬에서 함수를 정의할 때는 <code>def</code> 키워드를 사용합니다.</li>
 <li><code>def</code> 뒤에 함수의 이름을 적습니다. 이름은 변수 명명 규칙과 동일하게 작성합니다.</li>
 <li>이름 뒤의 괄호 안에 <strong>매개변수(parameters)</strong>라고 불리는 입력값 변수들을 나열합니다. 입력값이 없다면 빈 괄호 <code>()</code>를 사용합니다.</li>
-<li>줄 끝에 콜론 <code>:</code>을 붙이고, 다음 줄부터 들여쓰기를 하여 함수의 본문을 작성합니다.</li>
+<li>줄 끝에 콜론 <code>:</code>을 붙이고 다음 줄부터 들여쓰기를 하여 함수의 본문을 작성합니다.</li>
 </ul>
 <pre class="{python}"><code>def print_greeting():
     print('Hello!')
@@ -4759,7 +4754,7 @@ print('calling', report, 22.5)</code></pre>
 </div>
 <section id="데이터-분석-함수-작성하기" class="level2 callout-body-container callout-body">
 <h2 class="anchored" data-anchor-id="데이터-분석-함수-작성하기">데이터 분석 함수 작성하기</h2>
-<p>파일 이름을 인수로 받아 해당 파일을 읽고, 데이터의 최솟값을 반환하는 함수를 작성하세요.</p>
+<p>파일 이름을 인수로 받아 해당 파일을 읽고 데이터의 최솟값을 반환하는 함수를 작성하세요.</p>
 <pre class="{python}"><code>#| eval: false
 import pandas as pd
 
@@ -4852,8 +4847,8 @@ print(iterate(0.5, 10, 1.0))</code></pre>
 <div class="callout-body-container callout-body">
 <ul>
 <li>복잡한 코드는 함수를 사용하여 작고 관리하기 쉬운 단위로 쪼개는 것이 좋습니다.</li>
-<li><code>def</code> 키워드를 사용하여 함수를 정의하고, 이름으로 호출합니다.</li>
-<li>함수 정의 시 매개변수를 지정하고, 호출 시 인수를 전달합니다.</li>
+<li><code>def</code> 키워드를 사용하여 함수를 정의하고 이름으로 호출합니다.</li>
+<li>함수 정의 시 매개변수를 지정하고 호출 시 인수를 전달합니다.</li>
 <li><code>return</code> 문을 사용하여 함수의 실행 결과를 반환할 수 있습니다. 반환값이 없으면 <code>None</code>이 반환됩니다.</li>
 </ul>
 </div>

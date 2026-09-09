@@ -412,11 +412,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1197,7 +1192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="코드-분석-및-주요-포인트">코드 분석 및 주요 포인트</h3>
 <ol type="1">
 <li><strong><code>#[pyfunction]</code></strong>: Rust 함수를 Python에서 호출 가능한 함수로 노출합니다. 반환값으로 <code>PyResult&lt;T&gt;</code>를 사용하여 에러 발생 시 Python 예외를 발생시킬 수 있습니다.</li>
-<li><strong><code>Bound&lt;'_, PyModule&gt;</code> (PyO3 v0.21+ / v0.24)</strong>: PyO3의 신규 메모리 관리 API로, GIL 수명주기와 안전하게 바인딩된 스마트 포인터입니다.</li>
+<li><strong><code>Bound&lt;'_, PyModule&gt;</code> (PyO3 v0.21+ / v0.24)</strong>: PyO3의 신규 메모리 관리 API로 GIL 수명주기와 안전하게 바인딩된 스마트 포인터입니다.</li>
 <li><strong><code>wrap_pyfunction!</code></strong>: <code>#[pyfunction]</code>으로 정의된 Rust 함수를 Python 모듈 객체에 등록하기 위한 래퍼 매크로입니다.</li>
 <li><strong>서브모듈 등록 (<code>PyModule::new</code> &amp; <code>add_submodule</code>)</strong>: <code>parent_module.child_module.func()</code> 형태로 Python 계층형 네임스페이스를 Rust 단에서 구성할 수 있습니다.</li>
 </ol>
@@ -1206,7 +1201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="fibonacci---연산-성능-가속-비교" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="fibonacci---연산-성능-가속-비교">2. <code>fibonacci</code> - 연산 성능 가속 비교</h2>
-<p><code>fibonacci</code> 프로젝트는 반복문 기반 피보나치 계산을 Rust로 작성하고, Python 순수 구현과의 실행 속도를 비교 측정합니다.</p>
+<p><code>fibonacci</code> 프로젝트는 반복문 기반 피보나치 계산을 Rust로 작성하고 Python 순수 구현과의 실행 속도를 비교 측정합니다.</p>
 <section id="rust-소스-코드-fibonaccisrclib.rs" class="level3">
 <h3 class="anchored" data-anchor-id="rust-소스-코드-fibonaccisrclib.rs">Rust 소스 코드 (<code>fibonacci/src/lib.rs</code>)</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">pyo3::prelude::</span><span class="op">*;</span></span>
@@ -1267,7 +1262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="코드-분석-및-주요-포인트-1">코드 분석 및 주요 포인트</h3>
 <ul>
 <li><strong>컴파일 최적화 효과</strong>: Rust의 <code>u64</code> 레지스터 직접 연산 및 루프 언롤링 최적화 덕분에 반복 연산에서 Python 대비 수십~수백 배 빠른 성능을 발휘합니다.</li>
-<li><strong>타입 자동 변환</strong>: Python의 정수형(<code>int</code>)은 Rust의 <code>u64</code>로 자동 역직렬화(Unmarshaling)되고, 반환 시 다시 Python 객체로 래핑됩니다.</li>
+<li><strong>타입 자동 변환</strong>: Python의 정수형(<code>int</code>)은 Rust의 <code>u64</code>로 자동 역직렬화(Unmarshaling)되고 반환 시 다시 Python 객체로 래핑됩니다.</li>
 </ul>
 <hr>
 </section>
@@ -1564,7 +1559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong><code>#[pyclass]</code> 및 <code>#[pymethods]</code></strong>: Rust 구조체를 Python 인스턴스화 가능한 클래스로 노출 (<code>Quiver(filename, mode)</code>).</li>
 <li><strong>스트리밍 I/O 성능</strong>: 수 GB 크기의 바이오 데이터셋을 처리할 때 Python 반복문 대신 Rust의 <code>BufReader</code>와 바이트 단위 쓰기를 사용하여 메모리 점유율을 낮추고 I/O 처리량을 극대화합니다.</li>
-<li><strong>Python CLI 생태계 활용</strong>: Rust의 성능으로 파싱하고, Python의 <code>click</code> 라이브러리로 사용자 친화적 터미널 UI를 구축합니다.</li>
+<li><strong>Python CLI 생태계 활용</strong>: Rust의 성능으로 파싱하고 Python의 <code>click</code> 라이브러리로 사용자 친화적 터미널 UI를 구축합니다.</li>
 </ul>
 <hr>
 </section>
@@ -1791,7 +1786,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="명확한-예외-매핑" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="명확한-예외-매핑">3. 명확한 예외 매핑</h2>
 <ul>
-<li>Rust의 <code>Result&lt;T, E&gt;</code>는 PyO3의 <code>PyResult&lt;T&gt;</code>로 변환하고, 상황에 맞는 표준 Python 예외(<code>PyValueError</code>, <code>PyTypeError</code>, <code>PyIOError</code>, <code>PyRuntimeError</code>)를 적절히 매핑해야 Python 사용자가 직관적인 에러 핸들링(<code>try-except</code>)을 구현할 수 있습니다.</li>
+<li>Rust의 <code>Result&lt;T, E&gt;</code>는 PyO3의 <code>PyResult&lt;T&gt;</code>로 변환하고 상황에 맞는 표준 Python 예외(<code>PyValueError</code>, <code>PyTypeError</code>, <code>PyIOError</code>, <code>PyRuntimeError</code>)를 적절히 매핑해야 Python 사용자가 직관적인 에러 핸들링(<code>try-except</code>)을 구현할 수 있습니다.</li>
 </ul>
 <hr>
 </section>

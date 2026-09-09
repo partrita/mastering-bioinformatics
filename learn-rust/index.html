@@ -410,11 +410,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1552,7 +1547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> <span class="kw">mut</span> ans_input <span class="op">=</span> <span class="dt">String</span><span class="pp">::</span>new()<span class="op">;</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>                <span class="co">// 표준 입력(stdin)으로부터 한 줄을 읽어 ans_input 변수에 저장합니다. unwrap()은 에러 시 패닉을 발생시킵니다.</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>                <span class="pp">std::io::</span>stdin()<span class="op">.</span>read_line(<span class="op">&amp;</span><span class="kw">mut</span> ans_input)<span class="op">.</span>unwrap()<span class="op">;</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>                <span class="co">// 입력값 앞뒤의 공백/줄바꿈 문자를 제거(.trim())하고, 32비트 정수형(i32)으로 변환(.parse::&lt;i32&gt;())합니다.</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>                <span class="co">// 입력값 앞뒤의 공백/줄바꿈 문자를 제거(.trim())하고 32비트 정수형(i32)으로 변환(.parse::&lt;i32&gt;())합니다.</span></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>                <span class="kw">let</span> ans_input <span class="op">=</span> ans_input<span class="op">.</span>trim()<span class="op">.</span><span class="pp">parse::</span><span class="op">&lt;</span><span class="dt">i32</span><span class="op">&gt;</span>()<span class="op">.</span>unwrap()<span class="op">;</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>                <span class="co">// 입력한 값이 두 피연산자의 합과 같다면 정답 처리합니다.</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> ans_input <span class="op">==</span> op1 <span class="op">+</span> op2 <span class="op">{</span></span>
@@ -1562,7 +1557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 현재 루프(loop)를 탈출하여 다음 문제로 넘어갑니다.</span></span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span><span class="op">;</span></span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 입력값이 틀린 경우 오답 메시지를 출력하고, 이 문제(loop)를 다시 풉니다.</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 입력값이 틀린 경우 오답 메시지를 출력하고 이 문제(loop)를 다시 풉니다.</span></span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>                    <span class="pp">println!</span>(<span class="st">"오답!"</span>)<span class="op">;</span></span>
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>            <span class="op">},</span></span>
@@ -1590,7 +1585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 현재 루프를 탈출하여 다음 문제로 넘어갑니다.</span></span>
 <span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span><span class="op">;</span></span>
 <span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 틀린 경우 오답 메시지를 출력하고, 이 문제(loop)를 다시 풉니다.</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>                    <span class="co">// 틀린 경우 오답 메시지를 출력하고 이 문제(loop)를 다시 풉니다.</span></span>
 <span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>                    <span class="pp">println!</span>(<span class="st">"오답!"</span>)<span class="op">;</span></span>
 <span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
 <span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>            <span class="op">},</span></span>
@@ -1943,7 +1938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">"  =&gt; {}"</span><span class="op">,</span> value)<span class="op">;</span></span>
 <span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co">// 메모리에 특정 값을 누적(가산/감산)하고, 누적된 결과를 출력하는 헬퍼 함수입니다.</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co">// 메모리에 특정 값을 누적(가산/감산)하고 누적된 결과를 출력하는 헬퍼 함수입니다.</span></span>
 <span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="co">// memory는 수정이 필요하므로 가변 참조(&amp;mut f64)로 전달받습니다.</span></span>
 <span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> add_and_print_memory(memory<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> <span class="dt">f64</span><span class="op">,</span> prev_result<span class="op">:</span> <span class="dt">f64</span>) <span class="op">{</span></span>
 <span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 참조 역참조 연산자(*)를 사용하여 실제 메모리 값을 업데이트합니다.</span></span>
@@ -2035,12 +2030,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 메모리 관련 명령인지 확인 (예: "memA+", "memB-" 등)</span></span>
 <span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> is_memory <span class="op">=</span> tokens[<span class="dv">0</span>]<span class="op">.</span>starts_with(<span class="st">"mem"</span>)<span class="op">;</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 메모리 연산이고, 맨 끝 문자가 '+'인 경우 (예: memA+는 이전 결과를 memA 메모리에 더함)</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 메모리 연산이고 맨 끝 문자가 '+'인 경우 (예: memA+는 이전 결과를 memA 메모리에 더함)</span></span>
 <span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_memory <span class="op">&amp;&amp;</span> tokens[<span class="dv">0</span>]<span class="op">.</span>ends_with(<span class="ch">'+'</span>) <span class="op">{</span></span>
 <span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> result <span class="op">=</span> memory<span class="op">.</span>add(tokens[<span class="dv">0</span>]<span class="op">,</span> prev_result)<span class="op">;</span></span>
 <span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>            print_output(result)<span class="op">;</span></span>
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span><span class="op">;</span> <span class="co">// 아래 일반 수식 계산을 건너뛰고 다음 입력으로 넘어갑니다.</span></span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 메모리 연산이고, 맨 끝 문자가 '-'인 경우 (예: memA-는 이전 결과를 memA 메모리에서 뺌)</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 메모리 연산이고 맨 끝 문자가 '-'인 경우 (예: memA-는 이전 결과를 memA 메모리에서 뺌)</span></span>
 <span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> is_memory <span class="op">&amp;&amp;</span> tokens[<span class="dv">0</span>]<span class="op">.</span>ends_with(<span class="ch">'-'</span>) <span class="op">{</span></span>
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 빼야 하므로 음수값(-prev_result)을 넘겨서 더해줍니다.</span></span>
 <span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> result <span class="op">=</span> memory<span class="op">.</span>add(tokens[<span class="dv">0</span>]<span class="op">,</span> <span class="op">-</span>prev_result)<span class="op">;</span></span>
@@ -2049,7 +2044,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 수식 계산</span></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 왼쪽 토큰을 평가합니다. "memA"와 같이 mem으로 시작하면 메모리에서 불러오고, 아니면 숫자로 변환합니다.</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 왼쪽 토큰을 평가합니다. "memA"와 같이 mem으로 시작하면 메모리에서 불러오고 아니면 숫자로 변환합니다.</span></span>
 <span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> left<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> eval_token(tokens[<span class="dv">0</span>]<span class="op">,</span> <span class="op">&amp;</span>memory)<span class="op">;</span></span>
 <span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 오른쪽 토큰을 평가합니다.</span></span>
 <span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> right<span class="op">:</span> <span class="dt">f64</span> <span class="op">=</span> eval_token(tokens[<span class="dv">2</span>]<span class="op">,</span> <span class="op">&amp;</span>memory)<span class="op">;</span></span>
@@ -2287,7 +2282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 특정 메모리 슬롯의 값을 가져오는 메서드</span></span>
 <span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> get(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> slot_name<span class="op">:</span> <span class="op">&amp;</span><span class="dt">str</span>) <span class="op">-&gt;</span> <span class="dt">f64</span> <span class="op">{</span></span>
-<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 값을 복사해서 가져오고, 없으면 0.0을 반환합니다.</span></span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 값을 복사해서 가져오고 없으면 0.0을 반환합니다.</span></span>
 <span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>        <span class="kw">self</span><span class="op">.</span>slots<span class="op">.</span>get(slot_name)<span class="op">.</span>copied()<span class="op">.</span>unwrap_or(<span class="dv">0.0</span>)</span>
 <span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
@@ -2774,9 +2769,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="chapter7my_librarysrclib.rs"><code>chapter7/my_library/src/lib.rs</code></h3>
 <ul>
 <li><strong>파일 위치</strong>: <code>rust-insighbook/chapter7/my_library/src/lib.rs</code></li>
-<li><strong>주요 주석 및 개요</strong>: ‘library’ 모듈을 정의하고, 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 ‘pub’ 키워드로 공개합니다. 이 선언은 같은 디렉터리에 있는 ‘library.rs’ 파일이나 ‘library/mod.rs’ 파일을 모듈로 가져옵니다.</li>
+<li><strong>주요 주석 및 개요</strong>: ‘library’ 모듈을 정의하고 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 ‘pub’ 키워드로 공개합니다. 이 선언은 같은 디렉터리에 있는 ‘library.rs’ 파일이나 ‘library/mod.rs’ 파일을 모듈로 가져옵니다.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 'library' 모듈을 정의하고, 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 'library' 모듈을 정의하고 이를 외부(다른 크레이트)에서도 접근하여 사용할 수 있도록 'pub' 키워드로 공개합니다.</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">// 이 선언은 같은 디렉터리에 있는 'library.rs' 파일이나 'library/mod.rs' 파일을 모듈로 가져옵니다.</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">mod</span> library<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
@@ -2879,7 +2874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="kw">mut</span> found_books <span class="op">=</span> <span class="pp">vec!</span>[]<span class="op">;</span></span>
 <span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a>        <span class="co">// books 벡터의 각 요소에 대해 반복문(for)을 돕니다. 불변 참조(&amp;self.books)이므로 요소도 참조(&amp;book)가 됩니다.</span></span>
 <span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> book <span class="kw">in</span> <span class="op">&amp;</span><span class="kw">self</span><span class="op">.</span>books <span class="op">{</span></span>
-<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 퍼지 매칭 점수를 계산합니다. 일치하는 경우 Some(score)를 반환하고, 일치하지 않으면 None을 반환합니다.</span></span>
+<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 퍼지 매칭 점수를 계산합니다. 일치하는 경우 Some(score)를 반환하고 일치하지 않으면 None을 반환합니다.</span></span>
 <span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> match_result <span class="op">=</span> <span class="kw">self</span><span class="op">.</span>matcher<span class="op">.</span>fuzzy_match(<span class="op">&amp;</span>book<span class="op">.</span>title<span class="op">,</span> title_query)<span class="op">;</span></span>
 <span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a>            <span class="co">// match_result가 Some인 경우 score 값을 바인딩하여 조건문을 실행합니다(if let 패턴 매칭).</span></span>
 <span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">let</span> <span class="cn">Some</span>(score) <span class="op">=</span> match_result <span class="op">{</span></span>
@@ -3155,7 +3150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 겹치면 true, 겹치지 않으면 false를 반환합니다.</span></span>
 <span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> intersects(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> other<span class="op">:</span> <span class="op">&amp;</span>Schedule) <span class="op">-&gt;</span> <span class="dt">bool</span> <span class="op">{</span></span>
 <span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">// [self.start, self.end]와 [other.start, other.end]가 겹치기 위한 조건:</span></span>
-<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 내 시작 시간이 상대방 종료 시간보다 이전이고, 상대방 시작 시간이 내 종료 시간보다 이전이어야 함</span></span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 내 시작 시간이 상대방 종료 시간보다 이전이고 상대방 시작 시간이 내 종료 시간보다 이전이어야 함</span></span>
 <span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">self</span><span class="op">.</span>start <span class="op">&lt;</span> other<span class="op">.</span>end <span class="op">&amp;&amp;</span> other<span class="op">.</span>start <span class="op">&lt;</span> <span class="kw">self</span><span class="op">.</span>end</span>
 <span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
@@ -3501,7 +3496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb33-379"><a href="#cb33-379" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span>]<span class="op">,</span></span>
 <span id="cb33-380"><a href="#cb33-380" aria-hidden="true" tabindex="-1"></a>        <span class="op">};</span></span>
 <span id="cb33-381"><a href="#cb33-381" aria-hidden="true" tabindex="-1"></a>        <span class="pp">assert_eq!</span>(expected<span class="op">,</span> calendar)<span class="op">;</span></span>
-<span id="cb33-382"><a href="#cb33-382" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 마지막으로 ID = 2번 일정을 삭제하고, 삭제 성공(true)이 잘 리턴되는지 확인합니다.</span></span>
+<span id="cb33-382"><a href="#cb33-382" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 마지막으로 ID = 2번 일정을 삭제하고 삭제 성공(true)이 잘 리턴되는지 확인합니다.</span></span>
 <span id="cb33-383"><a href="#cb33-383" aria-hidden="true" tabindex="-1"></a>        <span class="pp">assert!</span>(delete_schedule(<span class="op">&amp;</span><span class="kw">mut</span> calendar<span class="op">,</span> <span class="dv">2</span>))<span class="op">;</span></span>
 <span id="cb33-384"><a href="#cb33-384" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 삭제하면 캘린더가 텅 비어야 합니다.</span></span>
 <span id="cb33-385"><a href="#cb33-385" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> expected <span class="op">=</span> Calendar <span class="op">{</span> schedules<span class="op">:</span> <span class="pp">vec!</span>[] <span class="op">};</span></span>
@@ -3589,7 +3584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 겹치면 true, 겹치지 않으면 false를 반환합니다.</span></span>
 <span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> intersects(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> other<span class="op">:</span> <span class="op">&amp;</span>Schedule) <span class="op">-&gt;</span> <span class="dt">bool</span> <span class="op">{</span></span>
 <span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">// [self.start, self.end]와 [other.start, other.end]가 겹치기 위한 조건:</span></span>
-<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 내 시작 시간이 상대방 종료 시간보다 이전이고, 상대방 시작 시간이 내 종료 시간보다 이전이어야 함</span></span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 내 시작 시간이 상대방 종료 시간보다 이전이고 상대방 시작 시간이 내 종료 시간보다 이전이어야 함</span></span>
 <span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>        <span class="kw">self</span><span class="op">.</span>start <span class="op">&lt;</span> other<span class="op">.</span>end <span class="op">&amp;&amp;</span> other<span class="op">.</span>start <span class="op">&lt;</span> <span class="kw">self</span><span class="op">.</span>end</span>
 <span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
@@ -3966,7 +3961,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb35-407"><a href="#cb35-407" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span>]<span class="op">,</span></span>
 <span id="cb35-408"><a href="#cb35-408" aria-hidden="true" tabindex="-1"></a>        <span class="op">};</span></span>
 <span id="cb35-409"><a href="#cb35-409" aria-hidden="true" tabindex="-1"></a>        <span class="pp">assert_eq!</span>(expected<span class="op">,</span> calendar)<span class="op">;</span></span>
-<span id="cb35-410"><a href="#cb35-410" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 마지막으로 ID = 2번 일정을 삭제하고, 삭제 성공(true)이 잘 리턴되는지 확인합니다.</span></span>
+<span id="cb35-410"><a href="#cb35-410" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 마지막으로 ID = 2번 일정을 삭제하고 삭제 성공(true)이 잘 리턴되는지 확인합니다.</span></span>
 <span id="cb35-411"><a href="#cb35-411" aria-hidden="true" tabindex="-1"></a>        <span class="pp">assert!</span>(delete_schedule(<span class="op">&amp;</span><span class="kw">mut</span> calendar<span class="op">,</span> <span class="dv">2</span>))<span class="op">;</span></span>
 <span id="cb35-412"><a href="#cb35-412" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 삭제하면 캘린더가 텅 비어야 합니다.</span></span>
 <span id="cb35-413"><a href="#cb35-413" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> expected <span class="op">=</span> Calendar <span class="op">{</span> schedules<span class="op">:</span> <span class="pp">vec!</span>[] <span class="op">};</span></span>
@@ -4483,14 +4478,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 표준 라이브러리의 동기화(sync) 및 스레드(thread) 관련 도구를 가져옵니다.</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span><span class="op">{</span></span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Arc: 여러 스레드 간에 데이터의 소유권을 안전하게 공유할 수 있는 원자적 참조 카운팅(Atomic Reference Counting) 포인터입니다.</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Mutex: 여러 스레드가 동시에 데이터에 접근하는 것을 막고, 한 번에 하나의 스레드만 데이터를 수정할 수 있도록 보장하는 상호 배제(Mutual Exclusion) 락입니다.</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Mutex: 여러 스레드가 동시에 데이터에 접근하는 것을 막고 한 번에 하나의 스레드만 데이터를 수정할 수 있도록 보장하는 상호 배제(Mutual Exclusion) 락입니다.</span></span>
 <span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="pp">sync::</span><span class="op">{</span>Arc<span class="op">,</span> Mutex<span class="op">},</span></span>
 <span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// OS 스레드를 생성하고 관리하기 위한 스레드 모듈을 가져옵니다.</span></span>
 <span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    thread<span class="op">,</span></span>
 <span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span>
 <span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 0으로 초기화된 Mutex를 생성하고, 이를 Arc로 감싸서 여러 스레드가 공동으로 소유할 수 있는 counter 변수를 만듭니다.</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 0으로 초기화된 Mutex를 생성하고 이를 Arc로 감싸서 여러 스레드가 공동으로 소유할 수 있는 counter 변수를 만듭니다.</span></span>
 <span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> counter <span class="op">=</span> <span class="pp">Arc::</span>new(<span class="pp">Mutex::</span>new(<span class="dv">0</span>))<span class="op">;</span></span>
 <span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 생성할 스레드들의 핸들(Handle)을 보관하여 나중에 모든 스레드가 종료될 때까지 기다릴 수 있도록 벡터를 선언합니다.</span></span>
@@ -4601,7 +4596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 각 스레드로 작업(이미지 경로)을 보낼 송신단(Sender)들을 담을 벡터입니다.</span></span>
 <span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> channels <span class="op">=</span> <span class="pp">vec!</span>[]<span class="op">;</span></span>
 <span id="cb43-34"><a href="#cb43-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 처리된 이미지 개수를 누적해서 메인 스레드에 전달할 채널을 생성합니다.</span></span>
-<span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a>    <span class="co">// counter_tx는 각 스레드가 작업을 끝낼 때마다 1을 송신하고, counter_rx는 이를 수신합니다.</span></span>
+<span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a>    <span class="co">// counter_tx는 각 스레드가 작업을 끝낼 때마다 1을 송신하고 counter_rx는 이를 수신합니다.</span></span>
 <span id="cb43-36"><a href="#cb43-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> (counter_tx<span class="op">,</span> counter_rx) <span class="op">=</span> <span class="pp">channel::</span><span class="op">&lt;</span><span class="dt">usize</span><span class="op">&gt;</span>()<span class="op">;</span></span>
 <span id="cb43-37"><a href="#cb43-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-38"><a href="#cb43-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 4개의 워커 스레드를 생성하여 병렬로 이미지를 처리하도록 세팅합니다.</span></span>
@@ -4654,7 +4649,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb43-85"><a href="#cb43-85" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb43-86"><a href="#cb43-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-87"><a href="#cb43-87" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 메인 스레드가 모든 파일 전송을 마쳤으므로, 작업 채널들의 송신기를 명시적으로 소멸(drop)시킵니다.</span></span>
-<span id="cb43-88"><a href="#cb43-88" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 송신기가 다 닫히면 워커 스레드들의 rx.recv()가 에러를 반환하며 while 루프가 끝나고, 각 스레드는 종료됩니다.</span></span>
+<span id="cb43-88"><a href="#cb43-88" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 송신기가 다 닫히면 워커 스레드들의 rx.recv()가 에러를 반환하며 while 루프가 끝나고 각 스레드는 종료됩니다.</span></span>
 <span id="cb43-89"><a href="#cb43-89" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> channel <span class="kw">in</span> channels <span class="op">{</span></span>
 <span id="cb43-90"><a href="#cb43-90" aria-hidden="true" tabindex="-1"></a>        drop(channel)<span class="op">;</span></span>
 <span id="cb43-91"><a href="#cb43-91" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
@@ -4760,7 +4755,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb45-50"><a href="#cb45-50" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 이미지 파일을 엽니다. (디코딩 및 읽기 작업)</span></span>
 <span id="cb45-51"><a href="#cb45-51" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> img <span class="op">=</span> <span class="pp">image::</span>open(<span class="op">&amp;</span>path)<span class="op">;</span></span>
 <span id="cb45-52"><a href="#cb45-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-53"><a href="#cb45-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 이미지 오픈에 성공하면 썸네일을 만들어 저장하고, 성공의 의미로 1을 반환합니다.</span></span>
+<span id="cb45-53"><a href="#cb45-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 이미지 오픈에 성공하면 썸네일을 만들어 저장하고 성공의 의미로 1을 반환합니다.</span></span>
 <span id="cb45-54"><a href="#cb45-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">let</span> <span class="cn">Ok</span>(img) <span class="op">=</span> img <span class="op">{</span></span>
 <span id="cb45-55"><a href="#cb45-55" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 이미지 비율을 유지하면서 64x64 크기로 축소합니다.</span></span>
 <span id="cb45-56"><a href="#cb45-56" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> thumbnail <span class="op">=</span> img<span class="op">.</span>thumbnail(<span class="dv">64</span><span class="op">,</span> <span class="dv">64</span>)<span class="op">;</span></span>
@@ -4845,7 +4840,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 처리된 이미지 개수를 세기 위한 카운터 변수를 초기화합니다.</span></span>
 <span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> processed_count <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 입력 디렉터리 내부를 읽고, 각 항목(파일 또는 폴더)을 하나씩 순회합니다.</span></span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 입력 디렉터리 내부를 읽고 각 항목(파일 또는 폴더)을 하나씩 순회합니다.</span></span>
 <span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// read_dir은 Result를 반환하므로 unwrap()으로 성공 시의 ReadDir 반복자를 가져옵니다.</span></span>
 <span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> item <span class="kw">in</span> read_dir(<span class="op">&amp;</span>args<span class="op">.</span>input)<span class="op">.</span>unwrap() <span class="op">{</span></span>
 <span id="cb47-34"><a href="#cb47-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 반복자가 반환하는 각 항목도 Result 타입이므로 unwrap()을 통해 DirEntry를 가져옵니다.</span></span>

@@ -441,11 +441,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1062,7 +1057,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="제1장.-벡터-스칼라-그리고-기하학">제1장. 벡터, 스칼라, 그리고 기하학</h2>
 <section id="스칼라-벡터-그리고-좌표계" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="스칼라-벡터-그리고-좌표계">1. 스칼라, 벡터, 그리고 좌표계</h3>
-<p>선형대수학을 처음 배울 때는 가장 단순한 구성 요소인 스칼라와 벡터에서 출발합니다. 스칼라는 3, 7, π처럼 하나의 숫자로 이루어집니다. 크기만 있고 방향은 없습니다. 개수를 세거나 길이를 재거나 다른 대상을 확대·축소할 때 씁니다. 반면 벡터는 순서가 있는 숫자들의 모음입니다. 공간에서 한 방향을 가리키는 화살표로 생각할 수도 있고, 2D에서는 (2, 5), 3D에서는 (1, 3, 4)처럼 목록으로 나타낼 수도 있습니다. 스칼라가 “얼마나 많이”를 나타낸다면 벡터는 “얼마나 많이”와 “어느 방향으로”를 함께 나타냅니다.</p>
+<p>선형대수학을 처음 배울 때는 가장 단순한 구성 요소인 스칼라와 벡터에서 출발합니다. 스칼라는 3, 7, π처럼 하나의 숫자로 이루어집니다. 크기만 있고 방향은 없습니다. 개수를 세거나 길이를 재거나 다른 대상을 확대·축소할 때 씁니다. 반면 벡터는 순서가 있는 숫자들의 모음입니다. 공간에서 한 방향을 가리키는 화살표로 생각할 수도 있고 2D에서는 (2, 5), 3D에서는 (1, 3, 4)처럼 목록으로 나타낼 수도 있습니다. 스칼라가 “얼마나 많이”를 나타낸다면 벡터는 “얼마나 많이”와 “어느 방향으로”를 함께 나타냅니다.</p>
 <section id="좌표계" class="level4">
 <h4 class="anchored" data-anchor-id="좌표계">좌표계</h4>
 <p>벡터를 이야기하려면 좌표계가 필요합니다. 종이 위에 서로 수직인 두 축, 즉 x축(왼쪽에서 오른쪽)과 y축(아래에서 위)을 놓는다고 생각해 보세요. 종이 위의 점은 x축과 y축을 따라 얼마나 떨어져 있는지 나타내는 두 숫자로 설명할 수 있습니다. 이 숫자 쌍이 2D 벡터입니다. 종이에서 위로 뻗는 z축을 더하면 3D 공간이 됩니다. 좌표계마다 벡터를 수치로 나타내는 방식은 달라도, 다루는 공간 자체는 같습니다.</p>
@@ -1080,7 +1075,7 @@ window.Quarto = {
 </section>
 <section id="왜-중요한가" class="level4">
 <h4 class="anchored" data-anchor-id="왜-중요한가">왜 중요한가</h4>
-<p>거의 모든 과학과 공학 분야가 이 아이디어에 의존합니다. 물리학은 속도, 가속도, 힘을 벡터로 다루고, 컴퓨터 그래픽스는 점, 색상, 변환을 나타내는 데 벡터를 쓰며 데이터 과학은 데이터셋 전체를 고차원 벡터로 취급합니다. 스칼라와 벡터를 일찍 익혀 두면 현대 과학과 기술이 쓰는 언어를 해독하는 일이 한결 수월해집니다.</p>
+<p>거의 모든 과학과 공학 분야가 이 아이디어에 의존합니다. 물리학은 속도, 가속도, 힘을 벡터로 다루고 컴퓨터 그래픽스는 점, 색상, 변환을 나타내는 데 벡터를 쓰며 데이터 과학은 데이터셋 전체를 고차원 벡터로 취급합니다. 스칼라와 벡터를 일찍 익혀 두면 현대 과학과 기술이 쓰는 언어를 해독하는 일이 한결 수월해집니다.</p>
 </section>
 <section id="직접-해보기" class="level4">
 <h4 class="anchored" data-anchor-id="직접-해보기">직접 해보기</h4>
@@ -1156,7 +1151,7 @@ v_3
 </section>
 <section id="왜-중요한가-1" class="level4">
 <h4 class="anchored" data-anchor-id="왜-중요한가-1">왜 중요한가</h4>
-<p>명확한 표기법은 선형대수학의 근간입니다. 그것 없이는 방정식이 금방 읽기 어려워지고, 방향과 크기에 대한 직관이 사라집니다. 벡터를 쓰는 방식은 대수(숫자와 기호)를 기하학(화살표와 공간)과 얼마나 쉽게 연결할 수 있는지를 결정합니다. 이 상징적이고 시각적인 이중 관점은 선형대수학을 강력하고 실용적으로 만듭니다.</p>
+<p>명확한 표기법은 선형대수학의 근간입니다. 그것 없이는 방정식이 금방 읽기 어려워지고 방향과 크기에 대한 직관이 사라집니다. 벡터를 쓰는 방식은 대수(숫자와 기호)를 기하학(화살표와 공간)과 얼마나 쉽게 연결할 수 있는지를 결정합니다. 이 상징적이고 시각적인 이중 관점은 선형대수학을 강력하고 실용적으로 만듭니다.</p>
 </section>
 <section id="직접-해보기-1" class="level4">
 <h4 class="anchored" data-anchor-id="직접-해보기-1">직접 해보기</h4>
@@ -1246,7 +1241,7 @@ c \cdot \mathbf{u} = (c \cdot u_1, \; c \cdot u_2, \; \ldots, \; c \cdot u_n).
 <section id="직접-해보기-2" class="level4">
 <h4 class="anchored" data-anchor-id="직접-해보기-2">직접 해보기</h4>
 <ol type="1">
-<li>(2, 3)과 (1, 4)를 더하고, 결과를 그래프 용지에 그려보세요.</li>
+<li>(2, 3)과 (1, 4)를 더하고 결과를 그래프 용지에 그려보세요.</li>
 <li>(1, 2)에 3을 곱한 다음, (0, 5)를 더하세요. 최종 벡터는 무엇인가요?</li>
 <li>더 깊은 도전: u = (1, 2)와 v = (2, 1)이라 할 때, a와 b가 2와 2 사이의 정수 값일 때 a·u + b·v 형태의 모든 벡터를 스케치해 보세요. 여러분이 만드는 점들의 격자를 주목하세요. 그것이 이 두 벡터의 생성(span)입니다.</li>
 </ol>
@@ -1268,7 +1263,7 @@ a_1 \cdot v_1 + a_2 \cdot v_2 + \cdots + a_k \cdot v_k.
 </section>
 <section id="기하학적-의미" class="level4">
 <h4 class="anchored" data-anchor-id="기하학적-의미">기하학적 의미</h4>
-<p>선형 결합은 방향과 크기를 혼합하는 것에 관한 것입니다. 각 벡터는 “방향성 재료”처럼 작용하고, 스칼라는 각 재료를 얼마나 사용할지 제어합니다.</p>
+<p>선형 결합은 방향과 크기를 혼합하는 것에 관한 것입니다. 각 벡터는 “방향성 재료”처럼 작용하고 스칼라는 각 재료를 얼마나 사용할지 제어합니다.</p>
 <ul>
 <li>벡터 하나로는: 원점을 통과하는 단일 선 위의 점에만 도달할 수 있습니다.</li>
 <li>2D에서 평행하지 않은 두 벡터로는: 평면의 모든 점에 도달할 수 있습니다.</li>
@@ -1338,7 +1333,7 @@ a_1 \cdot v_1 + a_2 \cdot v_2 + \cdots + a_k \cdot v_k.
 <li>벡터 공간에서 차원이 어떻게 발생하는지 설명합니다.</li>
 <li>데이터가 몇 개의 중요한 벡터의 생성(span)에 투영되는 주성분 분석과 같은 실용적인 방법을 뒷받침합니다.</li>
 </ul>
-<p>요컨대, 생성(span)은 벡터 집합의 “도달 범위”를 알려주고, 선형 결합은 그 도달 범위를 탐색하는 메커니즘입니다.</p>
+<p>요컨대, 생성(span)은 벡터 집합의 “도달 범위”를 알려주고 선형 결합은 그 도달 범위를 탐색하는 메커니즘입니다.</p>
 </section>
 <section id="직접-해보기-3" class="level4">
 <h4 class="anchored" data-anchor-id="직접-해보기-3">직접 해보기</h4>
@@ -1411,7 +1406,7 @@ u - v = (-3, -4).
 <li><span class="math inline">\(\ell_1\)</span> 노름: <span class="math inline">\(\|v\|_1 = |v_1| + |v_2| + \cdots + |v_n|\)</span> (절대값의 합).</li>
 <li><span class="math inline">\(\ell_\infty\)</span> 노름: <span class="math inline">\(\|v\|_\infty = \max(|v_1|, |v_2|, \ldots, |v_n|)\)</span> (가장 큰 성분).</li>
 </ul>
-<p>노름을 바꾸면 “길이”와 “거리”의 기하학도 달라집니다. 예를 들어, ℓ₁ 노름에서 단위 원은 다이아몬드 모양이고, ℓ∞ 노름에서는 정사각형처럼 보입니다.</p>
+<p>노름을 바꾸면 “길이”와 “거리”의 기하학도 달라집니다. 예를 들어, ℓ₁ 노름에서 단위 원은 다이아몬드 모양이고 ℓ∞ 노름에서는 정사각형처럼 보입니다.</p>
 </section>
 <section id="일상적인-비유-2" class="level4">
 <h4 class="anchored" data-anchor-id="일상적인-비유-2">일상적인 비유</h4>
@@ -1939,7 +1934,7 @@ u \cdot v = \|u\| \, \|v\| \cos(\theta).
 <li><p><strong>단순화된 좌표</strong>: <span class="math inline">\(\{v_1, \ldots, v_k\}\)</span>가 정규직교 집합이면, 그들의 생성(span)에 있는 모든 벡터 <span class="math inline">\(u\)</span>에 대해 계수를 쉽게 계산할 수 있습니다: <span class="math inline">\(c_i = u \cdot v_i\)</span>. 이것은 연립 방정식을 푸는 것보다 훨씬 간단합니다.</p></li>
 <li><p><strong>일반화된 피타고라스 정리</strong>: 벡터가 정규직교이면, 그들의 합의 제곱 길이는 계수의 제곱의 합입니다. 예를 들어, <span class="math inline">\(u = a v_1 + b v_2\)</span>이면, <span class="math inline">\(\|u\|^2 = a^2 + b^2\)</span></p></li>
 <li><p><strong>쉬운 투영</strong>: 정규직교 집합에 투영하는 것은 간단합니다 그냥 내적을 취하면 됩니다.</p></li>
-<li><p><strong>행렬이 좋아짐</strong>: 벡터가 행렬의 열을 형성할 때, 정규직교성은 그 행렬을 직교 행렬로 만들며 이는 특별한 속성을 가집니다: 전치가 역행렬과 같고, 길이와 각도를 보존합니다.</p></li>
+<li><p><strong>행렬이 좋아짐</strong>: 벡터가 행렬의 열을 형성할 때, 정규직교성은 그 행렬을 직교 행렬로 만들며 이는 특별한 속성을 가집니다: 전치가 역행렬과 같고 길이와 각도를 보존합니다.</p></li>
 </ol>
 </section>
 <section id="mathbbr2와-mathbbr3에서의-중요성" class="level4">
@@ -2074,7 +2069,7 @@ A\mathbf{x} = x_1 a_1 + x_2 a_2.
 <li>표로서, 행렬은 정적인 객체입니다: 행과 열에 쓰인 숫자.</li>
 <li>기계로서, 같은 숫자는 벡터를 변환하기 위한 지침이 됩니다.</li>
 </ul>
-<p>이 이중성은 개념에 그치지 않습니다. 선형대수학이 왜 그렇게 강력한지 이해하는 열쇠입니다. 표로 저장된 데이터셋을 변환으로 해석할 수도 있고, 이해한 변환을 표로 옮겨 적을 수도 있습니다.</p>
+<p>이 이중성은 개념에 그치지 않습니다. 선형대수학이 왜 그렇게 강력한지 이해하는 열쇠입니다. 표로 저장된 데이터셋을 변환으로 해석할 수도 있고 이해한 변환을 표로 옮겨 적을 수도 있습니다.</p>
 </section>
 <section id="실제-예" class="level4">
 <h4 class="anchored" data-anchor-id="실제-예">실제 예</h4>
@@ -2116,14 +2111,14 @@ A\mathbf{x} = x_1 a_1 + x_2 a_2.
 </section>
 <section id="행렬-모양-인덱싱-및-블록-보기" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="행렬-모양-인덱싱-및-블록-보기">12. 행렬 모양, 인덱싱 및 블록 보기</h3>
-<p>행렬은 모양과 크기가 다양하고, 항목을 어떻게 읽어 내는지가 중요합니다. 이 절에서는 행렬을 정확하게 읽고 쓰는 법, 행과 열을 다루는 법, 블록 구조로 문제를 단순화하는 법을 다룹니다. 겉보기에 단순한 이 아이디어들이 큰 시스템을 정밀하고 효율적으로 다루게 해 줍니다.</p>
+<p>행렬은 모양과 크기가 다양하고 항목을 어떻게 읽어 내는지가 중요합니다. 이 절에서는 행렬을 정확하게 읽고 쓰는 법, 행과 열을 다루는 법, 블록 구조로 문제를 단순화하는 법을 다룹니다. 겉보기에 단순한 이 아이디어들이 큰 시스템을 정밀하고 효율적으로 다루게 해 줍니다.</p>
 <section id="행렬의-모양" class="level4">
 <h4 class="anchored" data-anchor-id="행렬의-모양">행렬의 모양</h4>
 <p>행렬의 모양은 행과 열의 수로 주어집니다:</p>
 <ul>
 <li>m×n 행렬은 m개의 행과 n개의 열을 가집니다.</li>
 <li>행은 수평으로, 열은 수직으로 실행됩니다.</li>
-<li>정사각 행렬은 m = n이고, 직사각 행렬은 m ≠ n입니다.</li>
+<li>정사각 행렬은 m = n이고 직사각 행렬은 m ≠ n입니다.</li>
 </ul>
 <p>예:</p>
 <ul>
@@ -2178,7 +2173,7 @@ A = \begin{bmatrix}
 <li>첫 번째 행: (1, 4, 7).</li>
 <li>두 번째 열: (4, 5, 6).</li>
 </ul>
-<p>이 이중성은 강력합니다: 행은 종종 제약 조건이나 방정식을 나타내고, 열은 방향이나 특징을 나타냅니다. 나중에 행렬-벡터 곱을 해석할 때, A·x를 곱하는 것은 열을 결합하는 것을 의미하고, yᵀ·A를 곱하는 것은 행을 결합하는 것을 의미한다는 것을 알게 될 것입니다.</p>
+<p>이 이중성은 강력합니다: 행은 종종 제약 조건이나 방정식을 나타내고 열은 방향이나 특징을 나타냅니다. 나중에 행렬-벡터 곱을 해석할 때, A·x를 곱하는 것은 열을 결합하는 것을 의미하고 yᵀ·A를 곱하는 것은 행을 결합하는 것을 의미한다는 것을 알게 될 것입니다.</p>
 </section>
 <section id="부분-행렬" class="level4">
 <h4 class="anchored" data-anchor-id="부분-행렬">부분 행렬</h4>
@@ -2351,7 +2346,7 @@ cA = [c \cdot a_{ij}].
 <li>행렬을 더하는 것은 벡터에 적용될 때 그 효과를 더하는 것에 해당합니다.</li>
 <li>행렬을 크기 조절하는 것은 변환의 효과를 크기 조절합니다.</li>
 </ul>
-<p>예: <span class="math inline">\(A\)</span>가 벡터를 약간 회전시키고, <span class="math inline">\(B\)</span>가 벡터를 늘린다고 합시다. 행렬 <span class="math inline">\(A + B\)</span>는 두 영향을 함께 적용하는 변환을 나타냅니다. 2로 크기 조절하면 변환의 효과가 두 배가 됩니다.</p>
+<p>예: <span class="math inline">\(A\)</span>가 벡터를 약간 회전시키고 <span class="math inline">\(B\)</span>가 벡터를 늘린다고 합시다. 행렬 <span class="math inline">\(A + B\)</span>는 두 영향을 함께 적용하는 변환을 나타냅니다. 2로 크기 조절하면 변환의 효과가 두 배가 됩니다.</p>
 </section>
 <section id="특별한-경우-영과-항등" class="level4">
 <h4 class="anchored" data-anchor-id="특별한-경우-영과-항등">특별한 경우: 영과 항등</h4>
@@ -2364,7 +2359,7 @@ cA = [c \cdot a_{ij}].
 <section id="기하학적-직관-1" class="level4">
 <h4 class="anchored" data-anchor-id="기하학적-직관-1">기하학적 직관</h4>
 <ol type="1">
-<li><span class="math inline">\(\mathbb{R}^2\)</span> 또는 <span class="math inline">\(\mathbb{R}^3\)</span>에서, 변환 행렬을 더하는 것은 기하학적 효과를 중첩하는 것과 같습니다: 예: 한 행렬은 전단하고, 다른 행렬은 회전하며 그 합은 둘 다를 섞습니다.</li>
+<li><span class="math inline">\(\mathbb{R}^2\)</span> 또는 <span class="math inline">\(\mathbb{R}^3\)</span>에서, 변환 행렬을 더하는 것은 기하학적 효과를 중첩하는 것과 같습니다: 예: 한 행렬은 전단하고 다른 행렬은 회전하며 그 합은 둘 다를 섞습니다.</li>
 <li>변환을 크기 조절하면 그 작용이 더 강해지거나 약해집니다. 전단을 두 배로 하면 두 배로 두드러집니다.</li>
 </ol>
 <p>곱셈을 배우기 전에도 덧셈과 크기 조절에 이미 기하학적 의미가 담겨 있음을 보여줍니다.</p>
@@ -2372,9 +2367,9 @@ cA = [c \cdot a_{ij}].
 <section id="일상적인-비유-9" class="level4">
 <h4 class="anchored" data-anchor-id="일상적인-비유-9">일상적인 비유</h4>
 <ul>
-<li>레시피: 두 레시피(행렬)를 재료별로 더하면 결합된 쇼핑 목록이 나옵니다. 레시피에 3을 곱하면 3배 많은 사람들을 위해 크기를 조절합니다.</li>
+<li>레시피: 두 레시피(행렬)를 재료별로 더하면 결합된 쇼핑 목록이 나옵니다. 레시피에 3을 곱하면 3배 많은 사람을 위해 크기를 조절합니다.</li>
 <li>재무 계획: 두 예산 표를 더하면 결합된 예산이 나옵니다. 12를 곱하면 월별 비용을 연간 총액으로 크기 조절합니다.</li>
-<li>효과 혼합: 행렬로 표현된 오디오 신호를 생각해 보세요. 그것들을 더하면 소리가 중첩되고, 크기를 조절하면 볼륨이 조정됩니다.</li>
+<li>효과 혼합: 행렬로 표현된 오디오 신호를 생각해 보세요. 그것들을 더하면 소리가 중첩되고 크기를 조절하면 볼륨이 조정됩니다.</li>
 </ul>
 </section>
 <section id="왜-중요한가-10" class="level4">
@@ -2422,7 +2417,7 @@ cA = [c \cdot a_{ij}].
 <p>이제 우리는 선형대수학의 모든 것에서 가장 중요한 연산 중 하나인 행렬-벡터 곱에 도달했습니다. 이 연산은 행렬 <span class="math inline">\(A\)</span>와 벡터 x를 취하여 새로운 벡터를 생성합니다. 계산은 간단하지만 그 해석은 깊습니다: 행을 결합하는 것으로, 열을 결합하는 것으로, 또는 선형 변환을 적용하는 것으로 볼 수 있습니다. 이것이 행렬을 벡터 공간의 기하학과 연결하는 연산입니다.</p>
 <section id="대수적-규칙" class="level4">
 <h4 class="anchored" data-anchor-id="대수적-규칙">대수적 규칙</h4>
-<p><span class="math inline">\(A\)</span>가 <span class="math inline">\(m \times n\)</span> 행렬이고, x가 <span class="math inline">\(\mathbb{R}^n\)</span>의 벡터라고 가정합니다. 곱 <span class="math inline">\(A\mathbf{x}\)</span>는 <span class="math inline">\(\mathbb{R}^m\)</span>의 벡터이며 다음과 같이 정의됩니다:</p>
+<p><span class="math inline">\(A\)</span>가 <span class="math inline">\(m \times n\)</span> 행렬이고 x가 <span class="math inline">\(\mathbb{R}^n\)</span>의 벡터라고 가정합니다. 곱 <span class="math inline">\(A\mathbf{x}\)</span>는 <span class="math inline">\(\mathbb{R}^m\)</span>의 벡터이며 다음과 같이 정의됩니다:</p>
 <p><span class="math display">\[
 A =
 \begin{bmatrix}
@@ -2539,7 +2534,7 @@ A = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta 
 <section id="일상적인-비유-10" class="level4">
 <h4 class="anchored" data-anchor-id="일상적인-비유-10">일상적인 비유</h4>
 <ul>
-<li>재료 혼합: 벡터 x는 레시피이고, <span class="math inline">\(A\)</span>의 열은 재료입니다. 곱 <span class="math inline">\(A\mathbf{x}\)</span>는 최종 혼합물입니다.</li>
+<li>재료 혼합: 벡터 x는 레시피이고 <span class="math inline">\(A\)</span>의 열은 재료입니다. 곱 <span class="math inline">\(A\mathbf{x}\)</span>는 최종 혼합물입니다.</li>
 <li>가중 평균: 학생의 최종 성적은 행렬-벡터 곱입니다: 가중치(벡터)에 점수(행렬 열)를 곱합니다.</li>
 <li>신호 처리: 입력 신호를 가중치와 결합하면 새로운 출력이 생성되며 이는 가중치 벡터에 신호 행렬을 곱하는 것과 같습니다.</li>
 </ul>
@@ -2636,7 +2631,7 @@ AB = [A b_1 \; A b_2 \; \cdots \; A b_p].
 <p>가장 중요한 해석은 기계 관점입니다: 행렬을 곱하는 것은 변환을 구성하는 것에 해당합니다.</p>
 <ul>
 <li><span class="math inline">\(A\)</span>가 <span class="math inline">\(\mathbb{R}^n \to \mathbb{R}^m\)</span>을 매핑하고 <span class="math inline">\(B\)</span>가 <span class="math inline">\(\mathbb{R}^p \to \mathbb{R}^n\)</span>을 매핑하면, <span class="math inline">\(AB\)</span>는 <span class="math inline">\(\mathbb{R}^p \to \mathbb{R}^m\)</span>을 매핑합니다.</li>
-<li>즉: <span class="math inline">\(B\)</span>를 먼저 하고, 그 다음에 <span class="math inline">\(A\)</span>를 합니다.</li>
+<li>즉: <span class="math inline">\(B\)</span>를 먼저 하고 그 다음에 <span class="math inline">\(A\)</span>를 합니다.</li>
 </ul>
 <p>예:</p>
 <ul>
@@ -2811,7 +2806,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 <h2 class="anchored" data-anchor-id="제1장.-벡터-스칼라-그리고-기하학-1">제1장. 벡터, 스칼라, 그리고 기하학</h2>
 <section id="스칼라-벡터-그리고-좌표계-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="스칼라-벡터-그리고-좌표계-1">1. 스칼라, 벡터, 그리고 좌표계</h3>
-<p>이제 직접 해 봅시다. 이 실습에서는 선형대수학의 <strong>구성 요소</strong>인 스칼라와 벡터를 다룹니다. 스칼라는 <code>3</code>이나 <code>-1.5</code> 같은 숫자이고, 벡터는 공간을 가리키는 작은 숫자 목록이라고 생각하면 됩니다.</p>
+<p>이제 직접 해 봅시다. 이 실습에서는 선형대수학의 <strong>구성 요소</strong>인 스칼라와 벡터를 다룹니다. 스칼라는 <code>3</code>이나 <code>-1.5</code> 같은 숫자이고 벡터는 공간을 가리키는 작은 숫자 목록이라고 생각하면 됩니다.</p>
 <p>Python과 NumPy로 이 내용을 살펴봅니다. NumPy가 처음이어도 괜찮습니다. 단계별로 진행하겠습니다.</p>
 <section id="실습-환경-설정" class="level4">
 <h4 class="anchored" data-anchor-id="실습-환경-설정">실습 환경 설정</h4>
@@ -2881,7 +2876,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"v ="</span>, v)</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"w ="</span>, w)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>여기서 <code>v</code>의 성분은 <code>(2, 3)</code>이고, <code>w</code>의 성분은 <code>(1, -1, 4)</code>입니다.</p>
+<p>여기서 <code>v</code>의 성분은 <code>(2, 3)</code>이고 <code>w</code>의 성분은 <code>(1, -1, 4)</code>입니다.</p>
 <ol start="2" type="1">
 <li><strong>성분 접근하기</strong> 벡터의 각 숫자는 <em>성분</em>입니다. 인덱싱을 사용하여 성분을 뽑아낼 수 있습니다.</li>
 </ol>
@@ -2984,7 +2979,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>여기서 파란색 화살표는 빨간색 화살표보다 두 배 길고, 녹색 화살표는 반대 방향을 가리킵니다.</p>
+<p>여기서 파란색 화살표는 빨간색 화살표보다 두 배 길고 녹색 화살표는 반대 방향을 가리킵니다.</p>
 <ol start="5" type="1">
 <li><strong>두 연산 결합하기</strong> 벡터를 스칼라 배하고 더할 수 있습니다. 이것을 선형 결합이라고 부릅니다.</li>
 </ol>
@@ -3102,7 +3097,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">4</span>])</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>length <span class="op">=</span> np.linalg.norm(v)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"v의 길이 ="</span>, length)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이것은 <code>5.0</code>을 출력합니다. <code>(3,4)</code>는 변이 3과 4인 직각 삼각형을 형성하고, <code>sqrt(3²+4²)=5</code>이기 때문입니다.</p>
+<p>이것은 <code>5.0</code>을 출력합니다. <code>(3,4)</code>는 변이 3과 4인 직각 삼각형을 형성하고 <code>sqrt(3²+4²)=5</code>이기 때문입니다.</p>
 <ol start="2" type="1">
 <li><strong>수동 계산 vs NumPy</strong></li>
 </ol>
@@ -3287,7 +3282,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>cosine_similarity <span class="op">=</span> np.dot(v,u)<span class="op">/</span>(np.linalg.norm(v)<span class="op">*</span>np.linalg.norm(u))</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"코사인 유사도 ="</span>, cosine_similarity)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>1</code>에 가까우면 방향이 거의 일치하고, <code>0</code>에 가까우면 서로 무관하며 <code>-1</code>에 가까우면 정반대입니다.</p>
+<p><code>1</code>에 가까우면 방향이 거의 일치하고 <code>0</code>에 가까우면 서로 무관하며 <code>-1</code>에 가까우면 정반대입니다.</p>
 </section>
 <section id="직접-해보기-22" class="level4">
 <h4 class="anchored" data-anchor-id="직접-해보기-22">직접 해보기</h4>
@@ -3300,7 +3295,7 @@ A^T = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 5 \\ 3 &amp; 6 \end{bmatrix}.
 </section>
 <section id="투영과-분해-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="투영과-분해-1">8. 투영과 분해</h3>
-<p>이 실습에서는 벡터를 두 부분으로 나누는 방법을 배웁니다. 한 부분은 다른 벡터 방향으로 놓이고, 다른 부분은 그에 <em>수직</em>입니다.</p>
+<p>이 실습에서는 벡터를 두 부분으로 나누는 방법을 배웁니다. 한 부분은 다른 벡터 방향으로 놓이고 다른 부분은 그에 <em>수직</em>입니다.</p>
 <section id="단계별-코드-설명-7" class="level4">
 <h4 class="anchored" data-anchor-id="단계별-코드-설명-7">단계별 코드 설명</h4>
 <ol type="1">

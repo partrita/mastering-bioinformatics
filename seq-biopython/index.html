@@ -410,11 +410,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -955,7 +950,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#대용량-데이터-처리를-위한-팁" id="toc-대용량-데이터-처리를-위한-팁" class="nav-link" data-scroll-target="#대용량-데이터-처리를-위한-팁">8. 대용량 데이터 처리를 위한 팁</a></li>
   <li><a href="#결론-및-향후-과제" id="toc-결론-및-향후-과제" class="nav-link" data-scroll-target="#결론-및-향후-과제">9. 결론 및 향후 과제</a></li>
-  <li><a href="#부록-생명정보학자를브러리-목록" id="toc-부록-생명정보학자를브러리-목록" class="nav-link" data-scroll-target="#부록-생명정보학자를브러리-목록">부록: 생명정보학자를브러리 목록</a></li>
+  <li><a href="#부록-생명정보학자-라이브러리-목록" id="toc-부록-생명정보학자-라이브러리-목록" class="nav-link" data-scroll-target="#부록-생명정보학자-라이브러리-목록">부록: 생명정보학자 라이브러리 목록</a></li>
   <li><a href="#연습-문제" id="toc-연습-문제" class="nav-link" data-scroll-target="#연습-문제">연습 문제</a></li>
   <li><a href="#참고-문헌" id="toc-참고-문헌" class="nav-link" data-scroll-target="#참고-문헌">참고 문헌</a></li>
   </ul>
@@ -985,8 +980,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="서론-파이썬과-생명정보학의-결합" class="level1">
 <h1>1. 서론: 파이썬과 생명정보학의 결합</h1>
-<p>생명정보학(Bioinformatics)은 현대 생물학 연구의 핵심입니다. 수조 개의 염기서열 데이터가 쏟아지는 유전체학 시대에 데이터를 수동으로 처리하는 것은 불가능에 가깝습니다. 파이썬은 그 간결한 문법과 강력한 과학 계산 생태계를 바탕으로 생명정보학자에게 가장 사랑받는 도구가 되었습니다.</p>
-<p>그 중심에는 Biopython 프로젝트가 있습니다. Biopython은 단순히 파일을 읽고 쓰는 라이브러리를 넘어, 생물학적 서열을 수학적/컴퓨터공학적 객체로 다루고 외부 알고리즘(BLAST, ClustalW 등)과 연동할 수 있는 거대한 프레임워크입니다.</p>
+<p>생명정보학(Bioinformatics)은 현대 생물학 연구의 중심에 있습니다. 수조 개의 염기서열 데이터가 쏟아지는 유전체학 시대에 데이터를 수동으로 처리하는 것은 불가능에 가깝습니다. 파이썬은 그 간결한 문법과 강력한 과학 계산 생태계를 바탕으로 생명정보학자에게 가장 사랑받는 도구가 되었습니다.</p>
+<p>그 중심에는 Biopython 프로젝트가 있습니다. Biopython은 단순히 파일을 읽고 쓰는 라이브러리를 넘어 생물학적 서열을 수학적/컴퓨터공학적 객체로 다루고 외부 알고리즘(BLAST, ClustalW 등)과 연동할 수 있는 거대한 프레임워크입니다.</p>
 </section>
 <section id="서열-객체의-심화-이해" class="level1">
 <h1>2. 서열 객체의 심화 이해</h1>
@@ -1077,7 +1072,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="단백질-구조-분석-bio.pdb" class="level1">
 <h1>5. 단백질 구조 분석 (Bio.PDB)</h1>
-<p>단백질의 3차원 구조를 분석하는 것은 약물 설계(Drug Discovery)의 핵심입니다. PDB(Protein Data Bank) 파일을 파싱하여 원자 간의 거리를 계산하거나 구조적 특징을 추출할 수 있습니다.</p>
+<p>단백질의 3차원 구조를 분석하는 것은 약물 설계(Drug Discovery)의 토대입니다. PDB(Protein Data Bank) 파일을 파싱하여 원자 간의 거리를 계산하거나 구조적 특징을 추출할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.PDB <span class="im">import</span> PDBParser</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># PDB 파일 파싱 (실제 파일 필요)</span></span>
@@ -1144,8 +1139,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Biopython은 생명정보학의 문을 여는 열쇠입니다. 하지만 이 도구를 제대로 사용하려면 파이썬의 핵심 개념인 리스트 컴프리헨션, 데코레이터, 그리고 넘파이(NumPy)와 판다스(Pandas) 같은 데이터 분석 라이브러리를 깊이 이해하고 있어야 합니다.</p>
 <p>이제 여러분은 서열을 획득하고, 정렬하며 3차원 구조를 탐색하는 기초 체력을 갖추었습니다. 다음 단계로는 딥러닝(Deep Learning) 라이브러리인 PyTorch나 TensorFlow를 결합하여 단백질 접힘(Protein Folding) 예측과 같은 최신 연구 분야에 도전해 보시기 바랍니다.</p>
 </section>
-<section id="부록-생명정보학자를브러리-목록" class="level1">
-<h1>부록: 생명정보학자를브러리 목록</h1>
+<section id="부록-생명정보학자-라이브러리-목록" class="level1">
+<h1>부록: 생명정보학자 라이브러리 목록</h1>
 <ol type="1">
 <li>Pandas: 대규모 테이블 데이터(CSV, TSV) 처리의 표준.</li>
 <li>Matplotlib/Seaborn: 논문용 그래프 시각화.</li>

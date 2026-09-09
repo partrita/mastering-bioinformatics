@@ -440,11 +440,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1255,7 +1250,7 @@ window.Quarto = {
 <p>프로그래밍 언어의 관점에서 파이썬은 매우 매력적인 위치를 차지합니다. 배우기 쉽고 아이디어를 작동하는 프로토타입으로 빠르게 구현할 수 있어 ‘빠르며’, 어떤 프로그램을 작성하든 가장 먼저 손이 가는 언어입니다. 또한 개인 노트북이나 저렴한 cloud 인스턴스에서도 원활히 동작하므로 ‘저렴’합니다. 하지만 파이썬으로 ’뛰어난’ 품질의 프로그램을 만드는 것은 항상 쉬운 일만은 아닙니다. 파이썬 언어 자체가 매우 유연하고 관대하기 때문입니다. 예컨대 연산 과정에서 문자와 숫자를 혼용하는 오류를 즉시 잡아내지 못해 추후 프로그램이 갑자기 멈추는 원인이 되기도 합니다.</p>
 <p>이 책은 파이썬 모범 사례(best practices)와 아래와 같은 핵심 도구를 다루며 예비 생명정보학 개발자를 위해 집필되었습니다.</p>
 <ul>
-<li>파이썬 3.6부터 지원하는 타입 힌트(type hints): 변수의 타입을 숫자인지 리스트인지 명시하고, mypy 도구로 타입 적합성을 정적 검증합니다.</li>
+<li>파이썬 3.6부터 지원하는 타입 힌트(type hints): 변수의 타입을 숫자인지 리스트인지 명시하고 mypy 도구로 타입 적합성을 정적 검증합니다.</li>
 <li>pytest 테스팅 프레임워크: 정상 데이터와 예외 데이터를 모두 테스트하여 코드가 의도대로 작동하는지 검증합니다.</li>
 <li>pylint, flake8 스타일 검사 도구: 가독성을 저해하는 잠재적 오류나 코드 스타일 이슈를 사전에 탐지합니다.</li>
 <li>argparse 모듈: 프로그램 실행 인자(argument)를 체계적으로 문서화하고 검증합니다.</li>
@@ -1282,19 +1277,19 @@ window.Quarto = {
 <section id="누가-읽어야-하는가" class="level1">
 <h1>누가 읽어야 하는가?</h1>
 <p>프로그래밍이라는 기술(craft)에 관심이 있고 문서화, 인자 검증, 우아한 실패(fail gracefully), 그리고 신뢰할 수 있는 작동 방식을 갖춘 프로그램을 작성하고 싶다면 이 책을 읽어야 합니다. 테스트는 코드를 이해하고 정확성을 검증하는 데 핵심적인 기술입니다. 제가 작성한 테스트를 활용하는 방법뿐만 아니라 여러분만의 테스트를 작성하는 방법도 알려드릴 것입니다.</p>
-<p>이 책을 최대한 활용하려면 이미 파이썬에 대한 탄탄한 이해가 있어야 합니다. 저는 문자열, 리스트, 튜플, 딕셔너리, 셋(set), 네임드 튜플(named tuple)과 같은 파이썬 데이터 구조를 다루는 《Tiny Python Projects》(Manning, 2020)에서 가르쳤던 기술들을 바탕으로 내용을 전개할 것입니다. 파이썬 전문가일 필요는 없지만 타입(types), 정규 표현식, 고차 함수(higher-order functions)와 같은 고급 개념과 테스트 방법, 그리고 스타일과 구문, 정확성을 확인하기 위한 pylint, flake8, yapf, pytest 등의 도구 사용법을 이해할 수 있도록 이끌어 드릴 것입니다. 한 가지 눈에 띄는 차이점은 이 책의 모든 코드에 일관되게 타입 어노테이션(type annotations)을 사용하고, mypy 도구를 사용하여 타입이 올바르게 사용되었는지 확인할 것이라는 점입니다.</p>
+<p>이 책을 최대한 활용하려면 이미 파이썬에 대한 탄탄한 이해가 있어야 합니다. 저는 문자열, 리스트, 튜플, 딕셔너리, 셋(set), 네임드 튜플(named tuple)과 같은 파이썬 데이터 구조를 다루는 《Tiny Python Projects》(Manning, 2020)에서 가르쳤던 기술들을 바탕으로 내용을 전개할 것입니다. 파이썬 전문가일 필요는 없지만 타입(types), 정규 표현식, 고차 함수(higher-order functions)와 같은 고급 개념과 테스트 방법, 그리고 스타일과 구문, 정확성을 확인하기 위한 pylint, flake8, yapf, pytest 등의 도구 사용법을 이해할 수 있도록 이끌어 드릴 것입니다. 한 가지 눈에 띄는 차이점은 이 책의 모든 코드에 일관되게 타입 어노테이션(type annotations)을 사용하고 mypy 도구를 사용하여 타입이 올바르게 사용되었는지 확인할 것이라는 점입니다.</p>
 </section>
 <section id="프로그래밍-스타일-oop와-예외-처리를-피하는-이유" class="level1">
 <h1>프로그래밍 스타일: OOP와 예외 처리를 피하는 이유</h1>
 <p>저는 객체 지향 프로그래밍(OOP)을 피하는 경향이 있습니다. OOP가 무엇인지 몰라도 괜찮습니다. 파이썬 자체는 객체 지향 언어이며 문자열부터 셋에 이르기까지 거의 모든 요소가 기술적으로는 내부 상태와 메서드를 가진 객체입니다. 여러분은 OOP가 무엇인지 감을 잡을 수 있을 만큼 충분히 객체들을 접하게 되겠지만 제가 제시하는 프로그램들은 대부분 아이디어를 표현하는 데 객체를 사용하지 않을 것입니다.</p>
 <p>그렇긴 하지만 1장에서는 복잡한 데이터 구조를 표현하기 위해 클래스를 사용하는 방법을 보여줍니다. 클래스를 사용하면 타입 어노테이션이 포함된 데이터 구조를 정의할 수 있어 데이터 타입을 올바르게 사용하고 있는지 확인할 수 있습니다. OOP에 대해 조금 이해하는 것은 도움이 됩니다. 예를 들어, 클래스는 객체의 속성을 정의하고 부모 클래스로부터 속성을 상속받을 수 있는데, 이것이 제가 파이썬에서 OOP를 사용하는 목적과 한계입니다. 지금 당장 완전히 이해되지 않더라도 걱정하지 마십시오. 코드를 보면 자연스럽게 이해하게 될 것입니다.</p>
-<p>객체 지향 코드 대신, 저는 거의 전적으로 함수로 구성된 프로그램을 보여드릴 것입니다. 이러한 함수들은 입력받은 값에 대해서만 작용한다는 점에서 ’순수(pure)’합니다. 즉, 순수 함수는 전역 변수와 같이 숨겨진 가변 상태에 의존하지 않으며 동일한 인자가 주어지면 항상 동일한 값을 반환합니다. 또한 모든 함수에는 예상대로 동작하는지 확인하기 위해 실행할 수 있는 테스트가 연결되어 있습니다. 제 생각에 이러한 방식은 OOP로 작성된 솔루션보다 프로그램이 더 짧고 투명하며 테스트하기 쉽습니다. 여러분의 생각이 다를 수도 있고, 테스트만 통과한다면 여러분이 선호하는 어떤 프로그래밍 스타일로든 솔루션을 작성하셔도 좋습니다. 파이썬 공식 문서의 “Functional Programming HOWTO”는 왜 파이썬이 함수형 프로그래밍(FP)에 적합한지에 대해 잘 설명하고 있습니다.</p>
+<p>객체 지향 코드 대신, 저는 거의 전적으로 함수로 구성된 프로그램을 보여드릴 것입니다. 이러한 함수들은 입력받은 값에 대해서만 작용한다는 점에서 ’순수(pure)’합니다. 즉, 순수 함수는 전역 변수와 같이 숨겨진 가변 상태에 의존하지 않으며 동일한 인자가 주어지면 항상 동일한 값을 반환합니다. 또한 모든 함수에는 예상대로 동작하는지 확인하기 위해 실행할 수 있는 테스트가 연결되어 있습니다. 제 생각에 이러한 방식은 OOP로 작성된 솔루션보다 프로그램이 더 짧고 투명하며 테스트하기 쉽습니다. 여러분의 생각이 다를 수도 있고 테스트만 통과한다면 여러분이 선호하는 어떤 프로그래밍 스타일로든 솔루션을 작성하셔도 좋습니다. 파이썬 공식 문서의 “Functional Programming HOWTO”는 왜 파이썬이 함수형 프로그래밍(FP)에 적합한지에 대해 잘 설명하고 있습니다.</p>
 <p>마지막으로, 이 책의 프로그램들은 예외(exceptions) 사용을 피합니다. 이는 개인적인 용도로 작성하는 짧은 프로그램에 적합하다고 생각합니다. 프로그램의 흐름을 방해하지 않도록 예외를 관리하는 것은 프로그램을 이해하는 능력을 떨어뜨리는 또 다른 복잡성을 가중시킵니다. 저는 일반적으로 오류를 반환하는 파이썬 함수 작성 방식에 만족하지 못합니다. 많은 사람들이 예외를 발생시키고 try/catch 블록으로 실수를 처리하게 합니다. 만약 예외 처리가 정당하다고 판단되면, 저는 종종 예외를 잡지 않고(catch) 프로그램이 충돌하게 둡니다. 이런 면에서 저는 얼랑(Erlang) 언어의 창시자인 조 암스트롱(Joe Armstrong)의 생각을 따르고 있습니다. 그는 “얼랑 방식은 행복한 경로(happy path)를 작성하는 것이지, 오류 수정 코드로 가득 찬 꼬불꼬불한 작은 통로를 만드는 것이 아니다”라고 말했습니다.</p>
 <p>만약 공개용 프로그램이나 모듈을 작성한다면 예외와 오류 처리에 대해 훨씬 더 많이 배워야 하겠지만 그것은 이 책의 범위를 벗어납니다.</p>
 </section>
 <section id="구조" class="level1">
 <h1>구조</h1>
-<p>이 책은 크게 두 부분으로 나뉩니다. 첫 번째 부분은 Rosalind.info 웹사이트에서 찾을 수 있는 14가지 프로그래밍 과제를 다룹니다. 두 번째 부분은 생명정보학에서 중요하다고 생각되는 다른 패턴이나 개념을 보여주는 더 복잡한 프로그램들을 다룹니다. 각 장에서는 여러분이 작성할 코딩 과제를 설명하고, 제대로 작동하는 프로그램을 작성했는지 판단할 수 있는 테스트 스위트를 제공합니다.</p>
+<p>이 책은 크게 두 부분으로 나뉩니다. 첫 번째 부분은 Rosalind.info 웹사이트에서 찾을 수 있는 14가지 프로그래밍 과제를 다룹니다. 두 번째 부분은 생명정보학에서 중요하다고 생각되는 다른 패턴이나 개념을 보여주는 더 복잡한 프로그램들을 다룹니다. 각 장에서는 여러분이 작성할 코딩 과제를 설명하고 제대로 작동하는 프로그램을 작성했는지 판단할 수 있는 테스트 스위트를 제공합니다.</p>
 <p>“Zen of Python”에서는 “어떤 일을 하는 데는 명확한 한 가지 방법이 있어야 하며 가급적 하나만 있는 것이 좋다”고 하지만 저는 하나의 문제에 대해 여러 가지 다른 접근 방식을 시도해 봄으로써 많은 것을 배울 수 있다고 믿습니다. 펄(Perl)은 제가 생명정보학으로 들어온 관문이었으며 “무언가를 하는 방법은 여러 가지가 있다(TMTOWTDI)”는 펄 커뮤니티의 정신은 여전히 저에게 울림을 줍니다. 저는 대개 각 장에서 하나의 주제와 여러 변주(theme-and-variations) 접근 방식을 따라, 파이썬 구문과 데이터 구조의 다양한 측면을 탐구할 수 있는 여러 솔루션을 보여드릴 것입니다.</p>
 </section>
 <section id="테스트-주도-개발" class="level1">
@@ -1372,7 +1367,7 @@ window.Quarto = {
 <h1>new.py를 사용하여 프로그램 만들기</h1>
 <p>앞 섹션에서 보여드린 것처럼 솔루션 중 하나를 복사했다면, 처음부터 시작할 수 있도록 해당 프로그램을 삭제하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm dna.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>제 솔루션을 아직 보지 말고, 이 문제를 스스로 해결해 보시기 바랍니다. 필요한 정보가 모두 있다고 생각되면 바로 <code>dna.py</code> 버전을 작성하고 제공된 테스트를 <code>pytest</code>로 실행해 보십시오. 저와 함께 단계별로 프로그램을 작성하고 테스트를 실행하는 방법을 배우고 싶다면 계속 읽어주시기 바랍니다.</p>
+<p>제 솔루션을 아직 보지 말고 이 문제를 스스로 해결해 보시기 바랍니다. 필요한 정보가 모두 있다고 생각되면 바로 <code>dna.py</code> 버전을 작성하고 제공된 테스트를 <code>pytest</code>로 실행해 보십시오. 저와 함께 단계별로 프로그램을 작성하고 테스트를 실행하는 방법을 배우고 싶다면 계속 읽어주시기 바랍니다.</p>
 <p>이 책의 모든 프로그램은 일부 명령줄 인자를 받아들여 명령줄의 텍스트나 새 파일과 같은 출력을 생성합니다. 저는 항상 서문에 설명된 <code>new.py</code> 프로그램을 사용하여 시작하지만 이것이 필수 사항은 아닙니다. 원하는 어떤 지점에서든 프로그램을 작성할 수 있지만 사용법 문구 생성 및 인자의 적절한 검증과 같은 기능은 갖추고 있어야 합니다.</p>
 <p><code>01_dna</code> 디렉터리에 <code>dna.py</code> 프로그램을 생성하십시오. 이 디렉터리에 프로그램용 테스트 파일이 들어 있기 때문입니다. 제가 <code>dna.py</code> 프로그램을 시작하는 방법은 다음과 같습니다. <code>--purpose</code> 인자는 프로그램 문서화에 사용됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> new.py <span class="at">--purpose</span> <span class="st">'Tetranucleotide frequency'</span> dna.py</span>
@@ -1405,7 +1400,7 @@ window.Quarto = {
 </section>
 <section id="argparse-사용하기" class="level1">
 <h1>argparse 사용하기</h1>
-<p><code>new.py</code>에 의해 생성된 프로그램은 argparse 모듈을 사용하여 프로그램 파라미터를 정의하고, 인자가 올바른지 검증하며 사용자를 위한 사용법 문서를 생성합니다. argparse 모듈은 파이썬 표준 모듈이므로 항상 설치되어 있습니다. 다른 모듈도 이러한 작업을 수행할 수 있으며 프로그램의 이 부분을 처리하기 위해 선호하는 어떤 방법이든 자유롭게 사용할 수 있습니다. 단지 프로그램이 테스트를 통과할 수 있게 하십시오.</p>
+<p><code>new.py</code>에 의해 생성된 프로그램은 argparse 모듈을 사용하여 프로그램 파라미터를 정의하고 인자가 올바른지 검증하며 사용자를 위한 사용법 문서를 생성합니다. argparse 모듈은 파이썬 표준 모듈이므로 항상 설치되어 있습니다. 다른 모듈도 이러한 작업을 수행할 수 있으며 프로그램의 이 부분을 처리하기 위해 선호하는 어떤 방법이든 자유롭게 사용할 수 있습니다. 단지 프로그램이 테스트를 통과할 수 있게 하십시오.</p>
 <p>저는 《Tiny Python Projects》를 위해 작성한 <code>new.py</code> 버전을 해당 책의 GitHub 저장소 <code>bin</code> 디렉터리에 두었습니다. 그 버전은 제가 지금 여러분이 사용하길 원하는 버전보다 다소 간단합니다. 먼저 이 이전 버전의 <code>new.py</code>를 사용하여 만든 <code>dna.py</code> 버전을 보여드리겠습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1431,7 +1426,7 @@ window.Quarto = {
 <p>1 구어체로 쉬뱅(shebang, #!)이라고 불리는 이 줄은 운영 체제에 env 명령(environment)을 사용하여 프로그램의 나머지 부분을 실행할 python3를 찾으라고 지시합니다. 2 이것은 프로그램 또는 모듈 전체에 대한 독스트링(docstring, 문서화 문자열)입니다. 3 명령줄 인자를 처리하기 위해 argparse 모듈을 임포트합니다. 4 argparse 코드를 처리하기 위해 항상 <code>get_args()</code> 함수를 정의합니다. 5 함수에 대한 독스트링입니다. 6 parser 객체는 프로그램의 파라미터를 정의하는 데 사용됩니다. 7 <code>dna</code> 인자를 정의합니다. 이름이 대시(-)로 시작하지 않으므로 위치 인자가 됩니다. <code>metavar</code>는 요약 사용법에 표시될 인자에 대한 짧은 설명입니다. 다른 인자는 필요하지 않습니다. 8 함수는 인자를 파싱한 결과를 반환합니다. 도움말 플래그나 인자 관련 문제가 발생하면 argparse는 사용법 문구 또는 에러 메시지를 출력하고 프로그램을 종료합니다. 9 이 책의 모든 프로그램은 항상 <code>main()</code> 함수에서 시작합니다. 10 <code>main()</code>의 첫 번째 단계는 항상 <code>get_args()</code>를 호출하는 것입니다. 이 호출이 성공하면 인자가 유효했다는 의미입니다. 11 DNA 값은 인자의 이름이 <code>dna</code>이므로 <code>args.dna</code> 속성에서 사용할 수 있습니다. 12 프로그램이 (임포트되는 대신) 직접 실행될 때를 감지하여 <code>main()</code> 함수를 실행하는 파이썬 프로그램의 흔한 관용구입니다.</p>
 <p>쉬뱅 라인은 <code>./dna.py</code>와 같이 프로그램이 실행될 때 유닉스 쉘에서 사용됩니다. 윈도우에서는 작동하지 않으며 프로그램을 실행하려면 <code>python.exe dna.py</code>를 실행해야 합니다.</p>
 <p>이 코드는 완벽하게 작동하지만 <code>get_args()</code>에서 반환된 값은 프로그램 실행 시 동적으로 생성되는 <code>argparse.Namespace</code> 객체입니다. 즉, 저는 <code>parser.add_argument()</code>와 같은 코드를 사용해 런타임에 이 객체의 구조를 수정하고 있으므로, 파이썬은 컴파일 시점에 파싱된 인자에서 어떤 속성을 사용할 수 있는지 또는 그 타입이 무엇인지 확실히 알 수 없습니다. 필수 문자열 인자가 하나만 있다는 것이 여러분에게는 명확할지라도, 파이썬이 이를 식별하기에는 코드 내 정보가 충분하지 않습니다.</p>
-<p>프로그램을 컴파일한다는 것은 컴퓨터가 실행할 수 있는 기계어로 바꾸는 것을 의미합니다. C와 같은 일부 언어는 실행 전에 별도로 컴파일해야 합니다. 파이썬 프로그램은 종종 컴파일과 실행이 한 단계로 이루어지지만 여전히 컴파일 단계가 존재합니다. 일부 에러는 컴파일 시점에 잡힐 수 있고, 다른 에러들은 런타임까지 나타나지 않습니다. 예를 들어 구문 에러는 컴파일을 방해합니다. 런타임 에러보다는 컴파일 시점 에러가 발생하는 것이 더 바람직합니다.</p>
+<p>프로그램을 컴파일한다는 것은 컴퓨터가 실행할 수 있는 기계어로 바꾸는 것을 의미합니다. C와 같은 일부 언어는 실행 전에 별도로 컴파일해야 합니다. 파이썬 프로그램은 종종 컴파일과 실행이 한 단계로 이루어지지만 여전히 컴파일 단계가 존재합니다. 일부 에러는 컴파일 시점에 잡힐 수 있고 다른 에러들은 런타임까지 나타나지 않습니다. 예를 들어 구문 에러는 컴파일을 방해합니다. 런타임 에러보다는 컴파일 시점 에러가 발생하는 것이 더 바람직합니다.</p>
 <p>이것이 왜 문제가 될 수 있는지 알아보기 위해 <code>main()</code> 함수를 수정하여 타입 에러를 도입해 보겠습니다. 즉, 의도적으로 <code>args.dna</code> 값의 타입을 잘못 사용해 보겠습니다. 별도로 명시하지 않는 한, argparse가 명령줄에서 반환하는 모든 인자 값은 문자열입니다. 만약 문자열인 <code>args.dna</code>를 정수 값 2로 나누려고 하면, 파이썬은 예외를 발생시키고 런타임에 프로그램을 중단시킬 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -1471,7 +1466,7 @@ window.Quarto = {
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[Clang</span> 6.0 <span class="er">(</span><span class="ex">clang-600.0.57</span><span class="kw">)</span><span class="ex">]</span> on darwin</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Type</span> <span class="st">"help"</span>, <span class="st">"copyright"</span>, <span class="st">"credits"</span> or <span class="st">"license"</span> for more information.</span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>표준 <code>python3</code> REPL은 <code>&gt;&gt;&gt;</code>를 프롬프트로 사용합니다. <code>&gt;&gt;&gt;</code> 프롬프트 자체는 입력하지 말고, 그 뒤에 오는 텍스트만 입력해야 함에 주의하십시오. 예를 들어, 두 숫자를 더하는 과정을 다음과 같이 보여준다면:</p>
+<p>표준 <code>python3</code> REPL은 <code>&gt;&gt;&gt;</code>를 프롬프트로 사용합니다. <code>&gt;&gt;&gt;</code> 프롬프트 자체는 입력하지 말고 그 뒤에 오는 텍스트만 입력해야 함에 주의하십시오. 예를 들어, 두 숫자를 더하는 과정을 다음과 같이 보여준다면:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">5</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>여러분은 <code>3 + 5&lt;Enter&gt;</code>만 입력해야 합니다. 만약 앞의 프롬프트까지 포함하면 다음과 같이 에러가 발생합니다.</p>
@@ -1480,7 +1475,7 @@ window.Quarto = {
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">5</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">^</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="pp">SyntaxError</span>: invalid syntax</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>저는 특히 문서를 읽을 때 REPL을 사용하는 것을 좋아합니다. 예를 들어 <code>help(str)</code>을 입력하여 파이썬의 문자열 클래스에 대해 읽어보십시오. 도움말 문서 내에서 <code>F</code> 키, <code>Ctrl-F</code> 또는 스페이스바를 누르면 앞으로 이동할 수 있고, <code>B</code> 키 또는 <code>Ctrl-B</code>를 누르면 뒤로 이동할 수 있습니다. 검색하려면 <code>/</code> 키를 누른 뒤 문자열을 입력하고 <code>Enter</code>를 누르십시오. 도움말에서 나가려면 <code>Q</code>를 누르십시오. REPL을 종료하려면 <code>exit()</code>를 입력하거나 <code>Ctrl-D</code>를 누르십시오.</p>
+<p>저는 특히 문서를 읽을 때 REPL을 사용하는 것을 좋아합니다. 예를 들어 <code>help(str)</code>을 입력하여 파이썬의 문자열 클래스에 대해 읽어보십시오. 도움말 문서 내에서 <code>F</code> 키, <code>Ctrl-F</code> 또는 스페이스바를 누르면 앞으로 이동할 수 있고 <code>B</code> 키 또는 <code>Ctrl-B</code>를 누르면 뒤로 이동할 수 있습니다. 검색하려면 <code>/</code> 키를 누른 뒤 문자열을 입력하고 <code>Enter</code>를 누르십시오. 도움말에서 나가려면 <code>Q</code>를 누르십시오. REPL을 종료하려면 <code>exit()</code>를 입력하거나 <code>Ctrl-D</code>를 누르십시오.</p>
 </section>
 <section id="네임드-튜플named-tuples-소개" class="level1">
 <h1>네임드 튜플(Named Tuples) 소개</h1>
@@ -1657,7 +1652,7 @@ window.Quarto = {
 <span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>        args.dna <span class="op">=</span> <span class="bu">open</span>(args.dna).read().rstrip() <span class="co"># 2</span></span>
 <span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Args(args.dna)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 <code>dna</code> 값이 파일인지 확인합니다. 2 <code>open()</code>을 호출하여 파일 핸들을 연 다음, <code>fh.read()</code> 메서드를 연결해 문자열을 반환받고, 다시 <code>str.rstrip()</code> 메서드를 연결해 끝부분의 공백을 제거합니다.</p>
+<p>1 <code>dna</code> 값이 파일인지 확인합니다. 2 <code>open()</code>을 호출하여 파일 핸들을 연 다음, <code>fh.read()</code> 메서드를 연결해 문자열을 반환받고 다시 <code>str.rstrip()</code> 메서드를 연결해 끝부분의 공백을 제거합니다.</p>
 <p><code>fh.read()</code> 함수는 파일 전체를 읽어 변수에 담습니다. 이 경우 입력 파일이 작으므로 괜찮지만 생명정보학에서는 기가바이트 크기의 파일을 처리하는 일이 매우 흔합니다. 큰 파일에 <code>read()</code>를 사용하면 프로그램이나 컴퓨터 전체가 멈출 수 있습니다. 나중에 이를 피하기 위해 파일을 한 줄씩 읽는 방법을 보여드리겠습니다.</p>
 <p>이제 프로그램이 문자열 값으로 잘 작동하는지 확인하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./dna.py ACGT</span>
@@ -1684,13 +1679,13 @@ window.Quarto = {
 <span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>TEST2 <span class="op">=</span> (<span class="st">'./tests/inputs/input2.txt'</span>, <span class="st">'20 12 17 21'</span>)</span>
 <span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>TEST3 <span class="op">=</span> (<span class="st">'./tests/inputs/input3.txt'</span>, <span class="st">'196 231 237 246'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 모듈의 독스트링입니다. 2 표준 <code>os</code> 모듈은 운영 체제와 상호작용합니다. 3 <code>platform</code> 모듈은 윈도우에서 실행 중인지 판단하는 데 사용됩니다. 4 <code>subprocess</code> 모듈로부터 <code>dna.py</code> 프로그램을 실행하고 출력과 상태를 캡처하는 함수를 임포트합니다. 5 다음 줄들은 프로그램을 위한 전역 변수들입니다. 저는 테스트 이외의 곳에서는 전역 변수를 피하는 편입니다. 여기서는 함수에서 사용할 몇 가지 값들을 정의하고자 합니다. 전역 가시성을 강조하기 위해 <code>UPPERCASE_NAMES</code> 형식을 사용하는 것을 좋아합니다. 6 <code>RUN</code> 변수는 <code>dna.py</code> 프로그램을 실행하는 방법을 결정합니다. 윈도우에서는 파이썬 프로그램을 실행하기 위해 <code>python</code> 명령어를 사용해야 하지만 유닉스 플랫폼에서는 <code>dna.py</code>를 직접 실행할 수 있습니다. 7 <code>TEST*</code> 변수들은 DNA 서열이 포함된 파일과 해당 서열에 대해 기대되는 프로그램의 출력을 정의하는 튜플입니다.</p>
-<p><code>pytest</code> 모듈은 테스트 파일에 정의된 순서대로 테스트 함수를 실행합니다. 저는 종종 가장 간단한 사례부터 복잡한 사례 순으로 테스트를 구성하므로, 실패가 발생한 뒤에 테스트를 계속 진행하는 것은 대개 의미가 없습니다. 예를 들어, 첫 번째 테스트는 항상 테스트할 프로그램이 존재하는지 확인하는 것입니다. 프로그램이 존재하지 않는다면 더 이상의 테스트는 무의미합니다. 첫 번째 실패 지점에서 중단하도록 <code>-x</code> 플래그를 사용하고, 상세 출력을 위해 <code>-v</code> 플래그를 함께 사용하여 <code>pytest</code>를 실행하시길 권장합니다.</p>
+<p><code>pytest</code> 모듈은 테스트 파일에 정의된 순서대로 테스트 함수를 실행합니다. 저는 종종 가장 간단한 사례부터 복잡한 사례 순으로 테스트를 구성하므로, 실패가 발생한 뒤에 테스트를 계속 진행하는 것은 대개 의미가 없습니다. 예를 들어, 첫 번째 테스트는 항상 테스트할 프로그램이 존재하는지 확인하는 것입니다. 프로그램이 존재하지 않는다면 더 이상의 테스트는 무의미합니다. 첫 번째 실패 지점에서 중단하도록 <code>-x</code> 플래그를 사용하고 상세 출력을 위해 <code>-v</code> 플래그를 함께 사용하여 <code>pytest</code>를 실행하시길 권장합니다.</p>
 <p>첫 번째 테스트를 살펴보겠습니다. <code>pytest</code>가 찾을 수 있도록 함수 이름은 <code>test_exists()</code>로 지었습니다. 함수 본문에서는 하나 이상의 <code>assert</code> 문을 사용하여 어떤 조건이 참인지 확인합니다. 여기서는 <code>dna.py</code> 프로그램이 존재하는지 확인합니다. 이것이 여러분의 프로그램이 이 디렉터리에 있어야만 하는 이유입니다. 그렇지 않으면 테스트에서 찾을 수 없습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_exists(): <span class="co"># 1</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" 프로그램이 존재하는지 확인 """</span></span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> os.path.exists(PRG) <span class="co"># 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 <code>pytest</code>가 찾을 수 있도록 함수 이름은 <code>test_</code>로 시작해야 합니다. 2 <code>os.path.exists()</code> 함수는 주어진 인자가 파일로 존재할 경우 <code>True</code>를 반환합니다. 만약 <code>False</code>를 반환하면 단언(assertion)이 실패하고 이 테스트도 실패하게 됩니다.</p>
-<p>제가 작성하는 그 다음 테스트는 항상 프로그램이 <code>-h</code> 및 <code>--help</code> 플래그에 대해 사용법 문구를 생성하는지 확인하는 것입니다. <code>subprocess.getstatusoutput()</code> 함수는 단축 및 긴 도움말 플래그와 함께 <code>dna.py</code> 프로그램을 실행합니다. 각 경우에 프로그램이 <code>usage:</code>라는 단어로 시작하는 텍스트를 출력하는지 확인하고자 합니다. 완벽한 테스트는 아닙니다. 문서 내용이 정확한지까지는 확인하지 않고, 단지 사용법 문구처럼 보이는 무언가가 나타나는지만 확인합니다. 저는 모든 테스트가 완벽하게 철저할 필요는 없다고 생각합니다. 테스트 코드는 다음과 같습니다.</p>
+<p>제가 작성하는 그 다음 테스트는 항상 프로그램이 <code>-h</code> 및 <code>--help</code> 플래그에 대해 사용법 문구를 생성하는지 확인하는 것입니다. <code>subprocess.getstatusoutput()</code> 함수는 단축 및 긴 도움말 플래그와 함께 <code>dna.py</code> 프로그램을 실행합니다. 각 경우에 프로그램이 <code>usage:</code>라는 단어로 시작하는 텍스트를 출력하는지 확인하고자 합니다. 완벽한 테스트는 아닙니다. 문서 내용이 정확한지까지는 확인하지 않고 단지 사용법 문구처럼 보이는 무언가가 나타나는지만 확인합니다. 저는 모든 테스트가 완벽하게 철저할 필요는 없다고 생각합니다. 테스트 코드는 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_usage() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 사용법 문구 출력 확인 '''</span></span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> arg <span class="kw">in</span> [<span class="st">'-h'</span>, <span class="st">'--help'</span>]: <span class="co"># 1</span></span>
@@ -1698,7 +1693,7 @@ window.Quarto = {
 <span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> rv <span class="op">==</span> <span class="dv">0</span> <span class="co"># 3</span></span>
 <span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> out.lower().startswith(<span class="st">'usage:'</span>) <span class="co"># 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 단축 및 긴 도움말 플래그를 반복합니다. 2 인자와 함께 프로그램을 실행하고 반환값과 출력을 캡처합니다. 3 프로그램이 성공적인 종료 값인 0을 보고하는지 확인합니다. 4 프로그램의 출력을 소문자로 변환했을 때 <code>usage:</code> 텍스트로 시작하는지 확인합니다.</p>
-<p>명령줄 프로그램은 대개 0이 아닌 값을 반환하여 운영 체제에 에러가 발생했음을 알립니다. 프로그램이 성공적으로 실행되었다면 0을 반환해야 합니다. 때때로 0이 아닌 값은 내부 에러 코드와 관련이 있을 수도 있지만 대개는 무언가 잘못되었다는 뜻입니다. 제가 작성하는 프로그램들도 마찬가지로 성공적인 실행에는 항상 0을 보고하고, 에러가 있을 때는 0이 아닌 값을 보고하려 노력할 것입니다.</p>
+<p>명령줄 프로그램은 대개 0이 아닌 값을 반환하여 운영 체제에 에러가 발생했음을 알립니다. 프로그램이 성공적으로 실행되었다면 0을 반환해야 합니다. 때때로 0이 아닌 값은 내부 에러 코드와 관련이 있을 수도 있지만 대개는 무언가 잘못되었다는 뜻입니다. 제가 작성하는 프로그램들도 마찬가지로 성공적인 실행에는 항상 0을 보고하고 에러가 있을 때는 0이 아닌 값을 보고하려 노력할 것입니다.</p>
 <p>다음으로, 인자가 주어지지 않았을 때 프로그램이 종료되는지 확인하고 싶습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_dies_no_args() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 인자가 없을 때 종료 확인 '''</span></span>
@@ -1711,7 +1706,7 @@ window.Quarto = {
 <section id="출력을-테스트하기-위해-프로그램-실행하기" class="level1">
 <h1>출력을 테스트하기 위해 프로그램 실행하기</h1>
 <p>이제 프로그램이 의도한 대로 작동하는지 확인할 차례입니다. 프로그램을 테스트하는 방법은 많지만 저는 ‘안에서 밖으로(inside-out)’와 ’밖에서 안으로(outside-in)’라고 부르는 두 가지 기본 접근 방식을 즐겨 사용합니다. ’안에서 밖으로’ 접근 방식은 프로그램 내부의 개별 함수를 테스트하는 단계에서 시작합니다. 함수는 컴퓨팅의 기본 단위로 간주될 수 있으므로 이를 흔히 ‘유닛 테스트(unit testing)’라고 부르며 솔루션 섹션에서 다룰 예정입니다. 여기서는 ’밖에서 안으로’ 접근 방식부터 시작하겠습니다. 이는 사용자가 프로그램을 실행하는 것과 똑같이 명령줄에서 프로그램을 실행하는 것을 의미합니다. 코드 조각들이 함께 작동하여 올바른 출력을 생성하는지 확인하는 총체적인 접근 방식이므로, 때때로 ’통합 테스트(integration test)’라고도 불립니다.</p>
-<p>그러한 첫 번째 테스트는 DNA 문자열을 명령줄 인자로 전달하고, 프로그램이 정확한 문자열 형식으로 계산된 개수를 생성하는지 확인하는 것입니다.</p>
+<p>그러한 첫 번째 테스트는 DNA 문자열을 명령줄 인자로 전달하고 프로그램이 정확한 문자열 형식으로 계산된 개수를 생성하는지 확인하는 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_arg():</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 명령줄 인자 사용 확인 '''</span></span>
 <span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="bu">file</span>, expected <span class="kw">in</span> [TEST1, TEST2, TEST3]: <span class="co"># 1</span></span>
@@ -1794,7 +1789,7 @@ window.Quarto = {
 <p><code>==</code> 연산자는 두 값이 같은지 비교하는 데 사용됩니다. 두 문자열이나 두 숫자를 비교할 때 작동합니다. 앞서 <code>/</code>를 사용한 나눗셈에서 문자열과 숫자를 섞어 쓰면 예외가 발생한다고 말씀드렸습니다. 만약 이 연산자에서 타입을 섞어 쓰면 어떻게 될까요? 예를 들어 <code>"3" == 3</code>은 어떨까요? 타입을 먼저 비교하지 않고도 이 연산자를 안전하게 사용할 수 있을까요?</p>
 <p>그림 1-3에서 보듯이, 변수를 증가시키는 더 짧은 방법은 <code>+=</code> 연산자를 사용하는 것입니다. 이 연산자는 표현식의 우변(RHS, Righthand side)에 있는 값을 좌변(LHS, Lefthand side)에 있는 변수에 더합니다.</p>
 <p><img src="images/23ba33c621df7807f9c8357f17d29c043966a1b12ba500e21f19d5979f7f8475.jpg" class="img-fluid"> 그림 1-3. <code>+=</code> 연산자는 우변의 값을 좌변의 변수에 더합니다.</p>
-<p>확인해야 할 뉴클레오타이드가 네 개이므로 세 개의 <code>if</code> 표현식을 더 결합할 방법이 필요합니다. 파이썬에서는 <code>else if</code> 대신 <code>elif</code>를 사용하고, 마지막이나 기본 케이스에 <code>else</code>를 사용합니다. 다음은 프로그램이나 REPL에 입력하여 간단한 결정 트리(decision tree)를 구현할 수 있는 코드 블록입니다.</p>
+<p>확인해야 할 뉴클레오타이드가 네 개이므로 세 개의 <code>if</code> 표현식을 더 결합할 방법이 필요합니다. 파이썬에서는 <code>else if</code> 대신 <code>elif</code>를 사용하고 마지막이나 기본 케이스에 <code>else</code>를 사용합니다. 다음은 프로그램이나 REPL에 입력하여 간단한 결정 트리(decision tree)를 구현할 수 있는 코드 블록입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>dna <span class="op">=</span> <span class="st">'ACCGGGTTTT'</span></span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>count_a, count_c, count_g, count_t <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span></span>
 <span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna:</span>
@@ -1862,7 +1857,7 @@ window.Quarto = {
 </section>
 <section id="솔루션-2-count-함수-생성-및-유닛-테스트-추가" class="level1">
 <h1>솔루션 2: count() 함수 생성 및 유닛 테스트 추가</h1>
-<p>첫 번째 변형은 <code>main()</code> 함수에서 개수를 세는 모든 코드를 <code>count()</code> 함수로 옮기는 것입니다. 이 함수는 프로그램의 어느 곳에나 정의할 수 있지만 저는 보통 <code>get_args()</code>를 첫 번째로, <code>main()</code>을 두 번째로 배치하고, 다른 함수들은 그 뒤에 배치한 후 마지막으로 <code>main()</code>을 호출하는 두 줄의 코드를 둡니다.</p>
+<p>첫 번째 변형은 <code>main()</code> 함수에서 개수를 세는 모든 코드를 <code>count()</code> 함수로 옮기는 것입니다. 이 함수는 프로그램의 어느 곳에나 정의할 수 있지만 저는 보통 <code>get_args()</code>를 첫 번째로, <code>main()</code>을 두 번째로 배치하고 다른 함수들은 그 뒤에 배치한 후 마지막으로 <code>main()</code>을 호출하는 두 줄의 코드를 둡니다.</p>
 <p>다음 함수를 위해서는 <code>typing.Tuple</code> 값을 임포트해야 합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count(dna: <span class="bu">str</span>) <span class="op">-&gt;</span> Tuple[<span class="bu">int</span>, <span class="bu">int</span>, <span class="bu">int</span>, <span class="bu">int</span>]: ①</span>
 <span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' DNA 염기 개수 세기 '''</span></span>
@@ -1965,7 +1960,7 @@ dna.py::test_count PASSED [100%]
 <li>시그니처는 이전과 동일합니다.</li>
 <li>네 가지 염기 각각에 대해 <code>dna.count()</code> 메서드를 호출합니다.</li>
 </ol>
-<p>이 코드는 훨씬 간결하며 동일한 유닛 테스트를 사용하여 정확성을 검증할 수 있습니다. 이것이 핵심입니다. 함수는 블랙박스처럼 작동해야 합니다. 즉, 박스 안에서 무슨 일이 일어나는지 알 필요도 없고 신경 쓸 필요도 없습니다. 무언가 들어가서 답이 나오면 되고, 오직 그 답이 정확한지만 신경 쓰면 됩니다. 외부와의 계약(파라미터와 반환 값)이 동일하게 유지되는 한 박스 내부에서 일어나는 일을 자유롭게 변경할 수 있습니다.</p>
+<p>이 코드는 훨씬 간결하며 동일한 유닛 테스트를 사용하여 정확성을 검증할 수 있습니다. 이것이 핵심입니다. 함수는 블랙박스처럼 작동해야 합니다. 즉, 박스 안에서 무슨 일이 일어나는지 알 필요도 없고 신경 쓸 필요도 없습니다. 무언가 들어가서 답이 나오면 되고 오직 그 답이 정확한지만 신경 쓰면 됩니다. 외부와의 계약(파라미터와 반환 값)이 동일하게 유지되는 한 박스 내부에서 일어나는 일을 자유롭게 변경할 수 있습니다.</p>
 <p>다음은 파이썬의 f-문자열(f-string) 구문을 사용하여 <code>main()</code> 함수에서 출력 문자열을 만드는 또 다른 방법입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -2215,7 +2210,7 @@ dna.py::test_count PASSED [100%]
 <ul>
 <li><code>new.py</code> 프로그램을 사용하여 <code>argparse</code>를 통해 명령줄 인자를 받고 검증하는 파이썬 프로그램의 기본 구조를 만들 수 있습니다.</li>
 <li><code>pytest</code> 모듈은 이름이 <code>test_</code>로 시작하는 모든 함수를 실행하고 얼마나 많은 테스트가 통과했는지 결과를 보고합니다.</li>
-<li>유닛 테스트는 함수를 위한 것이고, 통합 테스트는 프로그램이 전체적으로 작동하는지 확인합니다.</li>
+<li>유닛 테스트는 함수를 위한 것이고 통합 테스트는 프로그램이 전체적으로 작동하는지 확인합니다.</li>
 <li><code>pylint</code>, <code>flake8</code>, <code>mypy</code>와 같은 프로그램은 코드에서 다양한 종류의 오류를 찾아낼 수 있습니다. 또한 <code>pytest</code>가 이러한 검사들을 자동으로 실행하여 코드가 통과하는지 확인하게 할 수도 있습니다.</li>
 <li>복잡한 명령은 <code>Makefile</code>의 타겟으로 저장하고 <code>make</code> 명령을 사용하여 실행할 수 있습니다.</li>
 <li>일련의 <code>if/else</code> 문을 사용하여 결정 트리를 만들 수 있습니다.</li>
@@ -2233,7 +2228,7 @@ dna.py::test_count PASSED [100%]
 <p>생명을 유지하는 데 필요한 단백질을 발현시키기 위해, DNA 영역은 메신저 RNA(mRNA)라고 불리는 RNA 형태로 전사되어야 합니다. DNA와 RNA 사이에는 흥미로운 생화학적 차이가 많지만 우리의 목적상 유일한 차이점은 DNA 시퀀스에서 티민(thymine) 염기를 나타내는 모든 문자 ’T’를 우라실(uracil)을 뜻하는 ’U’로 바꾸어야 한다는 것입니다. Rosalind RNA 페이지에 설명된 대로, 제가 작성법을 보여드릴 프로그램은 ’ACGT’와 같은 DNA 문자열을 입력받아 전사된 mRNA ’ACGU’를 출력할 것입니다. 파이썬의 <code>str.replace()</code> 함수를 사용하면 이를 한 줄로 수행할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb123"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">'GATGGAACTTGACTACGTAAATT'</span>.replace(<span class="st">'T'</span>, <span class="st">'U'</span>)</span>
 <span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="co">'GAUGGAACUUGACUACGUAAAAUU'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>여러분은 이미 1장에서 명령줄이나 파일로부터 DNA 시퀀스를 입력받아 결과를 출력하는 프로그램을 작성하는 방법을 보았으므로, 이를 다시 반복한다면 배울 점이 별로 없을 것입니다. 저는 생명정보학에서 흔히 볼 수 있는 패턴을 다룸으로써 이 프로그램을 더 흥미롭게 만들 것입니다. 즉, 하나 이상의 입력 파일을 처리하고 그 결과를 출력 디렉토리에 저장하는 방법을 보여드리겠습니다. 예를 들어, 시퀀싱 작업 결과를 품질 검사 및 필터링이 필요한 파일들이 담긴 디렉토리로 받고, 정제된 시퀀스들을 분석을 위한 새로운 디렉토리에 넣는 것은 매우 일반적인 일입니다. 여기서 입력 파일들은 한 줄에 하나씩 DNA 시퀀스를 포함하고 있으며 저는 출력 디렉토리에 동일한 이름의 파일들로 mRNA 시퀀스들을 작성할 것입니다.</p>
+<p>여러분은 이미 1장에서 명령줄이나 파일로부터 DNA 시퀀스를 입력받아 결과를 출력하는 프로그램을 작성하는 방법을 보았으므로, 이를 다시 반복한다면 배울 점이 별로 없을 것입니다. 저는 생명정보학에서 흔히 볼 수 있는 패턴을 다룸으로써 이 프로그램을 더 흥미롭게 만들 것입니다. 즉, 하나 이상의 입력 파일을 처리하고 그 결과를 출력 디렉토리에 저장하는 방법을 보여드리겠습니다. 예를 들어, 시퀀싱 작업 결과를 품질 검사 및 필터링이 필요한 파일들이 담긴 디렉토리로 받고 정제된 시퀀스들을 분석을 위한 새로운 디렉토리에 넣는 것은 매우 일반적인 일입니다. 여기서 입력 파일들은 한 줄에 하나씩 DNA 시퀀스를 포함하고 있으며 저는 출력 디렉토리에 동일한 이름의 파일들로 mRNA 시퀀스들을 작성할 것입니다.</p>
 <p>이 장에서 여러분은 다음을 배우게 됩니다.</p>
 <ul>
 <li>하나 이상의 파일 입력을 요구하는 프로그램을 작성하는 방법</li>
@@ -2276,7 +2271,7 @@ dna.py::test_count PASSED [100%]
 <p>여러 입력을 사용하여 프로그램을 실행하고 출력 디렉토리에 여러 파일이 생성되는지 확인해야 합니다. 여기서는 <code>rna</code>라는 출력 디렉토리와 함께 모든 테스트 입력 파일들을 사용할 것입니다. 요약 텍스트에서 시퀀스(sequence)와 파일(file)에 대해 단수/복수를 올바르게 사용하는 방식에 주목하세요.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb132"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./rna.py <span class="at">--out_dir</span> rna tests/Input/<span class="pp">*</span></span>
 <span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="ex">완료,</span> <span class="st">"rna"</span> 디렉토리에 3개 파일로 5개 시퀀스를 작성했습니다.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>wc</code>(단어 수 세기) 프로그램에 <code>-l</code> 옵션을 사용하여 출력 파일의 줄 수를 세고, <code>rna</code> 디렉토리의 3개 파일에 5개의 시퀀스가 기록되었는지 확인할 수 있습니다.</p>
+<p><code>wc</code>(단어 수 세기) 프로그램에 <code>-l</code> 옵션을 사용하여 출력 파일의 줄 수를 세고 <code>rna</code> 디렉토리의 3개 파일에 5개의 시퀀스가 기록되었는지 확인할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb133"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> rna/<span class="pp">*</span></span>
 <span id="cb133-2"><a href="#cb133-2" aria-hidden="true" tabindex="-1"></a><span class="ex">1</span> rna/Input1.txt</span>
 <span id="cb133-3"><a href="#cb133-3" aria-hidden="true" tabindex="-1"></a><span class="ex">2</span> rna/Input2.txt</span>
@@ -2321,7 +2316,7 @@ dna.py::test_count PASSED [100%]
 <span id="cb136-4"><a href="#cb136-4" aria-hidden="true" tabindex="-1"></a>                    nargs<span class="op">=</span><span class="st">'+'</span>, <span class="co"># 4</span></span>
 <span id="cb136-5"><a href="#cb136-5" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">type</span><span class="op">=</span>argparse.FileType(<span class="st">'rt'</span>)) <span class="co"># 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li><code>-f</code> 짧은 플래그와 <code>--file</code>에서 두 개의 대시를 제거하여 이것을 <code>file</code>이라는 이름의 위치 인자로 만듭니다. 선택적 파라미터는 대시로 시작하고, 위치 인자는 그렇지 않습니다.</li>
+<li><code>-f</code> 짧은 플래그와 <code>--file</code>에서 두 개의 대시를 제거하여 이것을 <code>file</code>이라는 이름의 위치 인자로 만듭니다. 선택적 파라미터는 대시로 시작하고 위치 인자는 그렇지 않습니다.</li>
 <li>도움말 문자열은 인자가 DNA 시퀀스를 포함하는 하나 이상의 파일이어야 함을 나타냅니다.</li>
 <li>이 문자열은 인자가 파일임을 나타내기 위해 짧은 사용법에 출력됩니다.</li>
 <li>이는 인자의 개수를 나타냅니다. <code>+</code>는 하나 이상의 값이 필요함을 나타냅니다.</li>
@@ -2370,9 +2365,9 @@ dna.py::test_count PASSED [100%]
 <li>유용한 오류 메시지를 출력했습니다.</li>
 <li>0이 아닌 값으로 프로그램을 종료했습니다.</li>
 </ol>
-<p>이것이 잘 작성된 프로그램이 작동해야 하는 방식이며 가능한 한 빨리 잘못된 인자를 감지하고 거부하며 사용자에게 문제를 알리는 것입니다. 이 모든 일이 제가 원하는 인자의 종류에 대한 좋은 설명을 작성하는 것 외에 아무것도 하지 않고도 일어났습니다. 다시 말하지만 가장 좋은 코드는 여러분이 작성하지 않는 코드입니다(엘론 머스크가 말했듯, “가장 좋은 부품은 부품이 없는 것이고, 가장 좋은 프로세스는 프로세스가 없는 것이다.”)</p>
+<p>이것이 잘 작성된 프로그램이 작동해야 하는 방식이며 가능한 한 빨리 잘못된 인자를 감지하고 거부하며 사용자에게 문제를 알리는 것입니다. 이 모든 일이 제가 원하는 인자의 종류에 대한 좋은 설명을 작성하는 것 외에 아무것도 하지 않고도 일어났습니다. 다시 말하지만 가장 좋은 코드는 여러분이 작성하지 않는 코드입니다(엘론 머스크가 말했듯, “가장 좋은 부품은 부품이 없는 것이고 가장 좋은 프로세스는 프로세스가 없는 것이다.”)</p>
 <p>파일 타입을 사용하고 있기 때문에, 리스트의 요소들은 파일 이름을 나타내는 문자열이 아니라 대신 열려 있는 파일 핸들(filehandle)이 될 것입니다. 파일 핸들은 파일의 내용을 읽고 쓰기 위한 메커니즘입니다. 지난 장에서 DNA 인자가 파일 이름이었을 때 파일 핸들을 사용했습니다.</p>
-<p>소스 코드에서 이러한 파라미터들을 정의하는 순서는 이 경우 중요하지 않습니다. 위치 인자 전이나 후에 옵션들을 정의할 수 있습니다. 순서는 여러 개의 위치 인자가 있을 때만 중요합니다. 첫 번째 파라미터는 첫 번째 위치 인자를 위한 것이고, 두 번째 파라미터는 두 번째 위치 인자를 위한 것, 이런 식입니다.</p>
+<p>소스 코드에서 이러한 파라미터들을 정의하는 순서는 이 경우 중요하지 않습니다. 위치 인자 전이나 후에 옵션들을 정의할 수 있습니다. 순서는 여러 개의 위치 인자가 있을 때만 중요합니다. 첫 번째 파라미터는 첫 번째 위치 인자를 위한 것이고 두 번째 파라미터는 두 번째 위치 인자를 위한 것, 이런 식입니다.</p>
 </section>
 <section id="args-클래스-정의하기" class="level1">
 <h1>Args 클래스 정의하기</h1>
@@ -2503,7 +2498,7 @@ dna.py::test_count PASSED [100%]
 </section>
 <section id="출력-시퀀스-작성하기" class="level1">
 <h1>출력 시퀀스 작성하기</h1>
-<p>의사코드를 다시 보면, 두 단계의 순회가 있습니다. 하나는 각 입력 파일 핸들에 대한 것이고, 다른 하나는 파일 핸들 내의 각 DNA 줄에 대한 것입니다. 열려 있는 파일 핸들에서 각 줄을 읽기 위해 또 다른 for 루프를 사용할 수 있습니다.</p>
+<p>의사코드를 다시 보면, 두 단계의 순회가 있습니다. 하나는 각 입력 파일 핸들에 대한 것이고 다른 하나는 파일 핸들 내의 각 DNA 줄에 대한 것입니다. 열려 있는 파일 핸들에서 각 줄을 읽기 위해 또 다른 for 루프를 사용할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb149"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fh <span class="kw">in</span> args.files:</span>
 <span id="cb149-2"><a href="#cb149-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> dna <span class="kw">in</span> fh:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>input2.txt 파일에는 각각 줄바꿈으로 끝나는 두 개의 시퀀스가 있습니다.</p>
@@ -2596,7 +2591,7 @@ dna.py::test_count PASSED [100%]
 <span id="cb155-11"><a href="#cb155-11" aria-hidden="true" tabindex="-1"></a>tests<span class="op">/</span>rna_test.py::test_good_multiple_entries PASSED [<span class="dv">100</span><span class="op">%</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 rna.py 프로그램이 존재합니다. 2 프로그램이 요청 시 사용법 문구를 출력합니다. 3 인자가 주어지지 않았을 때 프로그램이 오류와 함께 종료됩니다. 4 잘못된 파일 인자가 주어졌을 때 프로그램이 오류 메시지를 출력합니다. 5 다음 테스트들은 모두 올바른 입력이 주어졌을 때 프로그램이 제대로 작동하는지 검증합니다.</p>
 <p>일반적으로 저는 좋은 입력을 주기 전에 프로그램을 고장내려는 테스트를 먼저 작성합니다. 예를 들어, 파일이 주어지지 않거나 존재하지 않는 파일이 주어졌을 때 프로그램이 실패하기를 원합니다. 최고의 형사가 범죄자처럼 생각할 수 있는 것처럼, 저도 프로그램을 망가뜨릴 수 있는 모든 방법을 상상해 보고 그러한 상황에서도 프로그램이 예측 가능하게 행동하는지 테스트합니다.</p>
-<p>처음 세 가지 테스트는 1장과 정확히 동일합니다. 네 번째 테스트에서는 존재하지 않는 파일을 전달하고, 사용법 및 오류 메시지와 함께 0이 아닌 종료 값을 기대합니다. 오류 메시지에는 문제가 된 값, 즉 여기서는 잘못된 파일 이름이 구체적으로 명시되어야 합니다. 사용자에게 무엇이 문제인지, 그리고 어떻게 해결해야 하는지 정확히 알려주는 피드백을 만들기 위해 노력해야 합니다.</p>
+<p>처음 세 가지 테스트는 1장과 정확히 동일합니다. 네 번째 테스트에서는 존재하지 않는 파일을 전달하고 사용법 및 오류 메시지와 함께 0이 아닌 종료 값을 기대합니다. 오류 메시지에는 문제가 된 값, 즉 여기서는 잘못된 파일 이름이 구체적으로 명시되어야 합니다. 사용자에게 무엇이 문제인지, 그리고 어떻게 해결해야 하는지 정확히 알려주는 피드백을 만들기 위해 노력해야 합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb156"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_bad_file():</span>
 <span id="cb156-2"><a href="#cb156-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 입력 파일 부재 시 중단 확인 '''</span></span>
 <span id="cb156-3"><a href="#cb156-3" aria-hidden="true" tabindex="-1"></a>    bad <span class="op">=</span> random_filename() <span class="co"># 1</span></span>
@@ -2632,7 +2627,7 @@ dna.py::test_count PASSED [100%]
 <span id="cb158-18"><a href="#cb158-18" aria-hidden="true" tabindex="-1"></a>            <span class="co"># 10</span></span>
 <span id="cb158-19"><a href="#cb158-19" aria-hidden="true" tabindex="-1"></a>            shutil.rmtree(out_dir)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 기본 출력 디렉토리 이름입니다. 2 try/finally 블록은 테스트 실패 시 정리를 보장하는 데 도움이 됩니다. 3 이전 실행에서 남은 출력 디렉토리가 있는지 확인합니다. 4 shutil.rmtree() 함수를 사용하여 디렉토리와 그 내용을 제거합니다. 5 알려진 정상 입력 파일로 프로그램을 실행합니다. 6 기대한 출력 디렉토리가 생성되었는지 확인합니다. 7 기대한 출력 파일이 생성되었는지 확인합니다. 8 출력 파일의 내용이 올바른지 확인합니다. 9 try 블록에서 무언가 실패하더라도 이 finally 블록은 실행됩니다. 10 테스트 환경을 정리합니다.</p>
-<p>프로그램이 수행해야 할 모든 측면을 확인하는 것이 얼마나 중요한지 다시 한번 강조하고 싶습니다. 여기서 프로그램은 몇 개의 입력 파일을 처리하고, 출력 디렉토리를 만든 다음, 처리된 데이터를 출력 디렉토리의 파일들에 넣어야 합니다. 저는 알려진 입력을 사용하여 기대한 출력이 생성되는지 확인하면서 이러한 모든 요구사항을 테스트하고 있습니다.</p>
+<p>프로그램이 수행해야 할 모든 측면을 확인하는 것이 얼마나 중요한지 다시 한번 강조하고 싶습니다. 여기서 프로그램은 몇 개의 입력 파일을 처리하고 출력 디렉토리를 만든 다음, 처리된 데이터를 출력 디렉토리의 파일들에 넣어야 합니다. 저는 알려진 입력을 사용하여 기대한 출력이 생성되는지 확인하면서 이러한 모든 요구사항을 테스트하고 있습니다.</p>
 <p>이미 보여드린 것과 유사하기 때문에 여기서는 다루지 않겠지만 tests/rna_test.py 프로그램 전체를 읽어보시길 권장합니다. 첫 번째 입력 파일에는 하나의 시퀀스가 있습니다. 두 번째 입력 파일에는 두 개의 시퀀스가 있으며 저는 이를 사용하여 출력 파일에 두 개의 시퀀스가 기록되는지 테스트합니다. 세 번째 입력 파일에는 매우 긴 두 개의 시퀀스가 있습니다. 이러한 입력들을 개별적으로 또는 함께 사용함으로써, 제가 상상할 수 있는 프로그램의 모든 측면을 테스트하려고 노력합니다.</p>
 <p>pytest를 사용하여 tests/rna_test.py의 테스트를 실행할 수 있지만 pylint, flake8, mypy를 사용하여 프로그램을 점검할 것도 강력히 권장합니다. make test 단축키를 사용하면 이러한 도구들을 실행하기 위한 추가 인자와 함께 pytest를 실행해 주므로 편리합니다. 여러분의 목표는 완전히 깨끗한 테스트 결과를 얻는 것이어야 합니다.</p>
 <p>pylint가 fh와 같은 변수 이름이 너무 짧거나, 소문자 단어들을 언더스코어로 연결하는 snake_case가 아니라고 불평할 수도 있습니다. 저는 GitHub 저장소의 루트 디렉토리에 pylintrc 설정 파일을 포함해 두었습니다. 이러한 오류들을 무시하려면 이 파일을 여러분의 홈 디렉토리에 .pylintrc라는 이름으로 복사하십시오.</p>
@@ -2640,7 +2635,7 @@ dna.py::test_count PASSED [100%]
 </section>
 <section id="솔루션" class="level1">
 <h1>솔루션</h1>
-<p>다음 두 솔루션은 ’T’를 ’U’로 바꾸는 방법만 다릅니다. 첫 번째는 str.replace() 메서드를 사용하고, 두 번째는 정규 표현식을 도입하여 파이썬의 re.sub() 함수를 사용합니다.</p>
+<p>다음 두 솔루션은 ’T’를 ’U’로 바꾸는 방법만 다릅니다. 첫 번째는 str.replace() 메서드를 사용하고 두 번째는 정규 표현식을 도입하여 파이썬의 re.sub() 함수를 사용합니다.</p>
 </section>
 <section id="솔루션-1-str.replace-사용" class="level1">
 <h1>솔루션 1: str.replace() 사용</h1>
@@ -2709,7 +2704,7 @@ print(f'Done, wrote {num_seqs} sequence{"s" if num_seqs != 1 else ""} '
 <p>1 문자열 ’ACGT’에서 모든 ’T’를 ’U’로 바꿉니다. 2 치환된 결과인 새로운 문자열입니다.</p>
 <p>이 버전을 사용하기 위해, 다음과 같이 내부 for 루프를 수정할 수 있습니다. print()가 줄바꿈을 추가할 것이기 때문에 입력 DNA 문자열 끝의 줄바꿈을 제거하기 위해 str.rstrip() 메서드를 사용하기로 했습니다.</p>
 <p>for dna in fh: num_seqs += 1 print(re.sub(‘T’, ‘U’, dna.rstrip()), file=out_fh) # 1</p>
-<p>1 dna에서 줄바꿈을 제거하고, 모든 ’T’를 ’U’로 치환한 다음, 결과 문자열을 출력 파일 핸들에 출력합니다.</p>
+<p>1 dna에서 줄바꿈을 제거하고 모든 ’T’를 ’U’로 치환한 다음, 결과 문자열을 출력 파일 핸들에 출력합니다.</p>
 </section>
 <section id="벤치마킹" class="level1">
 <h1>벤치마킹</h1>
@@ -2748,7 +2743,7 @@ print(f'Done, wrote {num_seqs} sequence{"s" if num_seqs != 1 else ""} '
 <span id="cb169-9"><a href="#cb169-9" aria-hidden="true" tabindex="-1"></a>real <span class="dv">0</span><span class="er">m3</span><span class="fl">.100</span><span class="er">s</span></span>
 <span id="cb169-10"><a href="#cb169-10" aria-hidden="true" tabindex="-1"></a>user <span class="dv">0</span><span class="er">m2</span><span class="fl">.700</span><span class="er">s</span></span>
 <span id="cb169-11"><a href="#cb169-11" aria-hidden="true" tabindex="-1"></a>sys <span class="dv">0</span><span class="er">m0</span><span class="fl">.385</span><span class="er">s</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이제 첫 번째 솔루션이 더 빠른 것으로 나타납니다. 참고로 저는 몇 가지 다른 솔루션들도 생각해 냈는데, 그 모든 것들이 이 두 가지보다 훨씬 좋지 않은 결과를 냈습니다. 저는 제가 점점 더 똑똑한 솔루션들을 만들어 내고 있고, 그것이 결국 최고의 성능으로 이어질 것이라고 생각했습니다. 하지만 제가 최고라고 생각했던 프로그램이 이 두 프로그램보다 수십 배나 느리다는 사실을 알았을 때 제 자존심은 큰 상처를 입었습니다. 가설이 있을 때는 흔히 말하듯 “믿되, 검증하라(Trust, but verify)”는 원칙을 지켜야 합니다.</p>
+<p>이제 첫 번째 솔루션이 더 빠른 것으로 나타납니다. 참고로 저는 몇 가지 다른 솔루션들도 생각해 냈는데, 그 모든 것들이 이 두 가지보다 훨씬 좋지 않은 결과를 냈습니다. 저는 제가 점점 더 똑똑한 솔루션들을 만들어 내고 있고 그것이 결국 최고의 성능으로 이어질 것이라고 생각했습니다. 하지만 제가 최고라고 생각했던 프로그램이 이 두 프로그램보다 수십 배나 느리다는 사실을 알았을 때 제 자존심은 큰 상처를 입었습니다. 가설이 있을 때는 흔히 말하듯 “믿되, 검증하라(Trust, but verify)”는 원칙을 지켜야 합니다.</p>
 </section>
 <section id="더-나아가기-1" class="level1">
 <h1>더 나아가기</h1>
@@ -2777,7 +2772,7 @@ print(f'Done, wrote {num_seqs} sequence{"s" if num_seqs != 1 else ""} '
 <p>문자열 키 ’A’가 정수 값 65로 바뀐 것을 볼 수 있습니다. 이는 ord() 함수가 반환하는 값과 동일합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb171"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb171-1"><a href="#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">'A'</span>)</span>
 <span id="cb171-2"><a href="#cb171-2" aria-hidden="true" tabindex="-1"></a><span class="dv">65</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여, 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
+<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb172"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">65</span>)</span>
 <span id="cb172-2"><a href="#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="co">'A'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>str.translate() 함수는 상보 테이블의 키가 코드 포인트 값이어야 하는데, 이것이 바로 str.maketrans()를 통해 얻는 결과입니다.</p>
@@ -2866,7 +2861,7 @@ print(f'Done, wrote {num_seqs} sequence{"s" if num_seqs != 1 else ""} '
 </ul>
 <p>수열은 항상 0과 1로 시작합니다. 그림 4-1에서 보듯이, 리스트의 직전 두 값을 더함으로써 그 다음 숫자들을 무한히 생성할 수 있습니다.</p>
 <p><img src="images/666fd9c61298cad8a37cc3bae53de33975c0fd685705737d7f3e58e4da10b339.jpg" class="img-fluid"> 그림 4-1. 피보나치 수열의 처음 8개 숫자. 초기 0과 1 이후, 다음 숫자들은 이전의 두 숫자를 더해서 만들어집니다.</p>
-<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고, 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
+<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
 <p>여러분은 다음을 배우게 됩니다.</p>
 <ul>
 <li>인자를 수동으로 검증하고 오류를 발생시키는 방법</li>
@@ -2914,7 +2909,7 @@ print(f'Done, wrote {num_seqs} sequence{"s" if num_seqs != 1 else ""} '
 <span id="cb183-3"><a href="#cb183-3" aria-hidden="true" tabindex="-1"></a>fib.py: error: argument generations: invalid <span class="bu">int</span> value: <span class="st">'foo'</span></span>
 <span id="cb183-4"><a href="#cb183-4" aria-hidden="true" tabindex="-1"></a>$ echo $?</span>
 <span id="cb183-5"><a href="#cb183-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고, 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
+<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
 <p>이 프로그램은 받아들이는 숫자의 타입에 대해서도 매우 엄격합니다. 값은 반드시 정수여야 합니다. 부동 소수점 값도 거부할 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb184"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb184-1"><a href="#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./fib.py 5 3.2</span>
 <span id="cb184-2"><a href="#cb184-2" aria-hidden="true" tabindex="-1"></a><span class="ex">usage:</span> fib.py <span class="pp">[-</span><span class="ss">h</span><span class="pp">]</span> generations litter</span>
@@ -3078,7 +3073,7 @@ F_n = F_{n-1} + F_{n-2}
 <section id="솔루션-2-제너레이터-함수-만들기" class="level1">
 <h1>솔루션 2: 제너레이터 함수 만들기</h1>
 <p>이전 솔루션에서는 요청된 값까지 피보나치 수열을 생성하고 멈췄습니다. 하지만 수열은 무한합니다. 수열의 모든 숫자를 생성할 수 있는 함수를 만들 수 있을까요? 기술적으로는 가능하지만 무한하기 때문에 절대 끝나지 않을 것입니다.</p>
-<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고, 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
+<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb204"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb204-1"><a href="#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(k: <span class="bu">int</span>) <span class="op">-&gt;</span> Generator[<span class="bu">int</span>, <span class="va">None</span>, <span class="va">None</span>]: <span class="co"># 1</span></span>
 <span id="cb204-2"><a href="#cb204-2" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> <span class="co"># 2</span></span>
 <span id="cb204-3"><a href="#cb204-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> x <span class="co"># 3</span></span>
@@ -3086,7 +3081,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb204-5"><a href="#cb204-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> y <span class="co"># 5</span></span>
 <span id="cb204-6"><a href="#cb204-6" aria-hidden="true" tabindex="-1"></a>        x, y <span class="op">=</span> y, x <span class="op">+</span> (y <span class="op">*</span> k) <span class="co"># 6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 타입 시그니처는 함수가 정수형 파라미터 k (새끼 수)를 받는다는 것을 나타냅니다. 이 함수는 int 값을 산출 (yield)하고 보내기 (send)나 반환 (return) 타입이 없는 특수한 함수 타입인 Generator를 반환합니다. 2 마지막 두 세대만 추적하면 되므로, 이들을 0과 1로 초기화합니다. 3 0을 산출합니다. 4 무한 루프를 만듭니다. 5 마지막 세대를 산출합니다. 6 x (두 세대 전)를 이전의 y (한 세대 전)로 설정합니다. y를 현재 두 세대의 합으로 설정하되, 번식 가능한 쌍에 새끼 수 k를 곱합니다. (수정: x, y = y, x + y * k가 로직에 더 맞을 수 있음. 원문 참고 필요.)</p>
-<p>제너레이터는 반복자처럼 작동하여, 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
+<p>제너레이터는 반복자처럼 작동하여 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
 <p><img src="images/c6225c2ba2194f1f2dbbb058e7a37d8f790fbbb776617772689221182bb18217.jpg" class="img-fluid"> 그림 4-3. 두 가지 새끼 수 k=1 및 k=3에 대해 fib() 제너레이터의 상태가 시간에 따라 (n=5) 어떻게 변하는지 묘사한 것</p>
 <p>Generator의 타입 시그니처는 산출, 보내기, 반환에 대한 타입을 정의하기 때문에 조금 복잡해 보입니다. 여기서 더 깊이 파고들 필요는 없지만 typing 모듈에 대한 문서를 읽어보시길 권장합니다.</p>
 <p>이를 사용하는 방법은 다음과 같습니다.</p>
@@ -3109,7 +3104,7 @@ F_n = F_{n-1} + F_{n-2}
 <p>문자열 키 ’A’가 정수 값 65로 바뀐 것을 볼 수 있습니다. 이는 ord() 함수가 반환하는 값과 동일합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb207"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb207-1"><a href="#cb207-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">'A'</span>)</span>
 <span id="cb207-2"><a href="#cb207-2" aria-hidden="true" tabindex="-1"></a><span class="dv">65</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여, 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
+<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb208"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb208-1"><a href="#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">65</span>)</span>
 <span id="cb208-2"><a href="#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="co">'A'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>str.translate() 함수는 상보 테이블의 키가 코드 포인트 값이어야 하는데, 이것이 바로 str.maketrans()를 통해 얻는 결과입니다.</p>
@@ -3198,7 +3193,7 @@ F_n = F_{n-1} + F_{n-2}
 </ul>
 <p>수열은 항상 0과 1로 시작합니다. 그림 4-1에서 보듯이, 리스트의 직전 두 값을 더함으로써 그 다음 숫자들을 무한히 생성할 수 있습니다.</p>
 <p><img src="images/666fd9c61298cad8a37cc3bae53de33975c0fd685705737d7f3e58e4da10b339.jpg" class="img-fluid"> 그림 4-1. 피보나치 수열의 처음 8개 숫자. 초기 0과 1 이후, 다음 숫자들은 이전의 두 숫자를 더해서 만들어집니다.</p>
-<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고, 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
+<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
 <p>여러분은 다음을 배우게 됩니다.</p>
 <ul>
 <li>인자를 수동으로 검증하고 오류를 발생시키는 방법</li>
@@ -3246,7 +3241,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb219-3"><a href="#cb219-3" aria-hidden="true" tabindex="-1"></a>fib.py: error: argument generations: invalid <span class="bu">int</span> value: <span class="st">'foo'</span></span>
 <span id="cb219-4"><a href="#cb219-4" aria-hidden="true" tabindex="-1"></a>$ echo $?</span>
 <span id="cb219-5"><a href="#cb219-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고, 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
+<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
 <p>이 프로그램은 받아들이는 숫자의 타입에 대해서도 매우 엄격합니다. 값은 반드시 정수여야 합니다. 부동 소수점 값도 거부할 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb220"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb220-1"><a href="#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./fib.py 5 3.2</span>
 <span id="cb220-2"><a href="#cb220-2" aria-hidden="true" tabindex="-1"></a><span class="ex">usage:</span> fib.py <span class="pp">[-</span><span class="ss">h</span><span class="pp">]</span> generations litter</span>
@@ -3410,7 +3405,7 @@ F_n = F_{n-1} + F_{n-2}
 <section id="솔루션-2-제너레이터-함수-만들기-1" class="level1">
 <h1>솔루션 2: 제너레이터 함수 만들기</h1>
 <p>이전 솔루션에서는 요청된 값까지 피보나치 수열을 생성하고 멈췄습니다. 하지만 수열은 무한합니다. 수열의 모든 숫자를 생성할 수 있는 함수를 만들 수 있을까요? 기술적으로는 가능하지만 무한하기 때문에 절대 끝나지 않을 것입니다.</p>
-<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고, 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
+<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb240"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb240-1"><a href="#cb240-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(k: <span class="bu">int</span>) <span class="op">-&gt;</span> Generator[<span class="bu">int</span>, <span class="va">None</span>, <span class="va">None</span>]: <span class="co"># 1</span></span>
 <span id="cb240-2"><a href="#cb240-2" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> <span class="co"># 2</span></span>
 <span id="cb240-3"><a href="#cb240-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> x <span class="co"># 3</span></span>
@@ -3418,7 +3413,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb240-5"><a href="#cb240-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> y <span class="co"># 5</span></span>
 <span id="cb240-6"><a href="#cb240-6" aria-hidden="true" tabindex="-1"></a>        x, y <span class="op">=</span> y, x <span class="op">+</span> (y <span class="op">*</span> k) <span class="co"># 6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 타입 시그니처는 함수가 정수형 파라미터 k (새끼 수)를 받는다는 것을 나타냅니다. 이 함수는 int 값을 산출 (yield)하고 보내기 (send)나 반환 (return) 타입이 없는 특수한 함수 타입인 Generator를 반환합니다. 2 마지막 두 세대만 추적하면 되므로, 이들을 0과 1로 초기화합니다. 3 0을 산출합니다. 4 무한 루프를 만듭니다. 5 마지막 세대를 산출합니다. 6 x (두 세대 전)를 이전의 y (한 세대 전)로 설정합니다. y를 현재 두 세대의 합으로 설정하되, 번식 가능한 쌍에 새끼 수 k를 곱합니다. (수정: x, y = y, x + y * k가 로직에 더 맞을 수 있음. 원문 참고 필요.)</p>
-<p>제너레이터는 반복자처럼 작동하여, 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
+<p>제너레이터는 반복자처럼 작동하여 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
 <p><img src="images/c6225c2ba2194f1f2dbbb058e7a37d8f790fbbb776617772689221182bb18217.jpg" class="img-fluid"> 그림 4-3. 두 가지 새끼 수 k=1 및 k=3에 대해 fib() 제너레이터의 상태가 시간에 따라 (n=5) 어떻게 변하는지 묘사한 것</p>
 <p>Generator의 타입 시그니처는 산출, 보내기, 반환에 대한 타입을 정의하기 때문에 조금 복잡해 보입니다. 여기서 더 깊이 파고들 필요는 없지만 typing 모듈에 대한 문서를 읽어보시길 권장합니다.</p>
 <p>이를 사용하는 방법은 다음과 같습니다.</p>
@@ -3444,7 +3439,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb243-2"><a href="#cb243-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
 <span id="cb243-3"><a href="#cb243-3" aria-hidden="true" tabindex="-1"></a>    seq <span class="op">=</span> <span class="bu">list</span>(islice(fib(args.litter), args.generations <span class="op">+</span> <span class="dv">1</span>)) <span class="co"># 1</span></span>
 <span id="cb243-4"><a href="#cb243-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(seq[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 islice()의 첫 번째 인자는 호출될 함수이고, 두 번째 인자는 호출할 횟수입니다. 이 함수는 지연 함수이므로, 값을 강제로 생성하기 위해 list()를 사용합니다. 2 마지막 값을 출력합니다.</p>
+<p>1 islice()의 첫 번째 인자는 호출될 함수이고 두 번째 인자는 호출할 횟수입니다. 이 함수는 지연 함수이므로, 값을 강제로 생성하기 위해 list()를 사용합니다. 2 마지막 값을 출력합니다.</p>
 <p>seq 변수를 한 번만 사용하기 때문에 해당 할당을 생략할 수도 있습니다. 만약 벤치마킹을 통해 다음 버전이 가장 성능이 좋은 것으로 입증된다면, 기꺼이 한 줄짜리 코드로 작성할 수도 있을 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb244"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb244-1"><a href="#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb244-2"><a href="#cb244-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -3632,7 +3627,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb260-23"><a href="#cb260-23" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">'-q'</span>, <span class="st">'--quiet'</span>, action<span class="op">=</span><span class="st">'store_true'</span>, <span class="bu">help</span><span class="op">=</span><span class="st">'상세 출력 안 함'</span>) <span class="co"># 4</span></span>
 <span id="cb260-24"><a href="#cb260-24" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
 <span id="cb260-25"><a href="#cb260-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Args(args.program, args.quiet)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 테스트할 프로그램의 이름으로, 이 경우에는 fib.py입니다. 2 더 많거나 적은 출력을 생성하기 위한 불리언(Boolean) 값 True 또는 False입니다. 3 기본 타입은 str입니다. 4 action=’store_true’는 이를 불리언 플래그로 만듭니다. 플래그가 존재하면 값은 True가 되고, 그렇지 않으면 False가 됩니다.</p>
+<p>1 테스트할 프로그램의 이름으로, 이 경우에는 fib.py입니다. 2 더 많거나 적은 출력을 생성하기 위한 불리언(Boolean) 값 True 또는 False입니다. 3 기본 타입은 str입니다. 4 action=’store_true’는 이를 불리언 플래그로 만듭니다. 플래그가 존재하면 값은 True가 되고 그렇지 않으면 False가 됩니다.</p>
 <p>main() 함수는 실제로 테스트가 일어나는 곳입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb261"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb261-1"><a href="#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb261-2"><a href="#cb261-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -3743,7 +3738,7 @@ F_n = F_{n-1} + F_{n-2}
 <p>문자열 키 ’A’가 정수 값 65로 바뀐 것을 볼 수 있습니다. 이는 ord() 함수가 반환하는 값과 동일합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb276"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb276-1"><a href="#cb276-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">'A'</span>)</span>
 <span id="cb276-2"><a href="#cb276-2" aria-hidden="true" tabindex="-1"></a><span class="dv">65</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여, 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
+<p>이 값은 ASCII(미국 정보 교환 표준 부호) 테이블에서 문자 ’A’의 서수 위치를 나타냅니다. 즉, ’A’는 테이블의 65번째 문자입니다. chr() 함수는 이 과정을 반대로 수행하여 코드 포인트 값이 나타내는 문자를 제공합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb277"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb277-1"><a href="#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">65</span>)</span>
 <span id="cb277-2"><a href="#cb277-2" aria-hidden="true" tabindex="-1"></a><span class="co">'A'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>str.translate() 함수는 상보 테이블의 키가 코드 포인트 값이어야 하는데, 이것이 바로 str.maketrans()를 통해 얻는 결과입니다.</p>
@@ -3832,7 +3827,7 @@ F_n = F_{n-1} + F_{n-2}
 </ul>
 <p>수열은 항상 0과 1로 시작합니다. 그림 4-1에서 보듯이, 리스트의 직전 두 값을 더함으로써 그 다음 숫자들을 무한히 생성할 수 있습니다.</p>
 <p><img src="images/666fd9c61298cad8a37cc3bae53de33975c0fd685705737d7f3e58e4da10b339.jpg" class="img-fluid"> 그림 4-1. 피보나치 수열의 처음 8개 숫자. 초기 0과 1 이후, 다음 숫자들은 이전의 두 숫자를 더해서 만들어집니다.</p>
-<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고, 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
+<p>인터넷에서 솔루션을 검색해 보면 수열을 생성하는 수십 가지의 서로 다른 방법을 찾을 수 있을 것입니다. 저는 상당히 다른 세 가지 접근 방식에 집중하고 싶습니다. 첫 번째 솔루션은 알고리즘이 모든 단계를 엄격하게 정의하는 명령형 (imperative) 접근 방식을 사용합니다. 다음 솔루션은 제너레이터 (generator) 함수를 사용하고 마지막은 재귀적 (recursive) 솔루션에 집중할 것입니다. 재귀는 흥미롭기는 하지만 수열을 더 많이 생성하려고 할수록 속도가 급격히 느려지는데, 이러한 성능 문제는 캐싱 (caching)을 사용하여 해결할 수 있음이 밝혀졌습니다.</p>
 <p>여러분은 다음을 배우게 됩니다.</p>
 <ul>
 <li>인자를 수동으로 검증하고 오류를 발생시키는 방법</li>
@@ -3880,7 +3875,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb288-3"><a href="#cb288-3" aria-hidden="true" tabindex="-1"></a>fib.py: error: argument generations: invalid <span class="bu">int</span> value: <span class="st">'foo'</span></span>
 <span id="cb288-4"><a href="#cb288-4" aria-hidden="true" tabindex="-1"></a>$ echo $?</span>
 <span id="cb288-5"><a href="#cb288-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고, 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
+<p>종료 상태가 2라는 것보다 중요한 사실은 그 값이 0이 아니라는 점입니다. 이는 잘못된 인자를 거부하고 유용한 오류 메시지를 출력하며 0이 아닌 상태로 종료하므로 잘 작동하는 프로그램입니다. 만약 이 프로그램이 데이터 처리 단계의 파이프라인 (부록 A에서 다루는 Makefile 등)의 일부였다면, 0이 아닌 종료 값은 전체 프로세스를 중단시켰을 것이며 이는 바람직한 일입니다. 잘못된 값을 묵묵히 받아들이고 조용히 혹은 아예 실패하지 않는 프로그램은 재현 불가능한 결과로 이어질 수 있습니다. 프로그램이 인자를 적절히 검증하고 계속 진행할 수 없을 때 확실하게 실패하도록 만드는 것은 매우 중요합니다.</p>
 <p>이 프로그램은 받아들이는 숫자의 타입에 대해서도 매우 엄격합니다. 값은 반드시 정수여야 합니다. 부동 소수점 값도 거부할 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb289"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb289-1"><a href="#cb289-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./fib.py 5 3.2</span>
 <span id="cb289-2"><a href="#cb289-2" aria-hidden="true" tabindex="-1"></a><span class="ex">usage:</span> fib.py <span class="pp">[-</span><span class="ss">h</span><span class="pp">]</span> generations litter</span>
@@ -4044,7 +4039,7 @@ F_n = F_{n-1} + F_{n-2}
 <section id="솔루션-2-제너레이터-함수-만들기-2" class="level1">
 <h1>솔루션 2: 제너레이터 함수 만들기</h1>
 <p>이전 솔루션에서는 요청된 값까지 피보나치 수열을 생성하고 멈췄습니다. 하지만 수열은 무한합니다. 수열의 모든 숫자를 생성할 수 있는 함수를 만들 수 있을까요? 기술적으로는 가능하지만 무한하기 때문에 절대 끝나지 않을 것입니다.</p>
-<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고, 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
+<p>파이썬에는 무한할 수도 있는 시퀀스를 생성하는 함수를 일시 중단하는 방법이 있습니다. yield를 사용하여 함수로부터 값을 반환하고 나중에 다음 값이 요청될 때 동일한 상태에서 다시 시작하도록 함수를 잠시 떠날 수 있습니다. 이런 종류의 함수를 제너레이터 (generator)라고 부르며 이를 사용하여 수열을 생성하는 방법은 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb309"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb309-1"><a href="#cb309-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fib(k: <span class="bu">int</span>) <span class="op">-&gt;</span> Generator[<span class="bu">int</span>, <span class="va">None</span>, <span class="va">None</span>]: <span class="co"># 1</span></span>
 <span id="cb309-2"><a href="#cb309-2" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span> <span class="co"># 2</span></span>
 <span id="cb309-3"><a href="#cb309-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> x <span class="co"># 3</span></span>
@@ -4052,7 +4047,7 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb309-5"><a href="#cb309-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> y <span class="co"># 5</span></span>
 <span id="cb309-6"><a href="#cb309-6" aria-hidden="true" tabindex="-1"></a>        x, y <span class="op">=</span> y, x <span class="op">+</span> (y <span class="op">*</span> k) <span class="co"># 6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 타입 시그니처는 함수가 정수형 파라미터 k (새끼 수)를 받는다는 것을 나타냅니다. 이 함수는 int 값을 산출 (yield)하고 보내기 (send)나 반환 (return) 타입이 없는 특수한 함수 타입인 Generator를 반환합니다. 2 마지막 두 세대만 추적하면 되므로, 이들을 0과 1로 초기화합니다. 3 0을 산출합니다. 4 무한 루프를 만듭니다. 5 마지막 세대를 산출합니다. 6 x (두 세대 전)를 이전의 y (한 세대 전)로 설정합니다. y를 현재 두 세대의 합으로 설정하되, 번식 가능한 쌍에 새끼 수 k를 곱합니다. (수정: x, y = y, x + y * k가 로직에 더 맞을 수 있음. 원문 참고 필요.)</p>
-<p>제너레이터는 반복자처럼 작동하여, 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
+<p>제너레이터는 반복자처럼 작동하여 소진될 때까지 코드의 요청에 따라 값을 생성합니다. 이 제너레이터는 오직 값만 산출 (yield)하므로, 보내기와 반환 타입은 None입니다. 그 외에 이 코드는 첫 번째 버전의 프로그램이 했던 것과 정확히 동일한 작업을 수행하지만 멋진 제너레이터 함수 내부에서 이루어집니다. 두 가지 다른 새끼 수에 대해 함수가 어떻게 작동하는지 보려면 그림 4-3을 참고하십시오.</p>
 <p><img src="images/c6225c2ba2194f1f2dbbb058e7a37d8f790fbbb776617772689221182bb18217.jpg" class="img-fluid"> 그림 4-3. 두 가지 새끼 수 k=1 및 k=3에 대해 fib() 제너레이터의 상태가 시간에 따라 (n=5) 어떻게 변하는지 묘사한 것</p>
 <p>Generator의 타입 시그니처는 산출, 보내기, 반환에 대한 타입을 정의하기 때문에 조금 복잡해 보입니다. 여기서 더 깊이 파고들 필요는 없지만 typing 모듈에 대한 문서를 읽어보시길 권장합니다.</p>
 <p>이를 사용하는 방법은 다음과 같습니다.</p>
@@ -4251,7 +4246,7 @@ F_n = F_{n-1} + F_{n-2}
 <p>이것은 3장의 마지막 솔루션에서 역상보 서열을 만들기 위해 사용했던 것과 동일한 클래스임에 유의하십시오. 여기서는 다음과 같이 사용할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb330"><pre class="sourceCode cmake code-with-copy"><code class="sourceCode cmake"><span id="cb330-1"><a href="#cb330-1" aria-hidden="true" tabindex="-1"></a>&gt;&gt;&gt; <span class="fu">rec.seq.reverse_complement</span>()</span>
 <span id="cb330-2"><a href="#cb330-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Seq</span>('CCTCAGAATTATTAGTGGGAGGGAAGGCCGGAAGCCTCAGAGAAACGGTTCTGG...AGG')</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Seq 객체는 유용한 메서드를 많이 가지고 있으며 시간을 크게 절약할 수 있으므로 문서를 탐구해 보시길 권장합니다. 이 시점에서 여러분은 과제를 완수하기에 충분한 정보를 얻었다고 느낄 수 있습니다. 모든 시퀀스를 순회하고, G 또는 C인 염기의 비율을 결정하고, 최대값을 가진 레코드의 ID와 GC 함량을 반환해야 합니다. 스스로 솔루션을 작성해 보시길 권합니다. 더 도움이 필요하다면 한 가지 접근 방식을 보여드리고, 솔루션 섹션에서 여러 변형들을 다루겠습니다.</p>
+<p>Seq 객체는 유용한 메서드를 많이 가지고 있으며 시간을 크게 절약할 수 있으므로 문서를 탐구해 보시길 권장합니다. 이 시점에서 여러분은 과제를 완수하기에 충분한 정보를 얻었다고 느낄 수 있습니다. 모든 시퀀스를 순회하고, G 또는 C인 염기의 비율을 결정하고, 최대값을 가진 레코드의 ID와 GC 함량을 반환해야 합니다. 스스로 솔루션을 작성해 보시길 권합니다. 더 도움이 필요하다면 한 가지 접근 방식을 보여드리고 솔루션 섹션에서 여러 변형들을 다루겠습니다.</p>
 </section>
 <section id="for-루프를-사용하여-시퀀스-순회하기" class="level1">
 <h1>for 루프를 사용하여 시퀀스 순회하기</h1>
@@ -4272,7 +4267,7 @@ F_n = F_{n-1} + F_{n-2}
 <p>앞서 recs가 Bio.SeqIO.FastaIO.FastaIterator임을 보여드렸습니다. 모든 반복자와 마찬가지로, 이는 소진될 때까지 값을 생성합니다. 레코드들을 다시 루프 돌고 싶다면 SeqIO.parse() 함수를 사용하여 recs 객체를 다시 만들어야 합니다.</p>
 <p>잠시 시퀀스가 다음과 같다고 가정해 봅시다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb334"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb334-1"><a href="#cb334-1" aria-hidden="true" tabindex="-1"></a>&gt;&gt;&gt; seq = 'CCACCCTCGTGGTATGGCT'</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>해당 문자열에 C와 G가 얼마나 나타나는지 찾아야 합니다. 시퀀스의 각 염기를 순회하는 또 다른 for 루프를 사용하고, 염기가 G 또는 C일 때마다 카운터를 증가시킬 수 있습니다.</p>
+<p>해당 문자열에 C와 G가 얼마나 나타나는지 찾아야 합니다. 시퀀스의 각 염기를 순회하는 또 다른 for 루프를 사용하고 염기가 G 또는 C일 때마다 카운터를 증가시킬 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb335"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb335-1"><a href="#cb335-1" aria-hidden="true" tabindex="-1"></a>gc <span class="op">=</span> <span class="dv">0</span> <span class="co"># 1</span></span>
 <span id="cb335-2"><a href="#cb335-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> seq: <span class="co"># 2</span></span>
 <span id="cb335-3"><a href="#cb335-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> base <span class="kw">in</span> (<span class="st">'G'</span>, <span class="st">'C'</span>): <span class="co"># 3</span></span>
@@ -4458,7 +4453,7 @@ F_n = F_{n-1} + F_{n-2}
 <section id="더-나아가기-4" class="level1">
 <h1>더 나아가기</h1>
 <ul>
-<li>소스 코드를 보지 않고 <code>zip_longest()</code> 버전을 직접 작성해 보십시오. 반드시 테스트부터 시작하고, 테스트를 통과하는 함수를 작성하십시오.</li>
+<li>소스 코드를 보지 않고 <code>zip_longest()</code> 버전을 직접 작성해 보십시오. 반드시 테스트부터 시작하고 테스트를 통과하는 함수를 작성하십시오.</li>
 <li>두 개 이상의 입력 시퀀스를 처리할 수 있도록 프로그램을 확장하십시오. 프로그램이 모든 시퀀스 쌍 사이의 해밍 거리를 출력하게 하십시오. 이는 프로그램이 <span class="math inline">\(n! / k!(n - k)!\)</span>인 <span class="math inline">\(n \text{ choose } k\)</span> 개의 숫자를 출력함을 의미합니다. 세 개의 시퀀스에 대해 프로그램은 <span class="math inline">\(3! / (2!(3 - 2)!) = 6 / 2 = 3\)</span>개의 거리 쌍을 출력할 것입니다.</li>
 <li>예를 들어 시퀀스 AAACCCGGGTTT와 AACCCGGGTTTA 사이에 단 하나의 차이만 있음을 보여줄 수 있는 시퀀스 정렬 알고리즘을 작성해 보십시오.</li>
 </ul>
@@ -4476,7 +4471,7 @@ F_n = F_{n-1} + F_{n-2}
 </section>
 <section id="mrna를-단백질로-번역하기-더-많은-함수형-프로그래밍" class="level1">
 <h1>mRNA를 단백질로 번역하기: 더 많은 함수형 프로그래밍</h1>
-<p>분자 생물학의 중심 원리(Central Dogma)에 따르면, DNA는 mRNA를 만들고, mRNA는 단백질을 만듭니다. 2장에서는 DNA를 mRNA로 전사하는 방법을 보여드렸으므로, 이제 mRNA를 단백질 시퀀스로 번역할 시간입니다. Rosalind PROT 페이지에 설명된 대로, 이제 mRNA 문자열을 입력받아 아미노산 시퀀스를 생성하는 프로그램을 작성해야 합니다. 리스트, for 루프, 리스트 컴프리헨션, 딕셔너리, 고차 함수를 사용하는 여러 가지 솔루션을 보여드리겠지만 결국에는 Biopython 함수를 사용하게 될 것임을 고백합니다. 그래도 아주 재미있을 것입니다.</p>
+<p>분자 생물학의 중심 원리(Central Dogma)에 따르면, DNA는 mRNA를 만들고 mRNA는 단백질을 만듭니다. 2장에서는 DNA를 mRNA로 전사하는 방법을 보여드렸으므로, 이제 mRNA를 단백질 시퀀스로 번역할 시간입니다. Rosalind PROT 페이지에 설명된 대로, 이제 mRNA 문자열을 입력받아 아미노산 시퀀스를 생성하는 프로그램을 작성해야 합니다. 리스트, for 루프, 리스트 컴프리헨션, 딕셔너리, 고차 함수를 사용하는 여러 가지 솔루션을 보여드리겠지만 결국에는 Biopython 함수를 사용하게 될 것임을 고백합니다. 그래도 아주 재미있을 것입니다.</p>
 <p>주로 솔루션을 만들기 위해 작은 함수들을 작성하고, 테스트하고, 조합하는 방법에 집중할 것입니다. 여러분은 다음을 배우게 됩니다:</p>
 <ul>
 <li>문자열 슬라이스를 사용하여 시퀀스에서 코돈(codon)/k-mer를 추출하는 방법</li>
@@ -4512,13 +4507,13 @@ F_n = F_{n-1} + F_{n-2}
 <span id="cb361-11"><a href="#cb361-11" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
 <span id="cb361-12"><a href="#cb361-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Args(args.rna)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 유일한 파라미터는 mRNA 문자열입니다. 2 rna를 위치 문자열 인자로 정의합니다.</p>
-<p>프로그램이 올바른 사용법을 출력할 때까지 인자들을 수정하고, 입력된 RNA 문자열을 출력하도록 <code>main()</code>을 수정하십시오.</p>
+<p>프로그램이 올바른 사용법을 출력할 때까지 인자들을 수정하고 입력된 RNA 문자열을 출력하도록 <code>main()</code>을 수정하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb362"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb362-1"><a href="#cb362-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb362-2"><a href="#cb362-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
 <span id="cb362-3"><a href="#cb362-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(args.rna)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>작동하는지 확인하십시오.</p>
 <p>$ ./prot.py AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA</p>
-<p>진행 상황을 확인하기 위해 <code>pytest</code>나 <code>make test</code>를 실행하십시오. 처음 두 개의 테스트는 통과하고, 출력이 단백질 번역 결과여야 하는 세 번째 테스트에서 실패해야 합니다. 여러분이 이 문제를 해결할 수 있을 것 같다면 솔루션을 계속 진행하십시오. 어려움을 겪어도 괜찮습니다. 서두를 필요가 없으니 필요하다면 며칠 시간을 가지십시오. 집중적인 코딩 시간 외에도 낮잠과 산책(확산적 사고 시간)을 반드시 포함하십시오. 도움이 필요하다면 계속 읽어보십시오.</p>
+<p>진행 상황을 확인하기 위해 <code>pytest</code>나 <code>make test</code>를 실행하십시오. 처음 두 개의 테스트는 통과하고 출력이 단백질 번역 결과여야 하는 세 번째 테스트에서 실패해야 합니다. 여러분이 이 문제를 해결할 수 있을 것 같다면 솔루션을 계속 진행하십시오. 어려움을 겪어도 괜찮습니다. 서두를 필요가 없으니 필요하다면 며칠 시간을 가지십시오. 집중적인 코딩 시간 외에도 낮잠과 산책(확산적 사고 시간)을 반드시 포함하십시오. 도움이 필요하다면 계속 읽어보십시오.</p>
 </section>
 <section id="k-mer와-코돈" class="level1">
 <h1>K-mer와 코돈</h1>
@@ -4572,7 +4567,7 @@ F_n = F_{n-1} + F_{n-2}
 </blockquote>
 </blockquote>
 </blockquote>
-<p>코돈은 RNA의 부분 시퀀스이며 k-mer와 유사합니다. k는 크기(여기서는 3)이고, mer은 폴리머(polymer)라는 단어에서처럼 몫이나 부분을 뜻합니다. k-mer를 그 크기로 부르는 것이 일반적이므로, 여기서는 3-mer라고 부를 수 있습니다. k-mer는 한 글자씩 겹치므로 윈도우가 한 염기씩 오른쪽으로 이동합니다. 그림 7-3은 입력 RNA의 처음 아홉 염기에서 발견되는 처음 일곱 개의 3-mer를 보여줍니다.</p>
+<p>코돈은 RNA의 부분 시퀀스이며 k-mer와 유사합니다. k는 크기(여기서는 3)이고 mer은 폴리머(polymer)라는 단어에서처럼 몫이나 부분을 뜻합니다. k-mer를 그 크기로 부르는 것이 일반적이므로, 여기서는 3-mer라고 부를 수 있습니다. k-mer는 한 글자씩 겹치므로 윈도우가 한 염기씩 오른쪽으로 이동합니다. 그림 7-3은 입력 RNA의 처음 아홉 염기에서 발견되는 처음 일곱 개의 3-mer를 보여줍니다.</p>
 <p><img src="images/18d45845cdeff813cfe504fa2e3694aa64a4e678830d5b233101e801328542f4.jpg" class="img-fluid"> 그림 7-3. RNA 시퀀스의 처음 아홉 염기에 있는 모든 3-mer</p>
 <p>어떤 시퀀스 s에 있는 k-mer의 개수 n은 다음과 같습니다.</p>
 <p><span class="math display">\[
@@ -4586,7 +4581,7 @@ n = \operatorname{len}(s) - k + 1
 </blockquote>
 </blockquote>
 </blockquote>
-<p>14장에서 보여드릴 멀티프레임 번역을 고려할 때를 제외하고, 코돈은 겹치지 않으므로 3개 위치씩 이동하며(그림 7-4 참조), 17개의 코돈을 남깁니다.</p>
+<p>14장에서 보여드릴 멀티프레임 번역을 고려할 때를 제외하고 코돈은 겹치지 않으므로 3개 위치씩 이동하며(그림 7-4 참조), 17개의 코돈을 남깁니다.</p>
 <blockquote class="blockquote">
 <blockquote class="blockquote">
 <blockquote class="blockquote">
@@ -4631,7 +4626,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb367-12"><a href="#cb367-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span> <span class="co"># 8</span></span>
 <span id="cb367-13"><a href="#cb367-13" aria-hidden="true" tabindex="-1"></a>        protein <span class="op">+=</span> aa <span class="co"># 9</span></span>
 <span id="cb367-14"><a href="#cb367-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(protein) <span class="co"># 10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 입력된 RNA를 복사하고 대문자로 강제 변환합니다. 2 딕셔너리를 사용하여 코돈/아미노산 조회 테이블을 만듭니다. 3 k-mer를 찾기 위한 k의 크기를 설정합니다. 4 단백질 시퀀스를 빈 문자열로 초기화합니다. 5 RNA의 코돈들을 순회합니다. 6 <code>dict.get()</code>을 사용하여 이 코돈에 대한 아미노산을 찾고, 찾지 못하면 대시(-)를 반환합니다. 7 이것이 종결 코돈인지 확인합니다. 8 for 루프를 빠져나옵니다. 9 아미노산을 단백질 시퀀스에 추가합니다. 10 단백질 시퀀스를 출력합니다.</p>
+<p>1 입력된 RNA를 복사하고 대문자로 강제 변환합니다. 2 딕셔너리를 사용하여 코돈/아미노산 조회 테이블을 만듭니다. 3 k-mer를 찾기 위한 k의 크기를 설정합니다. 4 단백질 시퀀스를 빈 문자열로 초기화합니다. 5 RNA의 코돈들을 순회합니다. 6 <code>dict.get()</code>을 사용하여 이 코돈에 대한 아미노산을 찾고 찾지 못하면 대시(-)를 반환합니다. 7 이것이 종결 코돈인지 확인합니다. 8 for 루프를 빠져나옵니다. 9 아미노산을 단백질 시퀀스에 추가합니다. 10 단백질 시퀀스를 출력합니다.</p>
 </section>
 <section id="솔루션-2-유닛-테스트-추가" class="level1">
 <h1>솔루션 2: 유닛 테스트 추가</h1>
@@ -4722,7 +4717,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb376-6"><a href="#cb376-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> translate(<span class="st">'AUGGCCAUGGCGCCCAGAACUGAGAU'</span></span>
 <span id="cb376-7"><a href="#cb376-7" aria-hidden="true" tabindex="-1"></a>                     <span class="st">'CAAUAGUACCCGUAUUAACGGGUGA'</span>) <span class="op">==</span> <span class="st">'MAMAPRTEINSTRING'</span> <span class="co"># 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 저는 보통 문자열 파라미터를 빈 문자열로 테스트합니다. 2 단일 아미노산에 대해 테스트합니다. 3 시퀀스 끝 이전에 종결 코돈을 사용하는 테스트입니다. 4 인접한 문자열 리터럴들이 하나의 문자열로 결합된다는 점에 주목하십시오. 이는 소스 코드에서 긴 줄을 나누는 유용한 방법입니다. 5 Rosalind의 예시를 사용한 테스트입니다.</p>
-<p><code>main()</code>의 모든 코드를 이 함수로 옮기고, for 루프를 리스트 컴프리헨션으로 변경하며 리스트 슬라이스를 사용하여 종결 코돈에서 단백질을 자르겠습니다.</p>
+<p><code>main()</code>의 모든 코드를 이 함수로 옮기고 for 루프를 리스트 컴프리헨션으로 변경하며 리스트 슬라이스를 사용하여 종결 코돈에서 단백질을 자르겠습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb377"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb377-1"><a href="#cb377-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> translate(rna: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb377-2"><a href="#cb377-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 코돈 시퀀스 번역 '''</span></span>
 <span id="cb377-3"><a href="#cb377-3" aria-hidden="true" tabindex="-1"></a>    codon_to_aa <span class="op">=</span> {</span>
@@ -4841,7 +4836,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="검토-8" class="level1">
 <h1>검토</h1>
-<p>이 장의 초점은 당면한 문제를 해결하기 위해 함수를 작성하고, 테스트하고, 조합하는 방법에 맞춰져 있었습니다. 시퀀스에서 코돈을 찾고 RNA를 번역하는 함수들을 작성했습니다. 그런 다음 다른 함수들을 조합하기 위해 고차 함수를 사용하는 방법을 보여드렸고, 마지막으로 Biopython의 기존 함수를 사용했습니다.</p>
+<p>이 장의 초점은 당면한 문제를 해결하기 위해 함수를 작성하고, 테스트하고, 조합하는 방법에 맞춰져 있었습니다. 시퀀스에서 코돈을 찾고 RNA를 번역하는 함수들을 작성했습니다. 그런 다음 다른 함수들을 조합하기 위해 고차 함수를 사용하는 방법을 보여드렸고 마지막으로 Biopython의 기존 함수를 사용했습니다.</p>
 <ul>
 <li>K-mer는 시퀀스의 모든 k 길이 부분 시퀀스입니다.</li>
 <li>코돈은 특정 프레임에서 겹치지 않는 3-mer입니다.</li>
@@ -4944,7 +4939,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb408"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb408-1"><a href="#cb408-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> subseq <span class="kw">in</span> seq[<span class="dv">2</span>:]:</span>
 <span id="cb408-2"><a href="#cb408-2" aria-hidden="true" tabindex="-1"></a>...     seq.index(subseq, <span class="dv">2</span>)</span>
 <span id="cb408-3"><a href="#cb408-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>세 번째 접근 방식은 k-mer를 사용하는 것입니다. 부분 시퀀스가 존재한다면, 정의상 그것은 부분 시퀀스의 길이와 같은 k를 가진 k-mer입니다. 7장의 코드를 사용하여 시퀀스에서 모든 k-mer와 그 위치를 추출하고, 부분 시퀀스와 일치하는 k-mer의 위치를 기록하십시오.</p>
+<p>세 번째 접근 방식은 k-mer를 사용하는 것입니다. 부분 시퀀스가 존재한다면, 정의상 그것은 부분 시퀀스의 길이와 같은 k를 가진 k-mer입니다. 7장의 코드를 사용하여 시퀀스에서 모든 k-mer와 그 위치를 추출하고 부분 시퀀스와 일치하는 k-mer의 위치를 기록하십시오.</p>
 <p>마지막으로, 텍스트 패턴을 찾고 있는 것이므로 정규 표현식을 사용할 수도 있습니다. 5장에서 DNA에서 모든 G와 C를 찾기 위해 <code>re.findall()</code> 함수를 사용했었습니다. 이와 유사하게 시퀀스 내의 모든 부분 시퀀스를 찾기 위해 이 메서드를 사용할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb409"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb409-1"><a href="#cb409-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> re</span>
 <span id="cb409-2"><a href="#cb409-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> re.findall(subseq, seq)</span>
@@ -5041,7 +5036,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb416-6"><a href="#cb416-6" aria-hidden="true" tabindex="-1"></a>...</span>
 <span id="cb416-7"><a href="#cb416-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> found</span>
 <span id="cb416-8"><a href="#cb416-8" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 경우 발견된 위치들은 정수 값들의 리스트입니다. 첫 번째 솔루션에서는 리스트를 스플랫(*)하기 위해 <code>*found</code>를 사용했고, 값을 문자열로 강제 변환하고 공백으로 결합하기 위해 <code>print()</code>에 의존했습니다. 만약 대신 <code>str.join()</code>을 사용하여 <code>found</code>로부터 새로운 문자열을 만들려고 했다면 문제에 부딪혔을 것입니다. <code>str.join()</code> 함수는 여러 문자열을 하나의 문자열로 결합하므로, 문자열이 아닌 값을 주면 예외를 발생시킵니다.</p>
+<p>이 경우 발견된 위치들은 정수 값들의 리스트입니다. 첫 번째 솔루션에서는 리스트를 스플랫(*)하기 위해 <code>*found</code>를 사용했고 값을 문자열로 강제 변환하고 공백으로 결합하기 위해 <code>print()</code>에 의존했습니다. 만약 대신 <code>str.join()</code>을 사용하여 <code>found</code>로부터 새로운 문자열을 만들려고 했다면 문제에 부딪혔을 것입니다. <code>str.join()</code> 함수는 여러 문자열을 하나의 문자열로 결합하므로, 문자열이 아닌 값을 주면 예외를 발생시킵니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb417"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb417-1"><a href="#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">' '</span>.join(found)</span>
 <span id="cb417-2"><a href="#cb417-2" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
 <span id="cb417-3"><a href="#cb417-3" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"&lt;stdin&gt;"</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
@@ -5052,7 +5047,7 @@ n = \operatorname{len}(s) - k + 1
 <p>이는 <code>map()</code>을 사용해서 작성할 수도 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb419"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb419-1"><a href="#cb419-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">' '</span>.join(<span class="bu">map</span>(<span class="kw">lambda</span> n: <span class="bu">str</span>(n), found))</span>
 <span id="cb419-2"><a href="#cb419-2" aria-hidden="true" tabindex="-1"></a><span class="co">'2 4 10'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>str()</code> 함수는 단일 인자를 기대하고, <code>map()</code>은 자연스럽게 <code>found</code>의 각 값을 <code>str()</code>의 인자로 제공할 것이므로 람다를 완전히 생략할 수 있습니다. 이것이 정수 리스트를 문자열 리스트로 바꾸는 제가 선호하는 방법입니다.</p>
+<p><code>str()</code> 함수는 단일 인자를 기대하고 <code>map()</code>은 자연스럽게 <code>found</code>의 각 값을 <code>str()</code>의 인자로 제공할 것이므로 람다를 완전히 생략할 수 있습니다. 이것이 정수 리스트를 문자열 리스트로 바꾸는 제가 선호하는 방법입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb420"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb420-1"><a href="#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">' '</span>.join(<span class="bu">map</span>(<span class="bu">str</span>, found))</span>
 <span id="cb420-2"><a href="#cb420-2" aria-hidden="true" tabindex="-1"></a><span class="co">'2 4 10'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
@@ -5177,7 +5172,7 @@ n = \operatorname{len}(s) - k + 1
 <p>따라서 부분 시퀀스가 ’ATAT’라면 패턴은 <code>(?=ATAT)</code>가 되길 원합니다. 이제 문제는 정규 표현식 엔진이 매칭된 내용을 저장하지 않는다는 것입니다. 엔진에게 이 패턴을 찾으라고만 했지 발견된 텍스트로 무엇을 할지 말하지 않았기 때문입니다. 캡처 그룹을 만들기 위해 어설션을 괄호로 한 번 더 감싸야 합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb445"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb445-1"><a href="#cb445-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(re.finditer(<span class="st">'(?=(ATAT))'</span>, <span class="st">'GATATATGCATATACTT'</span>))</span>
 <span id="cb445-2"><a href="#cb445-2" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>re.Match <span class="bu">object</span><span class="op">;</span> span<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>), match<span class="op">=</span><span class="st">''</span><span class="op">&gt;</span>, <span class="op">&lt;</span>re.Match <span class="bu">object</span><span class="op">;</span> span<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">3</span>), match<span class="op">=</span><span class="st">''</span><span class="op">&gt;</span>, <span class="op">&lt;</span>re.Match <span class="bu">object</span><span class="op">;</span> span<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">9</span>), match<span class="op">=</span><span class="st">''</span><span class="op">&gt;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 반복자(iterator)에 대해 리스트 컴프리헨션을 사용하여 각 <code>re.Match</code> 객체의 <code>match.start()</code> 함수를 호출하고, 위치를 교정하기 위해 1을 더할 수 있습니다.</p>
+<p>이 반복자(iterator)에 대해 리스트 컴프리헨션을 사용하여 각 <code>re.Match</code> 객체의 <code>match.start()</code> 함수를 호출하고 위치를 교정하기 위해 1을 더할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb446"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb446-1"><a href="#cb446-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [match.start() <span class="op">+</span> <span class="dv">1</span> <span class="cf">for</span> match <span class="kw">in</span> re.finditer(<span class="ss">f'(?=(</span><span class="sc">{</span>subseq<span class="sc">}</span><span class="ss">))'</span>, seq)]</span>
 <span id="cb446-2"><a href="#cb446-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이 문제를 해결하는 가장 좋은 방법으로 제가 추천하는 최종 솔루션입니다.</p>
@@ -5295,7 +5290,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb456-12"><a href="#cb456-12" aria-hidden="true" tabindex="-1"></a>        description<span class="op">=</span><span class="st">'Overlap Graphs'</span>,</span>
 <span id="cb456-13"><a href="#cb456-13" aria-hidden="true" tabindex="-1"></a>        formatter_class<span class="op">=</span>argparse.ArgumentDefaultsHelpFormatter)</span>
 <span id="cb456-14"><a href="#cb456-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ... (인자 정의) ...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이를 인코딩하기 위해, 저는 그래프 구조를 표현하고 시각화하기 위해 Graphviz 도구를 사용합니다. 이 작업이 작동하려면 여러분의 기기에 Graphviz가 설치되어 있어야 합니다. 예를 들어, macOS에서는 Homebrew 패키지 관리자(<code>brew install graphviz</code>)를 사용할 수 있고, Ubuntu 리눅스에서는 <code>apt install graphviz</code>를 사용할 수 있습니다.</p>
+<p>이를 인코딩하기 위해, 저는 그래프 구조를 표현하고 시각화하기 위해 Graphviz 도구를 사용합니다. 이 작업이 작동하려면 여러분의 기기에 Graphviz가 설치되어 있어야 합니다. 예를 들어, macOS에서는 Homebrew 패키지 관리자(<code>brew install graphviz</code>)를 사용할 수 있고 Ubuntu 리눅스에서는 <code>apt install graphviz</code>를 사용할 수 있습니다.</p>
 <p>Graphviz의 출력은 Dot 언어 형식의 텍스트 파일이며 이는 Graphviz <code>dot</code> 도구에 의해 그림 형태의 그래프로 변환될 수 있습니다. 저장소의 두 번째 솔루션에는 출력 파일 이름을 제어하고 이미지를 자동으로 열지 여부를 결정하는 옵션들이 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb457"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb457-1"><a href="#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./solution2_graph.py <span class="at">-h</span></span>
 <span id="cb457-2"><a href="#cb457-2" aria-hidden="true" tabindex="-1"></a><span class="ex">usage:</span> solution2_graph.py <span class="pp">[-</span><span class="ss">h</span><span class="pp">]</span> [-k size] [-o FILE] <span class="pp">[-</span><span class="ss">v</span><span class="pp">]</span> <span class="pp">[-</span><span class="ss">d</span><span class="pp">]</span> FILE</span>
@@ -5335,7 +5330,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb460"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb460-1"><a href="#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> dot <span class="at">-Tpng</span> 1.txt <span class="at">-o</span> 1.png</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>그림 9-4는 첫 번째 FASTA 파일의 모든 시퀀스를 연결하는 그래프의 시각화 결과를 보여주며 이는 그림 9-3의 수동 정렬을 재현합니다.</p>
 <p><img src="images/62f71bc12f0305c5abaeb2077b56f313d442fd29e3038e4bee75144dc555358a.jpg" class="img-fluid"> 그림 9-4. 3-mer로 연결될 때 첫 번째 입력 파일의 시퀀스 어셈블리를 보여주는 <code>dot</code> 프로그램의 출력 결과</p>
-<p><code>-v|--view</code> 플래그와 함께 프로그램을 실행하면 이 이미지가 자동으로 표시되어야 합니다. 그래프 용어로 각 시퀀스는 노드(node)이고, 두 시퀀스 사이의 관계는 에지(edge)입니다.</p>
+<p><code>-v|--view</code> 플래그와 함께 프로그램을 실행하면 이 이미지가 자동으로 표시되어야 합니다. 그래프 용어로 각 시퀀스는 노드(node)이고 두 시퀀스 사이의 관계는 에지(edge)입니다.</p>
 <p>그래프는 방향성을 가질 수도 있고 가지지 않을 수도 있습니다. 그림 9-4는 관계가 한 노드에서 다른 노드로 흐른다는 것을 암시하는 화살표를 포함하고 있으므로, 이는 유향 그래프(directed graph)입니다. 다음 코드는 제가 이 그래프를 생성하고 시각화하는 방법을 보여줍니다. 유향 그래프를 만들기 위해 <code>graphviz.Digraph</code>를 임포트했으며 이 코드는 실제 솔루션의 일부인 로깅 코드를 생략했음에 유의하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb461"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb461-1"><a href="#cb461-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb461-2"><a href="#cb461-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -5353,7 +5348,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb461-14"><a href="#cb461-14" aria-hidden="true" tabindex="-1"></a>            dot.edge(s1, s2) <span class="co"># 6</span></span>
 <span id="cb461-15"><a href="#cb461-15" aria-hidden="true" tabindex="-1"></a>    args.outfile.close() <span class="co"># 7</span></span>
 <span id="cb461-16"><a href="#cb461-16" aria-hidden="true" tabindex="-1"></a>    dot.render(args.outfile.name, view<span class="op">=</span>args.view) <span class="co"># 8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 유향 그래프를 생성합니다. 2 공유된 k-mer들을 순회합니다. 3 k-mer를 공유하는 시퀀스 쌍을 찾고, 두 시퀀스 ID를 <code>s1</code>과 <code>s2</code>로 해제합니다. 4 테스트를 위해 출력을 인쇄합니다. 5 각 시퀀스에 대한 노드를 추가합니다. 6 노드들을 연결하는 에지를 추가합니다. 7 그래프가 파일 이름에 쓸 수 있도록 출력 파일 핸들을 닫습니다. 8 출력 파일 이름으로 그래프 구조를 씁니다. <code>args.view</code> 옵션에 따라 이미지를 여는 <code>view</code> 옵션을 사용합니다.</p>
+<p>1 유향 그래프를 생성합니다. 2 공유된 k-mer들을 순회합니다. 3 k-mer를 공유하는 시퀀스 쌍을 찾고 두 시퀀스 ID를 <code>s1</code>과 <code>s2</code>로 해제합니다. 4 테스트를 위해 출력을 인쇄합니다. 5 각 시퀀스에 대한 노드를 추가합니다. 6 노드들을 연결하는 에지를 추가합니다. 7 그래프가 파일 이름에 쓸 수 있도록 출력 파일 핸들을 닫습니다. 8 출력 파일 이름으로 그래프 구조를 씁니다. <code>args.view</code> 옵션에 따라 이미지를 여는 <code>view</code> 옵션을 사용합니다.</p>
 <p>이 몇 줄의 코드는 프로그램의 출력에 엄청난 영향을 미칩니다. 예를 들어, 그림 9-5는 이 프로그램이 두 번째 입력 파일에 있는 100개의 시퀀스에 대해 본질적으로 전체 어셈블리를 생성할 수 있음을 보여줍니다.</p>
 <p><img src="images/4d9d330ea8253606325997e6663283625728f467831336b1d6905fb9a8c868e2.jpg" class="img-fluid"> 그림 9-5. 두 번째 테스트 입력 파일의 그래프</p>
 <p>이 이미지(페이지에 맞게 축소되었지만)는 데이터의 복잡성과 완전성에 대해 많은 것을 말해줍니다. 예를 들어, 오른쪽 상단 모서리에 있는 시퀀스 쌍인 <code>Rosalind_1144</code>와 <code>Rosalind_2208</code>은 다른 어떤 시퀀스와도 연결될 수 없습니다. <code>k</code>를 4로 늘리고 결과 그래프를 조사하여 완전히 다른 결과를 확인해 보시길 권장합니다.</p>
@@ -5413,7 +5408,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb463-5"><a href="#cb463-5" aria-hidden="true" tabindex="-1"></a><span class="ex">TAGACCA</span></span>
 <span id="cb463-6"><a href="#cb463-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>Rosalind_3</span>
 <span id="cb463-7"><a href="#cb463-7" aria-hidden="true" tabindex="-1"></a><span class="ex">ATACA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이들 중 어떤 답이든 허용됩니다. 첫 번째 테스트 입력으로 프로그램을 실행하고, 허용 가능한 2-mer 중 하나를 무작위로 선택하는 것을 확인하십시오.</p>
+<p>이들 중 어떤 답이든 허용됩니다. 첫 번째 테스트 입력으로 프로그램을 실행하고 허용 가능한 2-mer 중 하나를 무작위로 선택하는 것을 확인하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb464"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb464-1"><a href="#cb464-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./lcsm.py tests/inputs/1.fa</span>
 <span id="cb464-2"><a href="#cb464-2" aria-hidden="true" tabindex="-1"></a><span class="ex">CA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>두 번째 테스트 입력은 훨씬 더 크며 프로그램이 답을 찾는 데 상당히 더 오랜 시간이 걸린다는 것을 알게 될 것입니다. 제 노트북에서는 거의 40초가 걸립니다. 솔루션에서 이진 탐색을 사용하여 실행 시간을 대폭 줄이는 방법을 보여드리겠습니다.</p>
@@ -5643,7 +5638,7 @@ n = \operatorname{len}(s) - k + 1
 <section id="솔루션-2-이진-탐색으로-속도-높이기" class="level1">
 <h1>솔루션 2: 이진 탐색으로 속도 높이기</h1>
 <p>이 장의 서론에서 언급했듯이, 이 솔루션은 입력 크기가 커질수록 훨씬 느려집니다. 프로그램의 진행 상황을 추적하는 한 가지 방법은 <code>for</code> 루프 시작 부분에 <code>print(k)</code> 문을 넣는 것입니다. 두 번째 입력 파일로 이를 실행해 보면, 1,000부터 거꾸로 세기 시작하여 <code>k</code>가 78에 도달할 때까지 정답에 이르지 못하는 것을 볼 수 있습니다.</p>
-<p>1씩 거꾸로 세는 것은 너무 오래 걸립니다. 만약 친구가 여러분에게 1에서 1,000 사이의 숫자를 맞춰보라고 했을 때, 친구가 “너무 높아”라고 말할 때마다 1,000부터 시작해서 1씩 줄여가며 계속 추측하지는 않을 것입니다. 500을 추측하는 것이 훨씬 빠르고(우정에도 더 좋습니다) 효율적입니다. 만약 친구가 선택한 숫자가 453이라면 친구는 “너무 높아”라고 말할 것이고, 그러면 여러분은 250을 선택하는 것이 현명할 것입니다. 친구가 “너무 낮아”라고 대답하면, 여러분은 정답을 찾을 때까지 마지막 높고 낮은 추측값 사이의 차이를 계속 절반으로 나누어 나갈 것입니다. 이것이 바로 이진 탐색(binary search)이며 정렬된 값들의 리스트에서 원하는 값의 위치를 빠르게 찾는 아주 좋은 방법입니다.</p>
+<p>1씩 거꾸로 세는 것은 너무 오래 걸립니다. 만약 친구가 여러분에게 1에서 1,000 사이의 숫자를 맞춰보라고 했을 때, 친구가 “너무 높아”라고 말할 때마다 1,000부터 시작해서 1씩 줄여가며 계속 추측하지는 않을 것입니다. 500을 추측하는 것이 훨씬 빠르고(우정에도 더 좋습니다) 효율적입니다. 만약 친구가 선택한 숫자가 453이라면 친구는 “너무 높아”라고 말할 것이고 그러면 여러분은 250을 선택하는 것이 현명할 것입니다. 친구가 “너무 낮아”라고 대답하면, 여러분은 정답을 찾을 때까지 마지막 높고 낮은 추측값 사이의 차이를 계속 절반으로 나누어 나갈 것입니다. 이것이 바로 이진 탐색(binary search)이며 정렬된 값들의 리스트에서 원하는 값의 위치를 빠르게 찾는 아주 좋은 방법입니다.</p>
 <p>이를 더 잘 이해하기 위해 <code>10_lcsm</code> 디렉토리에 <code>binsearch.py</code>라는 프로그램을 포함해 두었습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb494"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb494-1"><a href="#cb494-1" aria-hidden="true" tabindex="-1"></a>$ .<span class="op">/</span>binsearch.py <span class="op">-</span>h</span>
 <span id="cb494-2"><a href="#cb494-2" aria-hidden="true" tabindex="-1"></a>usage: binsearch.py [<span class="op">-</span>h] <span class="op">-</span>n <span class="bu">int</span> <span class="op">-</span>m <span class="bu">int</span></span>
@@ -5707,7 +5702,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb498-7"><a href="#cb498-7" aria-hidden="true" tabindex="-1"></a>CCCC</span>
 <span id="cb498-8"><a href="#cb498-8" aria-hidden="true" tabindex="-1"></a>&gt;Rosalind_4</span>
 <span id="cb498-9"><a href="#cb498-9" aria-hidden="true" tabindex="-1"></a>TTTTTTTT</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>만약 <code>k</code>에 대해 수용 가능한 값이 있다면, 저는 최대값을 찾아야 합니다. 저는 이진 탐색을 사용하여 최대값을 찾기 위한 힐클라이밍(hill-climbing) 탐색의 시작점을 찾기로 결정했습니다. 먼저 <code>main()</code>을 보여드리고, 그다음에 다른 함수들을 분석하겠습니다.</p>
+<p>만약 <code>k</code>에 대해 수용 가능한 값이 있다면, 저는 최대값을 찾아야 합니다. 저는 이진 탐색을 사용하여 최대값을 찾기 위한 힐클라이밍(hill-climbing) 탐색의 시작점을 찾기로 결정했습니다. 먼저 <code>main()</code>을 보여드리고 그다음에 다른 함수들을 분석하겠습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb499"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb499-1"><a href="#cb499-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb499-2"><a href="#cb499-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
 <span id="cb499-3"><a href="#cb499-3" aria-hidden="true" tabindex="-1"></a>    seqs <span class="op">=</span> [<span class="bu">str</span>(rec.seq) <span class="cf">for</span> rec <span class="kw">in</span> SeqIO.parse(args.<span class="bu">file</span>, <span class="st">'fasta'</span>)] <span class="co"># 1</span></span>
@@ -5948,7 +5943,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb523-6"><a href="#cb523-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Done,</span> see output in <span class="st">"fasta"</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>B5ZC00 P07204_TRBM_HUMAN</p>
 <p>P20840_SAG1_YEAST 완료, 출력을 “fasta”에서 확인하세요.</p>
-<p>이제 네 개의 FASTA 파일을 포함하는 <code>fasta</code> 디렉토리가 있을 것입니다. <code>mprt.py</code> 프로그램을 작성하는 한 가지 방법은 이와 같은 유틸리티를 사용하여 모든 입력 파일을 먼저 가져온 다음 FASTA 파일들을 인자로 제공하는 것입니다. 이는 생명정보학에서 매우 흔한 패턴이며 이와 같은 쉘 스크립트를 작성하는 것은 분석을 위해 데이터를 어떻게 가져왔는지 정확하게 기록하는 좋은 방법입니다. 이러한 프로그램들을 항상 소스 저장소에 커밋하고, 다음과 같이 왼쪽에 정렬된 이름 뒤에 콜론이 오고 다음 줄에 탭 문자로 들여쓰기된 명령이 오는 <code>fasta</code>라는 이름의 Makefile 타겟을 추가하는 것을 고려해 보십시오.</p>
+<p>이제 네 개의 FASTA 파일을 포함하는 <code>fasta</code> 디렉토리가 있을 것입니다. <code>mprt.py</code> 프로그램을 작성하는 한 가지 방법은 이와 같은 유틸리티를 사용하여 모든 입력 파일을 먼저 가져온 다음 FASTA 파일들을 인자로 제공하는 것입니다. 이는 생명정보학에서 매우 흔한 패턴이며 이와 같은 쉘 스크립트를 작성하는 것은 분석을 위해 데이터를 어떻게 가져왔는지 정확하게 기록하는 좋은 방법입니다. 이러한 프로그램들을 항상 소스 저장소에 커밋하고 다음과 같이 왼쪽에 정렬된 이름 뒤에 콜론이 오고 다음 줄에 탭 문자로 들여쓰기된 명령이 오는 <code>fasta</code>라는 이름의 Makefile 타겟을 추가하는 것을 고려해 보십시오.</p>
 <p>fasta: ./fetch_fasta.sh tests/inputs/1.txt</p>
 <p>이제 <code>make fasta</code>를 실행하여 데이터 수집 과정을 자동화할 수 있습니다. 입력 파일을 하드코딩하는 대신 인자로 받도록 프로그램을 작성함으로써, 이 프로그램과 여러 Makefile 타겟을 사용하여 다양한 데이터셋을 다운로드하는 과정을 자동화할 수 있습니다. 재현성을 위한 승리입니다.</p>
 </section>
@@ -5958,7 +5953,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb524"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb524-1"><a href="#cb524-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_fasta(fh: TextIO, fasta_dir: <span class="bu">str</span>) <span class="op">-&gt;</span> List[<span class="bu">str</span>]: <span class="co"># 1</span></span>
 <span id="cb524-2"><a href="#cb524-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' FASTA 파일들을 다운로드 디렉토리로 가져오기 '''</span></span>
 <span id="cb524-3"><a href="#cb524-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [] <span class="co"># 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 이 함수는 단백질 ID를 위한 파일 핸들과 다운로드 디렉토리 이름을 인자로 받고, 다운로드되었거나 이미 존재하는 파일들의 리스트를 반환할 것입니다. 임포트문에 <code>typing.List</code>를 추가하는 것을 잊지 마십시오. 2 지금은 빈 리스트를 반환합니다.</p>
+<p>1 이 함수는 단백질 ID를 위한 파일 핸들과 다운로드 디렉토리 이름을 인자로 받고 다운로드되었거나 이미 존재하는 파일들의 리스트를 반환할 것입니다. 임포트문에 <code>typing.List</code>를 추가하는 것을 잊지 마십시오. 2 지금은 빈 리스트를 반환합니다.</p>
 <p>다음과 같이 호출하고 싶습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb525"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb525-1"><a href="#cb525-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb525-2"><a href="#cb525-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -6020,7 +6015,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="솔루션-7" class="level1">
 <h1>솔루션</h1>
-<p>이 문제를 해결하기 위한 두 가지 변형을 제시하겠습니다. 둘 다 앞서 보여드린 것과 동일한 <code>get_args()</code>와 <code>fetch_fasta()</code> 함수를 사용합니다. 첫 번째는 모티프를 찾기 위해 정규 표현식을 사용하고, 두 번째는 정규 표현식이 존재하지 않는 끔찍하고 황량한 지적 불모지에서 문제를 해결하는 상황을 가정합니다.</p>
+<p>이 문제를 해결하기 위한 두 가지 변형을 제시하겠습니다. 둘 다 앞서 보여드린 것과 동일한 <code>get_args()</code>와 <code>fetch_fasta()</code> 함수를 사용합니다. 첫 번째는 모티프를 찾기 위해 정규 표현식을 사용하고 두 번째는 정규 표현식이 존재하지 않는 끔찍하고 황량한 지적 불모지에서 문제를 해결하는 상황을 가정합니다.</p>
 </section>
 <section id="솔루션-1-정규-표현식-사용하기" class="level1">
 <h1>솔루션 1: 정규 표현식 사용하기</h1>
@@ -6225,7 +6220,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb555-10"><a href="#cb555-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-h,</span> <span class="at">--help</span>            이 도움말 메시지를 표시하고 종료</span>
 <span id="cb555-11"><a href="#cb555-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-m</span> int, <span class="at">--modulo</span> int  나머지 연산 값 <span class="er">(</span><span class="ex">기본값:</span> 1000000<span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>1 필수 위치 인자는 단백질 시퀀스 또는 단백질 시퀀스를 포함하는 파일입니다. 2 <code>--modulo</code> 옵션의 기본값은 1,000,000입니다.</p>
-<p>Rosalind 예시인 <code>MA</code>를 사용하여 프로그램을 실행하고, 이 단백질 시퀀스를 인코딩할 수 있는 가능한 mRNA 시퀀스의 개수를 1,000,000으로 나눈 나머지인 12가 출력되는지 확인하십시오.</p>
+<p>Rosalind 예시인 <code>MA</code>를 사용하여 프로그램을 실행하고 이 단백질 시퀀스를 인코딩할 수 있는 가능한 mRNA 시퀀스의 개수를 1,000,000으로 나눈 나머지인 12가 출력되는지 확인하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb556"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb556-1"><a href="#cb556-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./mrna.py MA</span>
 <span id="cb556-2"><a href="#cb556-2" aria-hidden="true" tabindex="-1"></a><span class="ex">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>프로그램은 시퀀스를 위해 입력 파일도 읽을 것입니다. 첫 번째 입력 파일은 998개 잔기(residue) 길이의 시퀀스를 가지고 있으며 결과는 448832여야 합니다.</p>
@@ -6266,7 +6261,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="리스트의-곱product-생성하기" class="level1">
 <h1>리스트의 곱(Product) 생성하기</h1>
-<p>입력이 <code>MA</code>일 때, 프로그램은 응답으로 12를 출력해야 합니다. 이는 그림 12-1에 표시된 것처럼 이 단백질 시퀀스를 생성할 수 있는 가능한 mRNA 문자열의 개수입니다. 7장의 RNA 인코딩 테이블을 사용하면, 아미노산 메티오닌(M)은 mRNA 코돈 시퀀스 <code>AUG</code>에 의해 인코딩되고, 알라닌(A)은 네 개의 가능한 코돈(<code>GCA</code>, <code>GCC</code>, <code>GCG</code>, <code>GCU</code>)을 가지며 종결 코돈은 세 개(<code>UAA</code>, <code>UAG</code>, <code>UGA</code>)임을 알 수 있습니다. 이 세 그룹의 곱은 <span class="math inline">\(1 \times 4 \times 3 = 12\)</span>입니다.</p>
+<p>입력이 <code>MA</code>일 때, 프로그램은 응답으로 12를 출력해야 합니다. 이는 그림 12-1에 표시된 것처럼 이 단백질 시퀀스를 생성할 수 있는 가능한 mRNA 문자열의 개수입니다. 7장의 RNA 인코딩 테이블을 사용하면, 아미노산 메티오닌(M)은 mRNA 코돈 시퀀스 <code>AUG</code>에 의해 인코딩되고 알라닌(A)은 네 개의 가능한 코돈(<code>GCA</code>, <code>GCC</code>, <code>GCG</code>, <code>GCU</code>)을 가지며 종결 코돈은 세 개(<code>UAA</code>, <code>UAG</code>, <code>UGA</code>)임을 알 수 있습니다. 이 세 그룹의 곱은 <span class="math inline">\(1 \times 4 \times 3 = 12\)</span>입니다.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -6422,7 +6417,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb574-5"><a href="#cb574-5" aria-hidden="true" tabindex="-1"></a>M [<span class="st">'AUG'</span>]</span>
 <span id="cb574-6"><a href="#cb574-6" aria-hidden="true" tabindex="-1"></a>A [<span class="st">'GCA'</span>, <span class="st">'GCC'</span>, <span class="st">'GCG'</span>, <span class="st">'GCU'</span>]</span>
 <span id="cb574-7"><a href="#cb574-7" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> [<span class="st">'UAA'</span>, <span class="st">'UAG'</span>, <span class="st">'UGA'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>주어진 잔기를 인코딩하는 실제 코돈 리스트는 필요하지 않고, 오직 개수만 필요하므로 <code>len()</code> 함수를 사용하여 찾을 수 있습니다.</p>
+<p>주어진 잔기를 인코딩하는 실제 코돈 리스트는 필요하지 않고 오직 개수만 필요하므로 <code>len()</code> 함수를 사용하여 찾을 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb575"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb575-1"><a href="#cb575-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> possible <span class="op">=</span> [</span>
 <span id="cb575-2"><a href="#cb575-2" aria-hidden="true" tabindex="-1"></a>...     <span class="bu">len</span>([c <span class="cf">for</span> c, res <span class="kw">in</span> c2aa.items() <span class="cf">if</span> res <span class="op">==</span> aa])</span>
 <span id="cb575-3"><a href="#cb575-3" aria-hidden="true" tabindex="-1"></a>...     <span class="cf">for</span> aa <span class="kw">in</span> protein <span class="op">+</span> <span class="st">'*'</span></span>
@@ -6436,7 +6431,7 @@ n = \operatorname{len}(s) - k + 1
 <p>이 방법이 완벽하게 잘 작동하겠지만 이 기회에 값들의 시퀀스를 단일 값으로 축소(reducing)하는 것에 대해 이야기하고 싶습니다. 5장에서 숫자 1, 4, 3을 더해 결과 8을 만드는 <code>sum()</code> 함수를 소개했습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb577"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb577-1"><a href="#cb577-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">sum</span>(possible)</span>
 <span id="cb577-2"><a href="#cb577-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 함수는 쌍을 지어 작업을 수행하는데, 먼저 <span class="math inline">\(1 + 4\)</span>를 더해 5를 얻고, 그 다음 <span class="math inline">\(5 + 3\)</span>을 더해 8을 얻습니다. 만약 <code>+</code> 연산자를 <code>*</code>로 바꾸면 곱을 얻게 되고 결과는 12가 됩니다(그림 12-2 참조).</p>
+<p>이 함수는 쌍을 지어 작업을 수행하는데, 먼저 <span class="math inline">\(1 + 4\)</span>를 더해 5를 얻고 그 다음 <span class="math inline">\(5 + 3\)</span>을 더해 8을 얻습니다. 만약 <code>+</code> 연산자를 <code>*</code>로 바꾸면 곱을 얻게 되고 결과는 12가 됩니다(그림 12-2 참조).</p>
 <p><img src="images/3c87b876c0b92c3b7d2292305e7c3ef796daa01bc157e9724f2b749a1b701a5c.jpg" class="img-fluid"> 그림 12-2. 덧셈과 곱셈을 사용하여 숫자 리스트 축소하기</p>
 <p>이것이 값들의 리스트를 축소한다는 아이디어이며 바로 <code>functools.reduce()</code> 함수가 우리를 도와주는 일입니다. 이것은 <code>filter()</code>, <code>map()</code> 및 이 책 전체에서 사용한 다른 함수들과 같은 또 다른 고차 함수(HOF)이지만 중요한 차이점이 있습니다. 람다 함수가 하나가 아닌 두 개의 인자를 받는다는 점입니다. 문서는 <code>sum()</code>을 작성하는 방법을 보여줍니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb578"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb578-1"><a href="#cb578-1" aria-hidden="true" tabindex="-1"></a><span class="bu">reduce</span>(...)</span>
@@ -6498,7 +6493,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb590-11"><a href="#cb590-11" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> maybemod(a <span class="op">*</span> <span class="dv">2</span>) <span class="co"># 9</span></span>
 <span id="cb590-12"><a href="#cb590-12" aria-hidden="true" tabindex="-1"></a>        b <span class="op">//=</span> <span class="dv">2</span> <span class="co"># 10</span></span>
 <span id="cb590-13"><a href="#cb590-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 <code>mulmod()</code> 함수는 정수 나머지 값 <code>mod</code>를 사용하여 곱할 두 정수 <code>a</code>와 <code>b</code>를 인자로 받습니다. 2 이는 <code>mod</code> 값을 감싸는 클로저로, 필요시 <code>mod</code>로 나눈 나머지를 반환합니다. 3 결과가 0이면 원래 값을 반환하고, 그렇지 않으면 계산된 값을 반환합니다. 4 결과를 초기화합니다. 5 <code>a</code>의 크기를 줄일 수 있다면 줄입니다. 6 <code>b</code>가 0보다 큰 동안 루프를 돕니다. 7 <code>b</code>가 홀수인지 확인합니다. 8 결과에 <code>a</code>를 더하고 결과에 나머지 연산을 적용할 수도 있습니다. 9 <code>a</code>를 두 배로 만들고 값에 나머지 연산을 적용할 수도 있습니다. 10 바닥 나눗셈을 사용하여 <code>b</code>를 반으로 나누며 결국 0이 되어 루프가 종료됩니다.</p>
+<p>1 <code>mulmod()</code> 함수는 정수 나머지 값 <code>mod</code>를 사용하여 곱할 두 정수 <code>a</code>와 <code>b</code>를 인자로 받습니다. 2 이는 <code>mod</code> 값을 감싸는 클로저로, 필요시 <code>mod</code>로 나눈 나머지를 반환합니다. 3 결과가 0이면 원래 값을 반환하고 그렇지 않으면 계산된 값을 반환합니다. 4 결과를 초기화합니다. 5 <code>a</code>의 크기를 줄일 수 있다면 줄입니다. 6 <code>b</code>가 0보다 큰 동안 루프를 돕니다. 7 <code>b</code>가 홀수인지 확인합니다. 8 결과에 <code>a</code>를 더하고 결과에 나머지 연산을 적용할 수도 있습니다. 9 <code>a</code>를 두 배로 만들고 값에 나머지 연산을 적용할 수도 있습니다. 10 바닥 나눗셈을 사용하여 <code>b</code>를 반으로 나누며 결국 0이 되어 루프가 종료됩니다.</p>
 <p>다음은 제가 작성한 테스트입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb591"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb591-1"><a href="#cb591-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_mulmod() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb591-2"><a href="#cb591-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' mulmod 테스트 '''</span></span>
@@ -6548,7 +6543,7 @@ n = \operatorname{len}(s) - k + 1
 <p>이를 반대로 돌려 이름에서 염기로 가게 하려면, <code>dict.items()</code>를 사용하여 키/값 쌍을 가져올 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb598"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb598-1"><a href="#cb598-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(base_to_name.items())</span>
 <span id="cb598-2"><a href="#cb598-2" aria-hidden="true" tabindex="-1"></a>[(<span class="st">'A'</span>, <span class="st">'adenine'</span>), (<span class="st">'G'</span>, <span class="st">'guanine'</span>), (<span class="st">'C'</span>, <span class="st">'cytosine'</span>), (<span class="st">'T'</span>, <span class="st">'thymine'</span>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>그 다음 <code>reversed()</code>를 통해 <code>map()</code>을 적용하여 이들을 뒤집고, 마지막으로 결과를 <code>dict()</code> 함수에 전달하여 딕셔너리를 생성합니다.</p>
+<p>그 다음 <code>reversed()</code>를 통해 <code>map()</code>을 적용하여 이들을 뒤집고 마지막으로 결과를 <code>dict()</code> 함수에 전달하여 딕셔너리를 생성합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb599"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb599-1"><a href="#cb599-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">dict</span>(<span class="bu">map</span>(<span class="bu">reversed</span>, base_to_name.items()))</span>
 <span id="cb599-2"><a href="#cb599-2" aria-hidden="true" tabindex="-1"></a>{<span class="st">'adenine'</span>: <span class="st">'A'</span>, <span class="st">'guanine'</span>: <span class="st">'G'</span>, <span class="st">'cytosine'</span>: <span class="st">'C'</span>, <span class="st">'thymine'</span>: <span class="st">'T'</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>하지만 첫 번째 솔루션의 RNA 코돈 테이블에 이 작업을 시도하면 다음과 같은 결과를 얻게 됩니다.</p>
@@ -6728,7 +6723,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb611"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb611-1"><a href="#cb611-1" aria-hidden="true" tabindex="-1"></a>$ cat tests<span class="op">/</span>inputs<span class="op">/</span><span class="fl">1.</span><span class="er">fa</span></span>
 <span id="cb611-2"><a href="#cb611-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>Rosalind_24</span>
 <span id="cb611-3"><a href="#cb611-3" aria-hidden="true" tabindex="-1"></a>TCAATGCATGCGGGTCTATATGCAT</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 입력으로 프로그램을 실행하고, 그림 13-2에 설명된 대로 문자열 내에서 4~12 사이의 길이를 가진 모든 역회문의 위치(1부터 시작하는 카운팅 사용)와 길이를 확인하십시오. 결과의 순서는 중요하지 않습니다.</p>
+<p>이 입력으로 프로그램을 실행하고 그림 13-2에 설명된 대로 문자열 내에서 4~12 사이의 길이를 가진 모든 역회문의 위치(1부터 시작하는 카운팅 사용)와 길이를 확인하십시오. 결과의 순서는 중요하지 않습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb612"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb612-1"><a href="#cb612-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./revp.py tests/inputs/1.fa</span>
 <span id="cb612-2"><a href="#cb612-2" aria-hidden="true" tabindex="-1"></a><span class="ex">5</span> 4</span>
 <span id="cb612-3"><a href="#cb612-3" aria-hidden="true" tabindex="-1"></a><span class="ex">7</span> 4</span>
@@ -6761,7 +6756,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb615"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb615-1"><a href="#cb615-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb615-2"><a href="#cb615-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
 <span id="cb615-3"><a href="#cb615-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(args.<span class="bu">file</span>.name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>프로그램이 올바른 사용법을 생성하고, 가짜 파일을 거부하며 유효한 입력 이름을 출력하는지 수동으로 확인하십시오.</p>
+<p>프로그램이 올바른 사용법을 생성하고 가짜 파일을 거부하며 유효한 입력 이름을 출력하는지 수동으로 확인하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb616"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb616-1"><a href="#cb616-1" aria-hidden="true" tabindex="-1"></a>$ .<span class="op">/</span>revp.py tests<span class="op">/</span>inputs<span class="op">/</span><span class="fl">1.</span><span class="er">fa</span></span>
 <span id="cb616-2"><a href="#cb616-2" aria-hidden="true" tabindex="-1"></a>tests<span class="op">/</span>inputs<span class="op">/</span><span class="fl">1.</span><span class="er">fa</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>make test</code>를 실행하면 일부 테스트를 통과하게 될 것입니다. 이제 프로그램의 뼈대를 작성할 준비가 되었습니다.</p>
@@ -6802,7 +6797,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="모든-역상보-서열-찾기" class="level1">
 <h1>모든 역상보 서열 찾기</h1>
-<p>3장에서 역상보 서열을 찾는 많은 방법들을 보여드렸고, <code>Bio.Seq.reverse_complement()</code>가 아마도 가장 쉬운 방법이라는 결론을 내렸습니다. 모든 12-mer를 찾는 것부터 시작해 보겠습니다.</p>
+<p>3장에서 역상보 서열을 찾는 많은 방법들을 보여드렸고 <code>Bio.Seq.reverse_complement()</code>가 아마도 가장 쉬운 방법이라는 결론을 내렸습니다. 모든 12-mer를 찾는 것부터 시작해 보겠습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb621"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb621-1"><a href="#cb621-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> kmers <span class="op">=</span> find_kmers(seq, <span class="dv">12</span>)</span>
 <span id="cb621-2"><a href="#cb621-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> kmers</span>
 <span id="cb621-3"><a href="#cb621-3" aria-hidden="true" tabindex="-1"></a>[<span class="st">'TCAATGCATGCG'</span>, <span class="st">'CAATGCATGCGG'</span>, <span class="st">'AATGCATGCGGG'</span>, <span class="st">'ATGCATGCGGGT'</span>, <span class="st">'TGCATGCGGGTC'</span>, <span class="st">'GCATGCGGGTCT'</span>, <span class="st">'CATGCGGGTCTA'</span>, <span class="st">'ATGCGGGTCTAT'</span>, <span class="st">'TGCGGGTCTATA'</span>, <span class="st">'GCGGGTCTATAT'</span>, <span class="st">'CGGGTCTATATG'</span>, <span class="st">'GGGTCTATATGC'</span>, <span class="st">'GGTCTATATGCA'</span>, <span class="st">'GTCTATATGCAT'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -6817,7 +6812,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="하나로-합치기" class="level1">
 <h1>하나로 합치기</h1>
-<p>이제 이 과제를 완수하기 위해 필요한 거의 모든 것을 갖추었습니다. 먼저 모든 k-mer를 그들의 역상보 서열과 짝을 짓고, 동일한 것들을 찾아 그 위치를 출력하십시오. <code>for</code> 루프로 순회할 수도 있고, 6장에서 처음 살펴보았던 <code>zip()</code> 함수를 사용하여 쌍을 만들 수도 있습니다. 이것은 흥미로운 과제이며 제 버전을 읽기 전에 여러분이 스스로 작동하는 솔루션을 찾아낼 수 있을 것이라고 확신합니다.</p>
+<p>이제 이 과제를 완수하기 위해 필요한 거의 모든 것을 갖추었습니다. 먼저 모든 k-mer를 그들의 역상보 서열과 짝을 짓고 동일한 것들을 찾아 그 위치를 출력하십시오. <code>for</code> 루프로 순회할 수도 있고 6장에서 처음 살펴보았던 <code>zip()</code> 함수를 사용하여 쌍을 만들 수도 있습니다. 이것은 흥미로운 과제이며 제 버전을 읽기 전에 여러분이 스스로 작동하는 솔루션을 찾아낼 수 있을 것이라고 확신합니다.</p>
 </section>
 <section id="솔루션-9" class="level1">
 <h1>솔루션</h1>
@@ -6869,7 +6864,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="솔루션-2-operator.eq-함수-사용하기" class="level1">
 <h1>솔루션 2: operator.eq() 함수 사용하기</h1>
-<p><code>fst()</code>와 <code>snd()</code> 함수를 좋아하고 모듈 및 함수 공유 방법을 강조하고 싶기도 하지만 사실 <code>operator.eq()</code> 함수와 역할이 겹칩니다. 저는 이 모듈을 6장에서 <code>operator.ne()</code> (같지 않음) 함수를 사용하기 위해 처음 소개했고, 다른 곳에서도 <code>operator.le()</code> (작거나 같음) 및 <code>operator.add()</code> 함수를 사용해 왔습니다.</p>
+<p><code>fst()</code>와 <code>snd()</code> 함수를 좋아하고 모듈 및 함수 공유 방법을 강조하고 싶기도 하지만 사실 <code>operator.eq()</code> 함수와 역할이 겹칩니다. 저는 이 모듈을 6장에서 <code>operator.ne()</code> (같지 않음) 함수를 사용하기 위해 처음 소개했고 다른 곳에서도 <code>operator.le()</code> (작거나 같음) 및 <code>operator.add()</code> 함수를 사용해 왔습니다.</p>
 <p>앞선 솔루션의 일부를 다음과 같이 다시 작성할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb631"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb631-1"><a href="#cb631-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos, pair <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(kmers, revc)):</span>
 <span id="cb631-2"><a href="#cb631-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> operator.eq(<span class="op">*</span>pair): <span class="co"># 1</span></span>
@@ -6885,7 +6880,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb632-7"><a href="#cb632-7" aria-hidden="true" tabindex="-1"></a>            pairs <span class="op">=</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(kmers, revc))</span>
 <span id="cb632-8"><a href="#cb632-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> pos <span class="kw">in</span> [pos <span class="op">+</span> <span class="dv">1</span> <span class="cf">for</span> pos, pair <span class="kw">in</span> pairs <span class="cf">if</span> operator.eq(<span class="op">*</span>pair)]: <span class="co"># 1</span></span>
 <span id="cb632-9"><a href="#cb632-9" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(pos, k)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>1 동등 비교를 위해 가드를 사용하고, 리스트 컴프리헨션 내부에서 위치를 교정합니다.</p>
+<p>1 동등 비교를 위해 가드를 사용하고 리스트 컴프리헨션 내부에서 위치를 교정합니다.</p>
 </section>
 <section id="솔루션-3-revp-함수-작성하기" class="level1">
 <h1>솔루션 3: revp() 함수 작성하기</h1>
@@ -6948,7 +6943,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb640-8"><a href="#cb640-8" aria-hidden="true" tabindex="-1"></a><span class="ex">6</span> 6</span>
 <span id="cb640-9"><a href="#cb640-9" aria-hidden="true" tabindex="-1"></a><span class="ex">20</span> 6</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>두 번째 입력 파일은 첫 번째보다 상당히 큽니다. 이는 Rosalind 문제들에서 흔히 볼 수 있는 일이며 따라서 테스트 프로그램에 입력과 출력 값을 리터럴 문자열로 포함시키려고 하면 지저분해질 것입니다. 두 번째 파일에 대한 기대 출력은 70줄에 달합니다. 마지막 테스트는 빈 파일에 대한 것으로, 기대 출력은 빈 문자열입니다. 당연해 보일 수도 있지만 포인트는 빈 입력 파일에 대해 프로그램이 예외를 발생시키지 않는지 확인하는 것입니다.</p>
-<p><code>tests/revp_test.py</code>에서 저는 입력 파일의 이름을 받아 기대 출력 파일 이름을 읽고, 해당 입력으로 프로그램을 실행하여 출력을 확인하는 <code>run()</code> 헬퍼 함수를 작성했습니다.</p>
+<p><code>tests/revp_test.py</code>에서 저는 입력 파일의 이름을 받아 기대 출력 파일 이름을 읽고 해당 입력으로 프로그램을 실행하여 출력을 확인하는 <code>run()</code> 헬퍼 함수를 작성했습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb641"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb641-1"><a href="#cb641-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run(<span class="bu">file</span>: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>: <span class="co"># 1</span></span>
 <span id="cb641-2"><a href="#cb641-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">''' 테스트 실행 '''</span></span>
 <span id="cb641-3"><a href="#cb641-3" aria-hidden="true" tabindex="-1"></a>    expected_file <span class="op">=</span> <span class="bu">file</span> <span class="op">+</span> <span class="st">'.out'</span> <span class="co"># 2</span></span>
@@ -6967,7 +6962,7 @@ n = \operatorname{len}(s) - k + 1
 <li>역회문은 자신의 역상보 서열과 동일한 DNA 시퀀스입니다.</li>
 <li><code>find_kmers()</code>와 같은 공통 기능을 별도의 모듈로 추출하여 여러 프로젝트에서 공유할 수 있습니다.</li>
 <li><code>PYTHONPATH</code> 환경 변수는 파이썬이 모듈을 검색할 추가 디렉토리 위치를 지정하는 데 사용됩니다.</li>
-<li><code>zip()</code> 함수를 사용하여 k-mer와 그 역상보 서열을 짝지을 수 있고, <code>enumerate()</code>를 사용하여 그들의 위치를 알 수 있습니다.</li>
+<li><code>zip()</code> 함수를 사용하여 k-mer와 그 역상보 서열을 짝지을 수 있고 <code>enumerate()</code>를 사용하여 그들의 위치를 알 수 있습니다.</li>
 <li><code>operator.eq()</code> 함수는 두 요소가 동일한지 비교하는 연산자의 함수 버전입니다.</li>
 <li>리스트 컴프리헨션은 중첩된 <code>for</code> 루프를 간결하게 표현할 수 있는 강력한 도구입니다.</li>
 <li>정교한 통합 테스트를 작성하여 프로그램이 다양한 입력에 대해 정확하게 작동하는지 검증하는 것이 중요합니다.</li>
@@ -7047,11 +7042,11 @@ n = \operatorname{len}(s) - k + 1
 </ul></li>
 <li><strong>역방향 가닥 (Reverse strand):</strong> 먼저 원래 시퀀스의 역상보 서열을 구한 뒤 동일하게 세 가지 프레임을 적용합니다.</li>
 </ol>
-<p>각 리딩 프레임에서 시작 코돈(<code>ATG</code>)을 찾고, 그 뒤에 나오는 종결 코돈까지의 시퀀스를 추출하여 단백질로 번역해야 합니다. 하나의 리딩 프레임 안에 여러 개의 시작 코돈이 존재할 수 있으며 각 시작 코돈은 동일한 종결 코돈에서 끝나는 서로 다른 길이의 단백질 시퀀스를 생성할 수 있음에 유의하십시오.</p>
+<p>각 리딩 프레임에서 시작 코돈(<code>ATG</code>)을 찾고 그 뒤에 나오는 종결 코돈까지의 시퀀스를 추출하여 단백질로 번역해야 합니다. 하나의 리딩 프레임 안에 여러 개의 시작 코돈이 존재할 수 있으며 각 시작 코돈은 동일한 종결 코돈에서 끝나는 서로 다른 길이의 단백질 시퀀스를 생성할 수 있음에 유의하십시오.</p>
 </section>
 <section id="정규-표현식을-사용하여-orf-찾기" class="level1">
 <h1>정규 표현식을 사용하여 ORF 찾기</h1>
-<p>정규 표현식은 특정 패턴을 찾는 데 매우 강력합니다. ORF는 <code>ATG</code>로 시작하고, 그 뒤에 3의 배수만큼의 염기들이 오며 종결 코돈(<code>TAA</code>, <code>TAG</code>, <code>TGA</code>)으로 끝나는 패턴입니다. 하지만 정규 표현식만으로는 겹치는 ORF를 모두 찾는 것이 복잡할 수 있습니다. 대신, 각 리딩 프레임에서 시퀀스를 단백질로 번역한 후 단백질 시퀀스 내에서 모티프를 찾는 것이 더 간단할 수 있습니다.</p>
+<p>정규 표현식은 특정 패턴을 찾는 데 매우 강력합니다. ORF는 <code>ATG</code>로 시작하고 그 뒤에 3의 배수만큼의 염기들이 오며 종결 코돈(<code>TAA</code>, <code>TAG</code>, <code>TGA</code>)으로 끝나는 패턴입니다. 하지만 정규 표현식만으로는 겹치는 ORF를 모두 찾는 것이 복잡할 수 있습니다. 대신, 각 리딩 프레임에서 시퀀스를 단백질로 번역한 후 단백질 시퀀스 내에서 모티프를 찾는 것이 더 간단할 수 있습니다.</p>
 <p>단백질 수준에서 ORF는 <code>M</code>(메티오닌)으로 시작하고 시퀀스의 끝(종결 코돈에 의해 번역이 중단된 지점)까지 이어지는 시퀀스입니다.</p>
 <ol type="1">
 <li>DNA 시퀀스를 6가지 프레임으로 번역합니다. (3장의 <code>reverse_complement</code>와 7장의 <code>translate</code> 기능 활용)</li>
@@ -7061,7 +7056,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="솔루션-10" class="level1">
 <h1>솔루션</h1>
-<p>제 최종 솔루션은 Biopython을 사용하여 6가지 리딩 프레임을 생성하고, 각 프레임을 단백질로 번역한 뒤, <code>M</code>으로 시작하는 모든 단백질 시퀀스를 추출합니다.</p>
+<p>제 최종 솔루션은 Biopython을 사용하여 6가지 리딩 프레임을 생성하고 각 프레임을 단백질로 번역한 뒤, <code>M</code>으로 시작하는 모든 단백질 시퀀스를 추출합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb648"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb648-1"><a href="#cb648-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb648-2"><a href="#cb648-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb648-3"><a href="#cb648-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
@@ -7116,7 +7111,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="기타-프로그램" class="level1">
 <h1>기타 프로그램</h1>
-<p>이 파트의 장들에서는 제가 생명정보학에서 반복적으로 사용해 온 패턴들을 담은 여러 프로그램들을 소개하겠습니다. 먼저, 시퀀스 파일에서 기본 통계를 구하고 출력 표의 서식을 지정하는 프로그램을 작성하는 방법을 보여드리겠습니다. 다음으로는 헤더 정보의 패턴 매칭을 사용하여 시퀀스를 선택하는 방법을 설명하고, 이어서 훈련 파일에서 학습한 데이터를 사용하여 인공 DNA 시퀀스를 생성하는 프로그램을 다루겠습니다. 그 후에는 무작위성을 탐구하여 시퀀스를 서브샘플링(subsample)하는 프로그램을 살펴보고, 마지막으로 헤더 정보가 있거나 없는 구분된 텍스트 파일을 파이썬으로 파싱하는 방법으로 마무리하겠습니다. 여러분이 자신만의 프로그램을 작성할 때 이 프로그램들에서 유용한 패턴을 찾으시길 바랍니다.</p>
+<p>이 파트의 장들에서는 제가 생명정보학에서 반복적으로 사용해 온 패턴들을 담은 여러 프로그램들을 소개하겠습니다. 먼저, 시퀀스 파일에서 기본 통계를 구하고 출력 표의 서식을 지정하는 프로그램을 작성하는 방법을 보여드리겠습니다. 다음으로는 헤더 정보의 패턴 매칭을 사용하여 시퀀스를 선택하는 방법을 설명하고 이어서 훈련 파일에서 학습한 데이터를 사용하여 인공 DNA 시퀀스를 생성하는 프로그램을 다루겠습니다. 그 후에는 무작위성을 탐구하여 시퀀스를 서브샘플링(subsample)하는 프로그램을 살펴보고 마지막으로 헤더 정보가 있거나 없는 구분된 텍스트 파일을 파이썬으로 파싱하는 방법으로 마무리하겠습니다. 여러분이 자신만의 프로그램을 작성할 때 이 프로그램들에서 유용한 패턴을 찾으시길 바랍니다.</p>
 </section>
 <section id="seqmagique-보고서-생성-및-서식-지정" class="level1">
 <h1>Seqmagique: 보고서 생성 및 서식 지정</h1>
@@ -7142,7 +7137,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb650-4"><a href="#cb650-4" aria-hidden="true" tabindex="-1"></a><span class="ex">tests/inputs/1.fa</span> FALSE 50 50 50.00 1</span>
 <span id="cb650-5"><a href="#cb650-5" aria-hidden="true" tabindex="-1"></a><span class="ex">tests/inputs/2.fa</span> FALSE 49 79 64.00 5</span>
 <span id="cb650-6"><a href="#cb650-6" aria-hidden="true" tabindex="-1"></a><span class="ex">tests/inputs/empty.fa</span> FALSE 0 0 0.00 0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 연습에서는 이 출력을 흉내 내는 <code>seqmagique.py</code>(프랑스어 억양을 섞어 ’시퀀스 매지끄’라고 발음해 보세요)라는 프로그램을 만들 것입니다. 이 프로그램의 목적은 주어진 파일 세트의 시퀀스에 대한 기본적인 개요를 제공하여, 예를 들어 잘리거나 손상된 파일을 찾아낼 수 있도록 하는 것입니다.</p>
+<p>이 연습에서는 이 출력을 흉내 내는 <code>seqmagique.py</code>(프랑스어 억양을 섞어 ’시퀀스 매지끄’라고 발음해 보세요)라는 프로그램을 만들 것입니다. 이 프로그램의 목적은 주어진 파일 세트의 시퀀스에 대한 기본적인 개요를 제공하여 예를 들어 잘리거나 손상된 파일을 찾아낼 수 있도록 하는 것입니다.</p>
 <p>먼저 솔루션을 <code>seqmagique.py</code>로 복사하고 사용법을 확인하는 것부터 시작해 보겠습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb651"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb651-1"><a href="#cb651-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp solution1.py seqmagique.py</span>
 <span id="cb651-2"><a href="#cb651-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./seqmagique.py <span class="at">-h</span></span>
@@ -7177,7 +7172,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="md5-해시를-사용한-파일-확인" class="level1">
 <h1>MD5 해시를 사용한 파일 확인</h1>
-<p>대부분의 유전체학 프로젝트의 첫 번째 단계는 분석을 수행할 위치로 시퀀스 파일을 전송하는 것이며 데이터 손상에 대한 첫 번째 방어선은 파일이 완전히 복사되었는지 확인하는 것입니다. 파일의 출처는 시퀀싱 센터일 수도 있고, GenBank나 SRA(Sequence Read Archive)와 같은 공공 저장소일 수도 있습니다. 파일은 USB 드라이브에 담겨 올 수도 있고 인터넷에서 다운로드할 수도 있습니다. 후자의 경우 연결이 끊어져 일부 파일이 잘리거나 손상될 수 있습니다. 이러한 유형의 오류를 어떻게 찾을 수 있을까요?</p>
+<p>대부분의 유전체학 프로젝트의 첫 번째 단계는 분석을 수행할 위치로 시퀀스 파일을 전송하는 것이며 데이터 손상에 대한 첫 번째 방어선은 파일이 완전히 복사되었는지 확인하는 것입니다. 파일의 출처는 시퀀싱 센터일 수도 있고 GenBank나 SRA(Sequence Read Archive)와 같은 공공 저장소일 수도 있습니다. 파일은 USB 드라이브에 담겨 올 수도 있고 인터넷에서 다운로드할 수도 있습니다. 후자의 경우 연결이 끊어져 일부 파일이 잘리거나 손상될 수 있습니다. 이러한 유형의 오류를 어떻게 찾을 수 있을까요?</p>
 <p>파일이 완전한지 확인하는 한 가지 방법은 로컬 파일 크기를 서버의 파일 크기와 비교하는 것입니다. 예를 들어, <code>ls -l</code> 명령을 사용하여 파일 크기(바이트 단위)가 표시되는 파일 목록을 길게 볼 수 있습니다. 대용량 시퀀스 파일의 경우 이 숫자가 매우 클 것이며 원본과 대상의 파일 크기를 수동으로 비교해야 하는데 이는 지루하고 오류가 발생하기 쉽습니다.</p>
 <p>또 다른 기술은 파일의 해시(hash) 또는 메시지 다이제스트(message digest)를 사용하는 것입니다. 이는 단방향 암호화 알고리즘에 의해 생성된 파일 내용의 서명으로, 가능한 모든 입력에 대해 고유한 출력을 생성합니다. 해시를 만드는 데 사용할 수 있는 도구는 많지만 여기서는 MD5 알고리즘을 사용하는 도구에 집중하겠습니다. 이 알고리즘은 원래 암호화 및 보안 맥락에서 개발되었지만 이후 연구자들이 수많은 결함을 발견하여 지금은 데이터 무결성 확인과 같은 목적으로만 적합합니다.</p>
 <p>macOS에서는 <code>md5</code>를 사용하여 첫 번째 테스트 입력 파일의 내용으로부터 128비트 해시 값을 생성할 수 있습니다.</p>
@@ -7252,7 +7247,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb663-33"><a href="#cb663-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Args(args.<span class="bu">file</span>, args.tablefmt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li>하나 이상의 읽기 가능한 텍스트 파일을 위한 위치 파라미터를 정의합니다.</li>
-<li><code>choices</code>를 사용하여 인자를 리스트의 값으로 제한하는 옵션을 정의하고, 적절한 기본값을 설정합니다.</li>
+<li><code>choices</code>를 사용하여 인자를 리스트의 값으로 제한하는 옵션을 정의하고 적절한 기본값을 설정합니다.</li>
 </ol>
 <p><code>--tablefmt</code>에 <code>choices</code>를 사용하면 사용자 입력을 검증하는 데 드는 많은 노력을 줄일 수 있습니다. 290페이지의 “Seqmagick을 사용한 시퀀스 파일 분석”에서 보았듯이, 표 서식 옵션에 잘못된 값을 입력하면 유용한 오류 메시지가 표시됩니다.</p>
 <p><code>main()</code> 함수를 수정하여 입력 파일 이름을 출력하도록 합니다.</p>
@@ -7312,7 +7307,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="솔루션-11" class="level1">
 <h1>솔루션</h1>
-<p>파일 통계를 보여주지만 출력 서식 지정 방식이 서로 다른 두 가지 솔루션을 제시하겠습니다. 첫 번째 솔루션은 <code>tabulate()</code> 함수를 사용하여 ASCII 텍스트 표를 만들고, 두 번째 솔루션은 <code>rich</code> 모듈을 사용하여 실험실 동료와 책임 연구원(PI)에게 깊은 인상을 줄 수 있는 더 화려한 표를 만듭니다.</p>
+<p>파일 통계를 보여주지만 출력 서식 지정 방식이 서로 다른 두 가지 솔루션을 제시하겠습니다. 첫 번째 솔루션은 <code>tabulate()</code> 함수를 사용하여 ASCII 텍스트 표를 만들고 두 번째 솔루션은 <code>rich</code> 모듈을 사용하여 실험실 동료와 책임 연구원(PI)에게 깊은 인상을 줄 수 있는 더 화려한 표를 만듭니다.</p>
 </section>
 <section id="솔루션-1-tabulate를-사용한-서식-지정" class="level1">
 <h1>솔루션 1: tabulate()를 사용한 서식 지정</h1>
@@ -7384,7 +7379,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb680-2"><a href="#cb680-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> fh <span class="op">=</span> mock_open(read_data<span class="op">=</span>f1)()</span>
 <span id="cb680-3"><a href="#cb680-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> fh.read()</span>
 <span id="cb680-4"><a href="#cb680-4" aria-hidden="true" tabindex="-1"></a><span class="co">'&gt;SEQ0</span><span class="ch">\n</span><span class="co">GGATAAAGCGAGAGGCTGGATCATGCACCAACTGCGTGCAACGAAGGAAT</span><span class="ch">\n</span><span class="co">'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>테스트 맥락에서 저는 파일 이름에는 신경 쓰지 않고, 이것이 문자열을 반환하고 예외를 던지지 않는다는 것만 확인하면 됩니다.</p>
+<p>테스트 맥락에서 저는 파일 이름에는 신경 쓰지 않고 이것이 문자열을 반환하고 예외를 던지지 않는다는 것만 확인하면 됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb681"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb681-1"><a href="#cb681-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> fh.name</span>
 <span id="cb681-2"><a href="#cb681-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>MagicMock name<span class="op">=</span><span class="st">'open().name'</span> <span class="bu">id</span><span class="op">=</span><span class="st">'140349116126880'</span><span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>저는 종종 단위 테스트를 테스트 대상 함수와 동일한 모듈에 배치하지만 이 경우에는 메인 프로그램을 짧게 유지하기 위해 별도의 <code>unit.py</code> 모듈에 넣고 싶습니다. 빈 파일, 시퀀스가 하나인 파일, 시퀀스가 두 개 이상인 파일(세 개의 입력 테스트 파일에도 반영됨)을 처리하도록 테스트를 작성했습니다. 아마도 함수가 이 세 가지 경우에 대해 작동한다면 다른 모든 경우에 대해서도 작동할 것입니다.</p>
@@ -7435,7 +7430,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb684-2"><a href="#cb684-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pytest <span class="at">-xv</span> tests/unit.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>설명서에 명시된 대로, <code>seqmagique.py</code>를 찾을 수 있도록 <code>sys.path</code>에 현재 디렉토리를 추가하려면 다음과 같이 pytest를 호출해야 합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb685"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb685-1"><a href="#cb685-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">-m</span> pytest <span class="at">-xv</span> tests/unit.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>unit.py</code>를 테스트하려는 코드와 동일한 디렉토리에 두는 것이 더 짧은 pytest 명령을 실행할 수 있어 약간 더 편리하지만 모든 테스트를 <code>tests</code> 디렉토리에 그룹화하는 것이 더 깔끔합니다. 저는 보통 pytest가 자동으로 발견할 수 있도록 이 모듈을 <code>tests/unit_test.py</code>로 두고, 더 긴 명령을 실행하기 위해 make 타겟을 사용합니다. 주로 여러분이 코드와 테스트를 구성하는 다양한 방법을 알고 있기를 바랍니다.</p>
+<p><code>unit.py</code>를 테스트하려는 코드와 동일한 디렉토리에 두는 것이 더 짧은 pytest 명령을 실행할 수 있어 약간 더 편리하지만 모든 테스트를 <code>tests</code> 디렉토리에 그룹화하는 것이 더 깔끔합니다. 저는 보통 pytest가 자동으로 발견할 수 있도록 이 모듈을 <code>tests/unit_test.py</code>로 두고 더 긴 명령을 실행하기 위해 make 타겟을 사용합니다. 주로 여러분이 코드와 테스트를 구성하는 다양한 방법을 알고 있기를 바랍니다.</p>
 <p><code>main()</code>에서 <code>process()</code> 함수를 사용하는 방법은 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb686"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb686-1"><a href="#cb686-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb686-2"><a href="#cb686-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
@@ -7629,7 +7624,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="fastx-grep-시퀀스-선택-유틸리티-만들기" class="level1">
 <h1>FASTX grep: 시퀀스 선택 유틸리티 만들기</h1>
-<p>한 동료가 저에게 FASTQ 파일에서 설명이나 이름에 ‘LSU’(대형 소단위 RNA, long subunit RNA)라는 문자열이 포함된 모든 RNA 시퀀스를 찾아달라고 요청한 적이 있습니다. <code>grep</code> 프로그램을 사용하여 어떤 패턴과 일치하는 파일의 모든 라인을 찾음으로써 FASTQ 파일에 대한 이 문제를 해결할 수도 있지만 파이썬으로 솔루션을 작성하면 FASTA와 같은 다른 형식을 처리하거나 길이나 GC 함량과 같은 다른 기준에 따라 레코드를 선택하도록 프로그램을 확장할 수 있습니다. 또한 출력 시퀀스 형식을 변경하는 옵션을 추가하고, 파일 확장자를 기반으로 입력 파일의 형식을 추측하는 것과 같은 사용자 편의 기능을 도입할 수도 있습니다.</p>
+<p>한 동료가 저에게 FASTQ 파일에서 설명이나 이름에 ‘LSU’(대형 소단위 RNA, long subunit RNA)라는 문자열이 포함된 모든 RNA 시퀀스를 찾아달라고 요청한 적이 있습니다. <code>grep</code> 프로그램을 사용하여 어떤 패턴과 일치하는 파일의 모든 라인을 찾음으로써 FASTQ 파일에 대한 이 문제를 해결할 수도 있지만 파이썬으로 솔루션을 작성하면 FASTA와 같은 다른 형식을 처리하거나 길이나 GC 함량과 같은 다른 기준에 따라 레코드를 선택하도록 프로그램을 확장할 수 있습니다. 또한 출력 시퀀스 형식을 변경하는 옵션을 추가하고 파일 확장자를 기반으로 입력 파일의 형식을 추측하는 것과 같은 사용자 편의 기능을 도입할 수도 있습니다.</p>
 <p>이 장에서 배울 내용:</p>
 <ul>
 <li>FASTQ 파일의 구조</li>
@@ -7891,7 +7886,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb714-5"><a href="#cb714-5" aria-hidden="true" tabindex="-1"></a>           <span class="st">'fastq'</span> <span class="cf">if</span> re.match(<span class="vs">r'</span><span class="ch">\.</span><span class="vs">f</span><span class="kw">(</span><span class="vs">ast</span><span class="kw">)</span><span class="op">?</span><span class="vs">q</span><span class="dv">$</span><span class="vs">'</span>, ext) <span class="cf">else</span> <span class="st">''</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li><code>os.path.splitext()</code> 함수를 사용하여 파일 확장자를 가져오고 소문자로 변환합니다.</li>
-<li>확장자가 표 16-1의 FASTA 파일 패턴 중 하나와 일치하면 <code>fasta</code> 문자열을 반환하고, FASTQ 패턴과 일치하면 <code>fastq</code>를 반환하며 그렇지 않으면 빈 문자열을 반환합니다.</li>
+<li>확장자가 표 16-1의 FASTA 파일 패턴 중 하나와 일치하면 <code>fasta</code> 문자열을 반환하고 FASTQ 패턴과 일치하면 <code>fastq</code>를 반환하며 그렇지 않으면 빈 문자열을 반환합니다.</li>
 </ol>
 <p><code>os.path.splitext()</code>는 파일 이름의 루트와 확장자를 2-튜플로 반환한다는 점을 기억하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb715"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb715-1"><a href="#cb715-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> os</span>
@@ -7909,7 +7904,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb718"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb718-1"><a href="#cb718-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ext <span class="op">=</span> os.path.splitext(<span class="st">'/foo/bar.fna'</span>)[<span class="dv">1</span>][<span class="dv">1</span>:]</span>
 <span id="cb718-2"><a href="#cb718-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ext</span>
 <span id="cb718-3"><a href="#cb718-3" aria-hidden="true" tabindex="-1"></a><span class="co">'fna'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>대신 2장에서 처음 소개한 <code>re.sub()</code> 함수를 사용하는 것을 선호합니다. 제가 찾는 패턴은 문자열 시작 부분의 리터럴 점입니다. 캐럿(<code>^</code>)은 문자열의 시작을 나타내고, <code>.</code>은 어떤 문자 하나를 의미하는 메타문자입니다. 리터럴 점을 원한다는 것을 나타내려면 <code>\.</code>처럼 앞에 백슬래시를 두거나 <code>[^.]</code>와 같이 캐릭터 클래스 안에 넣어야 합니다.</p>
+<p>대신 2장에서 처음 소개한 <code>re.sub()</code> 함수를 사용하는 것을 선호합니다. 제가 찾는 패턴은 문자열 시작 부분의 리터럴 점입니다. 캐럿(<code>^</code>)은 문자열의 시작을 나타내고 <code>.</code>은 어떤 문자 하나를 의미하는 메타문자입니다. 리터럴 점을 원한다는 것을 나타내려면 <code>\.</code>처럼 앞에 백슬래시를 두거나 <code>[^.]</code>와 같이 캐릭터 클래스 안에 넣어야 합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb719"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb719-1"><a href="#cb719-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> re</span>
 <span id="cb719-2"><a href="#cb719-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ext <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="dv">^</span><span class="ch">\.</span><span class="vs">'</span>, <span class="st">''</span>, os.path.splitext(<span class="st">'/foo/bar.fna'</span>)[<span class="dv">1</span>])</span>
 <span id="cb719-3"><a href="#cb719-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ext</span>
@@ -7977,17 +7972,17 @@ n = \operatorname{len}(s) - k + 1
 <li>일치하면 시퀀스를 출력 파일에 씁니다.</li>
 </ol>
 <p>강조하고 싶은 몇 가지 항목이 있는데, 먼저 출력 파일 형식을 결정할 수 없는 경우 파일 처리 중간에 프로그램을 중단하기 위해 <code>sys.exit()</code>를 사용한 부분부터 시작하겠습니다. 이는 반드시 사용자로부터 기대하는 값은 아니며 프로그램이 실행될 때 제가 알아낼 수 있기를 바라는 값입니다. 만약 알아낼 수 없다면 사용자에게 오류 메시지를 반환하고 운영 체제에 실패를 나타내는 종료 값을 반환해야 합니다. 제가 계속 진행하기 전에 사용자가 다시 시작해서 누락된 정보를 수정해야 합니다.</p>
-<p>또한 <code>any()</code> 함수의 사용에 대해서도 언급하고 싶습니다. 이 함수는 <code>all()</code> 함수와 짝을 이룹니다. 두 함수 모두 참 같은(truthy) 값의 리스트를 단일 불리언(Boolean) 값으로 축약합니다. <code>all()</code> 함수는 모든 값이 참 같으면 <code>True</code>를 반환하고, 그렇지 않으면 <code>False</code>를 반환합니다.</p>
+<p>또한 <code>any()</code> 함수의 사용에 대해서도 언급하고 싶습니다. 이 함수는 <code>all()</code> 함수와 짝을 이룹니다. 두 함수 모두 참 같은(truthy) 값의 리스트를 단일 불리언(Boolean) 값으로 축약합니다. <code>all()</code> 함수는 모든 값이 참 같으면 <code>True</code>를 반환하고 그렇지 않으면 <code>False</code>를 반환합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb724"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb724-1"><a href="#cb724-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">all</span>([<span class="va">True</span>, <span class="va">True</span>, <span class="va">True</span>])</span>
 <span id="cb724-2"><a href="#cb724-2" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
 <span id="cb724-3"><a href="#cb724-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">all</span>([<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>])</span>
 <span id="cb724-4"><a href="#cb724-4" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>반면 <code>any()</code> 함수는 값 중 하나라도 참 같으면 <code>True</code>를 반환하고, 그렇지 않으면 <code>False</code>를 반환합니다.</p>
+<p>반면 <code>any()</code> 함수는 값 중 하나라도 참 같으면 <code>True</code>를 반환하고 그렇지 않으면 <code>False</code>를 반환합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb725"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb725-1"><a href="#cb725-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">any</span>([<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>])</span>
 <span id="cb725-2"><a href="#cb725-2" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
 <span id="cb725-3"><a href="#cb725-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">any</span>([<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>])</span>
 <span id="cb725-4"><a href="#cb725-4" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>저는 컴파일된 정규 표현식으로 레코드의 ID와 설명 필드를 검색할 때 이 함수를 사용합니다. 해당 정규 표현식은 대소문자 구분 없는 매칭을 켜기 위해 <code>re.IGNORECASE</code> 플래그도 사용하고 있습니다. 이를 설명하기 위해 파이썬이 <code>and</code>와 <code>or</code>를 사용하여 불리언 값을 결합하고, 각각의 비트 단위 연산자 <code>&amp;</code>와 <code>|</code>를 사용하여 비트를 결합하는 방법에 대해 잠시 곁다리로 이야기해 보겠습니다.</p>
+<p>저는 컴파일된 정규 표현식으로 레코드의 ID와 설명 필드를 검색할 때 이 함수를 사용합니다. 해당 정규 표현식은 대소문자 구분 없는 매칭을 켜기 위해 <code>re.IGNORECASE</code> 플래그도 사용하고 있습니다. 이를 설명하기 위해 파이썬이 <code>and</code>와 <code>or</code>를 사용하여 불리언 값을 결합하고 각각의 비트 단위 연산자 <code>&amp;</code>와 <code>|</code>를 사용하여 비트를 결합하는 방법에 대해 잠시 곁다리로 이야기해 보겠습니다.</p>
 </section>
 <section id="정규-표현식-검색-플래그-결합하기" class="level1">
 <h1>정규 표현식 검색 플래그 결합하기</h1>
@@ -8007,7 +8002,7 @@ n = \operatorname{len}(s) - k + 1
 <p>프로그램에서 정규 표현식을 컴파일할 때 이 기능을 사용합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb730"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb730-1"><a href="#cb730-1" aria-hidden="true" tabindex="-1"></a>regex <span class="op">=</span> re.<span class="bu">compile</span>(args.pattern, re.IGNORECASE <span class="cf">if</span> args.insensitive <span class="cf">else</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li><code>args.insensitive</code>가 <code>True</code>이면 패턴을 컴파일할 때 <code>re.IGNORECASE</code> 옵션을 사용하고, 그렇지 않으면 옵션 없음을 의미하는 0을 사용합니다.</li>
+<li><code>args.insensitive</code>가 <code>True</code>이면 패턴을 컴파일할 때 <code>re.IGNORECASE</code> 옵션을 사용하고 그렇지 않으면 옵션 없음을 의미하는 0을 사용합니다.</li>
 </ol>
 <p>정규 표현식을 컴파일하는 방법은 11장에서 처음 보여드렸습니다. 장점은 파이썬이 패턴을 한 번만 파싱하면 된다는 것인데, 이는 대개 코드 실행 속도를 높여줍니다. 여기서는 선택적 플래그를 사용하여 대소문자 구분 없는 매칭으로 변경할지 결정해야 합니다. 이러한 다른 플래그들을 사용하여 정규 표현식 매칭의 많은 측면을 변경할 수 있으며 이들은 비트 단위 OR 연산자 <code>|</code>를 사용하여 결합할 수 있습니다. <code>help(re)</code>의 설명서부터 시작하는 것이 가장 좋습니다.</p>
 <p><code>purge</code>와 <code>escape</code>를 제외한 각 함수는 <code>|</code>로 연결된 하나 이상의 다음 모듈 상수로 구성된 선택적 ‘flags’ 인자를 받을 수 있습니다. A, L, U는 상호 배타적입니다.</p>
@@ -8071,11 +8066,11 @@ n = \operatorname{len}(s) - k + 1
 </tr>
 </tbody>
 </table>
-<p>그림 16-6에 나와 있듯이, 파이썬은 각 비트를 살펴보고 두 비트 중 하나라도 1이면 1을 선택하고, 두 비트가 모두 0인 경우에만 0을 선택합니다. 그 결과 1번과 2번 위치의 비트가 모두 설정되었기 때문에 숫자 3의 이진 표현인 <code>0b011</code>이 됩니다.</p>
+<p>그림 16-6에 나와 있듯이, 파이썬은 각 비트를 살펴보고 두 비트 중 하나라도 1이면 1을 선택하고 두 비트가 모두 0인 경우에만 0을 선택합니다. 그 결과 1번과 2번 위치의 비트가 모두 설정되었기 때문에 숫자 3의 이진 표현인 <code>0b011</code>이 됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb734"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb734-1"><a href="#cb734-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> one <span class="op">|</span> two</span>
 <span id="cb734-2"><a href="#cb734-2" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>그림 16-6. 각 비트 열을 OR 연산할 때, 어떤 위치에서든 1이 있으면 1이 되며 모든 비트가 0인 경우에만 결과가 0이 됩니다.</p>
-<p><code>&amp;</code> 연산자를 사용할 때 파이썬은 두 비트가 모두 1일 때만 1을 산출하고, 그렇지 않으면 0을 반환합니다(표 16-3 참조).</p>
+<p><code>&amp;</code> 연산자를 사용할 때 파이썬은 두 비트가 모두 1일 때만 1을 산출하고 그렇지 않으면 0을 반환합니다(표 16-3 참조).</p>
 <p>표 16-3. AND(&amp;)의 진리표</p>
 <table class="caption-top table">
 <thead>
@@ -8111,7 +8106,7 @@ n = \operatorname{len}(s) - k + 1
 <p>따라서 <code>&amp;</code>를 사용하여 <code>one</code>과 <code>two</code>를 결합하면 숫자 0의 이진 표현인 <code>0b000</code> 값이 됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb735"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb735-1"><a href="#cb735-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> one <span class="op">&amp;</span> two</span>
 <span id="cb735-2"><a href="#cb735-2" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>|</code> 연산자를 사용하여 여러 개의 정규 표현식 비트 플래그를 결합할 수 있습니다. 예를 들어 <code>re.IGNORECASE</code>는 2이며 <code>0b010</code>으로 표현되고, <code>re.LOCALE</code>은 4이며 <code>0b100</code>으로 표현됩니다. 비트 단위 OR는 이들을 숫자 6인 <code>0b110</code>으로 결합합니다.</p>
+<p><code>|</code> 연산자를 사용하여 여러 개의 정규 표현식 비트 플래그를 결합할 수 있습니다. 예를 들어 <code>re.IGNORECASE</code>는 2이며 <code>0b010</code>으로 표현되고 <code>re.LOCALE</code>은 4이며 <code>0b100</code>으로 표현됩니다. 비트 단위 OR는 이들을 숫자 6인 <code>0b110</code>으로 결합합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb736"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb736-1"><a href="#cb736-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bn">0b010</span> <span class="op">|</span> <span class="bn">0b100</span></span>
 <span id="cb736-2"><a href="#cb736-2" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이것이 사실인지 확인할 수 있습니다.</p>
@@ -8133,7 +8128,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb740-5"><a href="#cb740-5" aria-hidden="true" tabindex="-1"></a>    regex <span class="op">=</span> re.<span class="bu">compile</span>(args.pattern)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>저는 이 솔루션이 DRY(Don’t Repeat Yourself, 반복하지 마라) 원칙을 위반하기 때문에 싫어합니다. 대신 <code>if</code> 표현식을 사용하여 <code>re.IGNORECASE</code> 플래그나 플래그 없음을 의미하는 기본값(숫자 0으로 밝혀짐) 중 하나를 선택하도록 작성할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb741"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb741-1"><a href="#cb741-1" aria-hidden="true" tabindex="-1"></a>regex <span class="op">=</span> re.<span class="bu">compile</span>(args.pattern, re.IGNORECASE <span class="cf">if</span> args.insensitive <span class="cf">else</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이 프로그램을 확장하여 설명서에 있는 추가 검색 플래그를 포함하고 싶다면 <code>|</code>를 사용하여 결합할 수 있습니다. 6장과 12장에서는 여러 값을 단일 값으로 축약(reducing)하는 개념에 대해 이야기했습니다. 예를 들어 덧셈을 사용하여 숫자 리스트를 합계로 축약하거나, 곱셈으로 곱을 만들고, <code>str.join()</code> 함수를 사용하여 문자열 리스트를 단일 값으로 축약할 수 있습니다. 마찬가지로 비트 단위 <code>|</code>를 사용하여 모든 정규 표현식 플래그를 축약할 수 있습니다.</p>
+<p>이 프로그램을 확장하여 설명서에 있는 추가 검색 플래그를 포함하고 싶다면 <code>|</code>를 사용하여 결합할 수 있습니다. 6장과 12장에서는 여러 값을 단일 값으로 축약(reducing)하는 개념에 대해 이야기했습니다. 예를 들어 덧셈을 사용하여 숫자 리스트를 합계로 축약하거나, 곱셈으로 곱을 만들고 <code>str.join()</code> 함수를 사용하여 문자열 리스트를 단일 값으로 축약할 수 있습니다. 마찬가지로 비트 단위 <code>|</code>를 사용하여 모든 정규 표현식 플래그를 축약할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb742"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb742-1"><a href="#cb742-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (re.A <span class="op">|</span> re.I <span class="op">|</span> re.L <span class="op">|</span> re.M <span class="op">|</span> re.S <span class="op">|</span> re.X <span class="op">|</span> re.U) <span class="op">+</span> <span class="dv">0</span></span>
 <span id="cb742-2"><a href="#cb742-2" aria-hidden="true" tabindex="-1"></a><span class="dv">382</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>이러한 플래그들은 고유한 비트를 사용하기 때문에, <code>&amp;</code> 연산자를 사용하여 특정 비트가 켜져 있는지 확인 함으로써 특정 값을 생성하는 데 어떤 플래그들이 사용되었는지 정확히 알아낼 수 있습니다. 예를 들어, 앞서 <code>|</code>를 사용하여 <code>re.IGNORECASE</code>와 <code>re.LOCALE</code> 플래그를 결합하는 방법을 보여드렸습니다.</p>
@@ -8212,7 +8207,7 @@ n = \operatorname{len}(s) - k + 1
 <p>이 연습에서 여러분은 다음을 수행하게 됩니다:</p>
 <ul>
 <li>여러 입력 시퀀스 파일을 읽어 주어진 <span class="math inline">\(k\)</span>에 대한 모든 고유한 k-mer를 찾습니다.</li>
-<li>이러한 k-mer를 사용하여 마르코프 체인을 만들고, 최소 및 최대 길이로 제한된 몇 개의 새로운 시퀀스를 생성합니다.</li>
+<li>이러한 k-mer를 사용하여 마르코프 체인을 만들고 최소 및 최대 길이로 제한된 몇 개의 새로운 시퀀스를 생성합니다.</li>
 <li>제너레이터(generator)에 대해 배웁니다.</li>
 <li>무작위 선택을 재현하기 위해 무작위 시드(random seed)를 사용합니다.</li>
 </ul>
@@ -8380,7 +8375,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb759-69"><a href="#cb759-69" aria-hidden="true" tabindex="-1"></a>                k<span class="op">=</span>args.kmer,</span>
 <span id="cb759-70"><a href="#cb759-70" aria-hidden="true" tabindex="-1"></a>                seed<span class="op">=</span>args.seed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li><code>type</code>은 값을 읽기 가능한 텍스트 파일로 제한하고, <code>nargs</code>는 하나 이상의 값을 요구합니다.</li>
+<li><code>type</code>은 값을 읽기 가능한 텍스트 파일로 제한하고 <code>nargs</code>는 하나 이상의 값을 요구합니다.</li>
 <li><code>type</code>은 값을 쓰기 가능한 텍스트 파일로 제한하며 기본 파일 이름은 <code>out.fa</code>가 됩니다.</li>
 <li><code>choices</code>는 값을 <code>fasta</code> 또는 <code>fastq</code>로 제한하며 기본값은 <code>fasta</code>입니다.</li>
 <li><code>type</code>은 이 값을 유효한 정수 값으로 제한하며 기본값은 100입니다.</li>
@@ -8634,7 +8629,7 @@ n = \operatorname{len}(s) - k + 1
 <li>각 파일 핸들을 순회합니다.</li>
 <li>파일 핸들의 각 시퀀스를 순회합니다.</li>
 <li>시퀀스의 각 k-mer를 순회합니다.</li>
-<li>k-mer의 접두사를 마르코프 체인의 키로 사용하고, 마지막 염기의 개수를 추가합니다.</li>
+<li>k-mer의 접두사를 마르코프 체인의 키로 사용하고 마지막 염기의 개수를 추가합니다.</li>
 <li>개수를 가중치 값으로 변환하는 함수를 정의합니다.</li>
 <li>염기의 총합을 구합니다.</li>
 <li>각 염기의 빈도를 총합으로 나눕니다.</li>
@@ -8674,7 +8669,7 @@ n = \operatorname{len}(s) - k + 1
 <li>이 k-mer에 대한 선택지 리스트를 가져오려고 시도합니다.</li>
 <li>가중치 있는 선택지를 사용하여 무작위로 다음 염기를 선택합니다.</li>
 <li>체인에서 이 k-mer를 찾을 수 없으면 루프를 종료합니다.</li>
-<li>시퀀스가 충분히 길면 새로운 시퀀스를 반환하고, 그렇지 않으면 <code>None</code>을 반환합니다.</li>
+<li>시퀀스가 충분히 길면 새로운 시퀀스를 반환하고 그렇지 않으면 <code>None</code>을 반환합니다.</li>
 </ol>
 <p>이 모든 것을 통합하기 위한 <code>main()</code> 함수는 다음과 같습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb792"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb792-1"><a href="#cb792-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
@@ -9029,7 +9024,7 @@ n = \operatorname{len}(s) - k + 1
 <li>유효한 파일이 아닌 모든 인자를 찾습니다.</li>
 <li><code>parser.error()</code>를 사용하여 잘못된 입력을 보고합니다.</li>
 </ol>
-<p><code>args.files</code>가 이제 문자열 리스트이므로 <code>main()</code> 처리가 약간 변경되어야 합니다. <code>open()</code>을 사용하여 직접 파일 핸들을 열어야 하며 이것이 압축 파일을 처리하는 데 필요한 프로그램의 핵심적인 변경 사항입니다. 파일 확장자가 <code>.gz</code>인지 확인하여 파일이 압축되었는지 판단하는 간단한 휴리스틱(heuristic)을 사용하고, 그런 경우 대신 <code>gzip.open()</code> 함수를 사용하여 파일을 열 것입니다.</p>
+<p><code>args.files</code>가 이제 문자열 리스트이므로 <code>main()</code> 처리가 약간 변경되어야 합니다. <code>open()</code>을 사용하여 직접 파일 핸들을 열어야 하며 이것이 압축 파일을 처리하는 데 필요한 프로그램의 핵심적인 변경 사항입니다. 파일 확장자가 <code>.gz</code>인지 확인하여 파일이 압축되었는지 판단하는 간단한 휴리스틱(heuristic)을 사용하고 그런 경우 대신 <code>gzip.open()</code> 함수를 사용하여 파일을 열 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb818"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb818-1"><a href="#cb818-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gzip</span>
 <span id="cb818-2"><a href="#cb818-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb818-3"><a href="#cb818-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
@@ -9067,7 +9062,7 @@ n = \operatorname{len}(s) - k + 1
 <ol type="1">
 <li><code>args.files</code>는 이제 파일 핸들이 아니라 문자열 리스트입니다.</li>
 <li>파일 확장자를 가져옵니다.</li>
-<li>파일 확장자가 <code>.gz</code>이면 <code>gzip.open()</code>을 사용하여 파일을 열고, 그렇지 않으면 일반 <code>open()</code> 함수를 사용합니다.</li>
+<li>파일 확장자가 <code>.gz</code>이면 <code>gzip.open()</code>을 사용하여 파일을 열고 그렇지 않으면 일반 <code>open()</code> 함수를 사용합니다.</li>
 </ol>
 <p>마지막으로 <code>nargs='+'</code>조차 작동하지 않을 때가 있습니다. 한 프로젝트에서 저는 35만 개 이상의 XML 파일을 다운로드해야 했습니다. 이 모든 파일을 인자로 전달하면 명령줄 자체에서 “인자 목록이 너무 김(Argument list too long)” 오류가 발생합니다. 제 해결책은 인자로 디렉토리 이름을 받는 것입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb819"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb819-1"><a href="#cb819-1" aria-hidden="true" tabindex="-1"></a>parser.add_argument(<span class="st">'-d'</span>,</span>
@@ -9102,7 +9097,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="blastomatic-구분된-텍스트-파일-파싱" class="level1">
 <h1>Blastomatic: 구분된 텍스트 파일 파싱</h1>
-<p>구분된 텍스트 파일(Delimited text files)은 열(columnar) 데이터를 인코딩하는 표준적인 방법입니다. 마이크로소프트 엑셀이나 구글 스프레드시트와 같은 스프레드시트 프로그램에 익숙하실 텐데, 각 워크시트 상단에는 열이 있고 아래로 레코드가 이어지는 데이터 세트가 담겨 있습니다. 이 데이터를 데이터 열이 문자(구분자)로 구분된 텍스트 파일로 내보낼 수 있습니다. 구분자는 쉼표인 경우가 많으며 파일 확장자는 <code>.csv</code>가 됩니다. 이 형식을 CSV(Comma-Separated Values)라고 부릅니다. 구분자가 탭(tab)인 경우 확장자는 <code>.tab</code>, <code>.txt</code> 또는 TSV(Tab-Separated Values)를 의미하는 <code>.tsv</code>가 될 수 있습니다. 파일의 첫 번째 줄에는 대개 열 이름이 포함됩니다. 특히 생명정보학에서 시퀀스를 비교하는 데 가장 널리 사용되는 도구 중 하나인 BLAST(Basic Local Alignment Search Tool)의 표 형식 출력물은 이와 경우가 다릅니다. 이 장에서는 <code>csv</code>와 <code>pandas</code> 모듈을 사용하여 이 출력물을 파싱하고, BLAST 결과를 다른 구분된 텍스트 파일의 메타데이터와 병합하는 방법을 보여드리겠습니다.</p>
+<p>구분된 텍스트 파일(Delimited text files)은 열(columnar) 데이터를 인코딩하는 표준적인 방법입니다. 마이크로소프트 엑셀이나 구글 스프레드시트와 같은 스프레드시트 프로그램에 익숙하실 텐데, 각 워크시트 상단에는 열이 있고 아래로 레코드가 이어지는 데이터 세트가 담겨 있습니다. 이 데이터를 데이터 열이 문자(구분자)로 구분된 텍스트 파일로 내보낼 수 있습니다. 구분자는 쉼표인 경우가 많으며 파일 확장자는 <code>.csv</code>가 됩니다. 이 형식을 CSV(Comma-Separated Values)라고 부릅니다. 구분자가 탭(tab)인 경우 확장자는 <code>.tab</code>, <code>.txt</code> 또는 TSV(Tab-Separated Values)를 의미하는 <code>.tsv</code>가 될 수 있습니다. 파일의 첫 번째 줄에는 대개 열 이름이 포함됩니다. 특히 생명정보학에서 시퀀스를 비교하는 데 가장 널리 사용되는 도구 중 하나인 BLAST(Basic Local Alignment Search Tool)의 표 형식 출력물은 이와 경우가 다릅니다. 이 장에서는 <code>csv</code>와 <code>pandas</code> 모듈을 사용하여 이 출력물을 파싱하고 BLAST 결과를 다른 구분된 텍스트 파일의 메타데이터와 병합하는 방법을 보여드리겠습니다.</p>
 <p>이 연습에서 배울 내용:</p>
 <ul>
 <li><code>csvkit</code> 및 <code>csvchk</code>를 사용하여 구분된 텍스트 파일을 보는 방법</li>
@@ -9328,7 +9323,7 @@ n = \operatorname{len}(s) - k + 1
 <h1>구분된 텍스트에 awk 및 cut 사용하기</h1>
 <p>데이터의 두 번째 열만 검사하고 싶다면 <code>cut</code> 도구를 사용할 수 있습니다. <code>-f</code> 옵션으로 두 번째 필드를 선택하고(1부터 시작), <code>-d</code> 옵션으로 쉼표를 구분자로 지정합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb841"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb841-1"><a href="#cb841-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cut <span class="at">-f2</span> <span class="at">-d,</span> out.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>또는 <code>awk</code>를 사용하여 <code>-F</code> 옵션으로 쉼표를 필드 구분자로 지정하고, <code>{print $2}</code> 지시어(역시 1부터 시작)를 사용하여 두 번째 필드를 출력하게 할 수 있습니다.</p>
+<p>또는 <code>awk</code>를 사용하여 <code>-F</code> 옵션으로 쉼표를 필드 구분자로 지정하고 <code>{print $2}</code> 지시어(역시 1부터 시작)를 사용하여 두 번째 필드를 출력하게 할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb842"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb842-1"><a href="#cb842-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> awk <span class="at">-F,</span> <span class="st">'{print $2}'</span> out.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>awk</code> 명령의 따옴표는 bash에서 작은따옴표로 묶어야 합니다. 큰따옴표를 사용하면 변수 <code>$2</code>를 보간(interpolate)하려고 시도하기 때문입니다. 아, 쉘 인용의 묘미란 이런 것이죠.</p>
 <p>추가로 두 번째 열의 모든 값이 실제로 90 이상인지 확인하고 싶다면 <code>cut</code>과 함께 <code>awk</code>를 사용할 수 있습니다. <code>awk</code>가 값을 정수로 취급하도록 첫 번째 필드에 0을 더해야 한다는 점에 유의하십시오.</p>
@@ -9341,7 +9336,7 @@ n = \operatorname{len}(s) - k + 1
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb845"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb845-1"><a href="#cb845-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> perl <span class="at">-F,</span> <span class="at">-ane</span> <span class="st">'$F[1] &gt;= 90 &amp;&amp; print("$F[1]\n")'</span> out.csv <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
 <span id="cb845-2"><a href="#cb845-2" aria-hidden="true" tabindex="-1"></a><span class="ex">190</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><code>join</code>, <code>paste</code>, <code>comm</code>, <code>awk</code>, <code>sed</code>, <code>grep</code>, <code>cut</code>, <code>sort</code>, 그리고 Perl과 같은 작고 제한적인 도구들을 사용하는 법을 배우는 것은 충분히 시간을 투자할 가치가 있습니다. 이러한 도구들과 유닉스 파이프에 능숙해지면 긴 파이썬 프로그램을 작성할 필요가 없어지는 경우가 많습니다.</p>
-<p><code>blastomatic.py</code> 프로그램은 기본적으로 쉼표로 구분된 파일인 <code>out.csv</code>에 출력을 기록합니다. <code>-d | --delimiter</code> 옵션을 사용하여 다른 구분자를 지정할 수 있고, <code>-o | --outfile</code> 옵션으로 다른 파일을 지정할 수 있습니다. 구분자가 지정되지 않은 경우 출력 파일 이름의 확장자에서 구분자를 추측한다는 점에 유의하십시오. 확장자가 <code>.csv</code>이면 쉼표로 간주하고, 그렇지 않으면 탭이 사용됩니다.</p>
+<p><code>blastomatic.py</code> 프로그램은 기본적으로 쉼표로 구분된 파일인 <code>out.csv</code>에 출력을 기록합니다. <code>-d | --delimiter</code> 옵션을 사용하여 다른 구분자를 지정할 수 있고 <code>-o | --outfile</code> 옵션으로 다른 파일을 지정할 수 있습니다. 구분자가 지정되지 않은 경우 출력 파일 이름의 확장자에서 구분자를 추측한다는 점에 유의하십시오. 확장자가 <code>.csv</code>이면 쉼표로 간주하고 그렇지 않으면 탭이 사용됩니다.</p>
 <p>전체 테스트 스위트를 보려면 <code>make test</code>를 실행하십시오. 프로그램이 어떻게 작동해야 하는지 이해했다면 새로 시작해 보십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb846"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb846-1"><a href="#cb846-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> new.py <span class="at">-fp</span> <span class="st">'Annotate BLAST output'</span> blastomatic.py</span>
 <span id="cb846-2"><a href="#cb846-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Done,</span> see new script <span class="st">"blastomatic.py"</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -9557,7 +9552,7 @@ n = \operatorname{len}(s) - k + 1
 <li>일치 백분율이 최솟값보다 작은 히트는 건너뜁니다. <code>float()</code> 함수를 사용하여 텍스트를 부동 소수점 값으로 변환합니다.</li>
 <li>쿼리 시퀀스 ID를 출력합니다.</li>
 </ol>
-<p>최소 일치 백분율을 90으로 설정하여 이 버전의 프로그램을 실행하고, 첫 번째 파일에서 190개의 히트를 얻는지 확인하십시오.</p>
+<p>최소 일치 백분율을 90으로 설정하여 이 버전의 프로그램을 실행하고 첫 번째 파일에서 190개의 히트를 얻는지 확인하십시오.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb867"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb867-1"><a href="#cb867-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./blastomatic.py <span class="at">-a</span> tests/inputs/meta.csv <span class="at">-b</span> tests/inputs/hits1.csv <span class="at">-p</span> 90 <span class="kw">|</span> <span class="fu">wc</span> <span class="at">-l</span></span>
 <span id="cb867-2"><a href="#cb867-2" aria-hidden="true" tabindex="-1"></a><span class="ex">190</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>BLAST 히트의 <code>qseqid</code> 값이 메타데이터 파일에서 <code>seq_id</code>로 발견되면, 시퀀스 ID, BLAST 히트의 일치 백분율, 그리고 메타데이터 파일의 수심 및 위도/경도 값을 출력 파일에 기록하십시오. 이것으로 이 프로그램을 시작하기 위한 충분한 정보가 되었을 것입니다. 테스트를 실행하여 프로그램이 올바른지 확인하십시오.</p>
@@ -9689,7 +9684,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb878-15"><a href="#cb878-15" aria-hidden="true" tabindex="-1"></a>evalue                        <span class="dv">0</span></span>
 <span id="cb878-16"><a href="#cb878-16" aria-hidden="true" tabindex="-1"></a>bitscore                    <span class="dv">492</span></span>
 <span id="cb878-17"><a href="#cb878-17" aria-hidden="true" tabindex="-1"></a>Name: <span class="dv">0</span>, dtype: <span class="bu">object</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>데이터프레임 레코드에서 단일 필드를 출력하려면 대괄호를 통한 필드 접근이나 익숙한 <code>dict.get()</code> 메서드를 사용하여 레코드를 딕셔너리처럼 취급할 수 있습니다. 딕셔너리와 마찬가지로 첫 번째 방법은 필드 이름을 잘못 입력하면 예외를 발생시키고, 후자의 방법은 조용히 <code>None</code>을 반환합니다.</p>
+<p>데이터프레임 레코드에서 단일 필드를 출력하려면 대괄호를 통한 필드 접근이나 익숙한 <code>dict.get()</code> 메서드를 사용하여 레코드를 딕셔너리처럼 취급할 수 있습니다. 딕셔너리와 마찬가지로 첫 번째 방법은 필드 이름을 잘못 입력하면 예외를 발생시키고 후자의 방법은 조용히 <code>None</code>을 반환합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb879"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb879-1"><a href="#cb879-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i, hit <span class="kw">in</span> wanted.iterrows():</span>
 <span id="cb879-2"><a href="#cb879-2" aria-hidden="true" tabindex="-1"></a>...     <span class="bu">print</span>(hit[<span class="st">'qseqid'</span>], hit.get(<span class="st">'pident'</span>), hit.get(<span class="st">'nope'</span>))</span>
 <span id="cb879-3"><a href="#cb879-3" aria-hidden="true" tabindex="-1"></a>...     <span class="cf">break</span></span>
@@ -9747,7 +9742,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb887-4"><a href="#cb887-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">','</span> <span class="cf">if</span> ext <span class="op">==</span> <span class="st">'.csv'</span> <span class="cf">else</span> <span class="st">'</span><span class="ch">\t</span><span class="st">'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li><code>os.path.splitext()</code>에서 파일 확장자를 선택합니다.</li>
-<li>파일 확장자가 <code>.csv</code>이면 쉼표를 반환하고, 그렇지 않으면 탭 문자를 반환합니다.</li>
+<li>파일 확장자가 <code>.csv</code>이면 쉼표를 반환하고 그렇지 않으면 탭 문자를 반환합니다.</li>
 </ol>
 </section>
 <section id="솔루션-1-딕셔너리를-사용하여-수동으로-테이블-결합하기" class="level1">
@@ -9839,7 +9834,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="솔루션-3-pandas를-사용하여-파일-읽고-쓰기" class="level1">
 <h1>솔루션 3: pandas를 사용하여 파일 읽고 쓰기</h1>
-<p>pandas 버전은 어떤 면에서는 조금 더 간단하고 어떤 면에서는 조금 더 복잡합니다. 저는 모든 출력 레코드를 파이썬 리스트에 저장하고, 그것으로부터 새로운 데이터프레임을 생성하여 출력 파일을 쓰는 방식을 선택했습니다.</p>
+<p>pandas 버전은 어떤 면에서는 조금 더 간단하고 어떤 면에서는 조금 더 복잡합니다. 저는 모든 출력 레코드를 파이썬 리스트에 저장하고 그것으로부터 새로운 데이터프레임을 생성하여 출력 파일을 쓰는 방식을 선택했습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb890"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb890-1"><a href="#cb890-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
 <span id="cb890-2"><a href="#cb890-2" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> get_args()</span>
 <span id="cb890-3"><a href="#cb890-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 메타데이터 파일을 데이터프레임으로 읽음</span></span>
@@ -9892,7 +9887,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb891-12"><a href="#cb891-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">'qstart'</span>, <span class="st">'qend'</span>, <span class="st">'sstart'</span>, <span class="st">'send'</span>, <span class="st">'evalue'</span>, <span class="st">'bitscore'</span></span>
 <span id="cb891-13"><a href="#cb891-13" aria-hidden="true" tabindex="-1"></a>        ])</span>
 <span id="cb891-14"><a href="#cb891-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb891-15"><a href="#cb891-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 원하는 일치 백분율인 히트를 선택하고, 인덱스 열을 사용하여 어노테이션과 내부 결합(inner join) 수행</span></span>
+<span id="cb891-15"><a href="#cb891-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 원하는 일치 백분율인 히트를 선택하고 인덱스 열을 사용하여 어노테이션과 내부 결합(inner join) 수행</span></span>
 <span id="cb891-16"><a href="#cb891-16" aria-hidden="true" tabindex="-1"></a>    joined <span class="op">=</span> hits[hits[<span class="st">'pident'</span>] <span class="op">&gt;=</span> args.pctid].join(annotations, how<span class="op">=</span><span class="st">'inner'</span>)</span>
 <span id="cb891-17"><a href="#cb891-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb891-18"><a href="#cb891-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 결합된 데이터프레임에서 원하는 열들을 지정된 구분자를 사용하여 출력 파일에 기록</span></span>
@@ -9934,7 +9929,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb897-2"><a href="#cb897-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> wanted.shape</span>
 <span id="cb897-3"><a href="#cb897-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">190</span>, <span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>결과 데이터프레임은 여전히 <code>qseqid</code> 열을 인덱스로 가지고 있으므로, 인덱스 값(시퀀스 ID)이 공통인 어노테이션과 결합할 수 있습니다. 기본적으로 <code>pandas</code>는 왼쪽 결합(left join)을 수행하여 첫 번째(왼쪽) 데이터프레임의 모든 행을 선택하고 오른쪽 데이터프레임에 짝이 없는 행은 null 값으로 대체합니다. 오른쪽 결합(right join)은 그 반대입니다. 저는 어노테이션이 있는 히트만 원하므로 내부 결합(inner join)을 사용합니다. 그림 19-3은 벤다이어그램을 사용하여 결합을 설명합니다.</p>
-<p>그림 19-3. 왼쪽 결합은 왼쪽 테이블의 모든 레코드를 선택하고, 오른쪽 결합은 오른쪽 테이블의 모든 레코드를 선택하며 내부 결합은 양쪽 모두에 존재하는 레코드만 선택합니다.</p>
+<p>그림 19-3. 왼쪽 결합은 왼쪽 테이블의 모든 레코드를 선택하고 오른쪽 결합은 오른쪽 테이블의 모든 레코드를 선택하며 내부 결합은 양쪽 모두에 존재하는 레코드만 선택합니다.</p>
 <p>결합 작업은 364페이지의 “csvkit 및 csvchk 사용하기”에서 보여드린 <code>join</code> 도구와 마찬가지로 두 데이터프레임의 열을 모두 가진 새로운 데이터프레임을 생성합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb898"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb898-1"><a href="#cb898-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> joined <span class="op">=</span> wanted.join(annots, how<span class="op">=</span><span class="st">'inner'</span>)</span>
 <span id="cb898-2"><a href="#cb898-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> joined</span>
@@ -9954,7 +9949,7 @@ n = \operatorname{len}(s) - k + 1
 <section id="더-나아가기-15" class="level1">
 <h1>더 나아가기</h1>
 <p>온도, 염도 또는 BLAST e-value와 같은 다른 필드로 필터링하는 옵션을 추가해 보십시오.</p>
-<p>기본적으로 두 파일의 모든 열을 출력 파일에 포함하고, 열의 하위 집합을 선택하는 옵션을 추가해 보십시오.</p>
+<p>기본적으로 두 파일의 모든 열을 출력 파일에 포함하고 열의 하위 집합을 선택하는 옵션을 추가해 보십시오.</p>
 </section>
 <section id="검토-20" class="level1">
 <h1>검토</h1>
@@ -10002,7 +9997,7 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb904-14"><a href="#cb904-14" aria-hidden="true" tabindex="-1"></a><span class="ex">clean:</span></span>
 <span id="cb904-15"><a href="#cb904-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> <span class="at">-f</span> crust.txt meringue.txt filling.txt pie.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
-<li><code>all</code>이라는 타겟을 정의합니다. 타겟을 지정하지 않고 <code>make</code>를 실행하면 첫 번째 타겟이 실행됩니다. 관례적으로 <code>all</code> 타겟은 소프트웨어 빌드와 같은 기본 목표를 달성하는 데 필요한 모든 타겟을 실행합니다. 여기서는 구성 파일들로부터 <code>pie.txt</code>를 만들고 “굽기(cook)”를 원합니다. <code>all</code>이라는 이름보다 중요한 것은 이것이 가장 먼저 정의되었다는 사실입니다. 타겟 이름 뒤에는 콜론(<code>:</code>)이 오고, 그 뒤에 이 타겟을 실행하기 전에 충족되어야 하는 의존성(dependencies)이 나열됩니다.</li>
+<li><code>all</code>이라는 타겟을 정의합니다. 타겟을 지정하지 않고 <code>make</code>를 실행하면 첫 번째 타겟이 실행됩니다. 관례적으로 <code>all</code> 타겟은 소프트웨어 빌드와 같은 기본 목표를 달성하는 데 필요한 모든 타겟을 실행합니다. 여기서는 구성 파일들로부터 <code>pie.txt</code>를 만들고 “굽기(cook)”를 원합니다. <code>all</code>이라는 이름보다 중요한 것은 이것이 가장 먼저 정의되었다는 사실입니다. 타겟 이름 뒤에는 콜론(<code>:</code>)이 오고 그 뒤에 이 타겟을 실행하기 전에 충족되어야 하는 의존성(dependencies)이 나열됩니다.</li>
 <li><code>all</code> 타겟에는 실행할 두 개의 명령이 있습니다. 각 명령은 탭(Tab) 문자로 들여쓰기되어야 합니다.</li>
 <li><code>filling.txt</code> 타겟입니다. 이 타겟의 목표는 <code>filling.txt</code>라는 파일을 만드는 것입니다. 출력 파일 이름을 타겟 이름으로 사용하는 것이 일반적이지만 필수사항은 아닙니다. 이 타겟에는 속 재료를 결합하는 하나의 명령만 있습니다.</li>
 <li><code>meringue.txt</code> 타겟이며 달걀 흰자와 설탕을 결합합니다.</li>
@@ -10066,7 +10061,7 @@ n = \operatorname{len}(s) - k + 1
 <h1>Makefile은 DAG를 만듭니다</h1>
 <p>각 타겟은 먼저 완료되어야 하는 전제 조건이나 의존성으로 다른 타겟을 지정할 수 있습니다. 이러한 동작들은 시작점과 타겟들을 통과하는 경로를 거쳐 마침내 출력 파일들을 생성하는 그래프 구조를 만듭니다. 모든 타겟에 대해 기술된 경로는 그림 A-3에 표시된 것처럼 방향이 있고(시작에서 끝으로) 순환이 없는(루프가 없는) 그래프, 즉 DAG(Directed Acyclic Graph)여야 합니다.</p>
 <p>그림 A-3. 타겟들은 서로 연결되어 어떤 결과를 만들어내기 위한 동작들의 방향성 비순환 그래프(DAG)를 묘사할 수 있습니다.</p>
-<p>많은 분석 파이프라인이 바로 이러한 형태입니다. FASTA 시퀀스 파일과 같은 입력값이 있고, 여러 변환 과정(트리밍, 필터링, 비교)을 거쳐 BLAST 히트, 유전자 예측, 기능 어노테이션과 같은 출력값이 생성되는 그래프입니다. <code>make</code>가 여러분의 작업을 문서화하고 완전한 기능을 갖춘 분석 파이프라인을 만드는 데 얼마나 광범위하게 활용될 수 있는지 알면 놀라실 것입니다.</p>
+<p>많은 분석 파이프라인이 바로 이러한 형태입니다. FASTA 시퀀스 파일과 같은 입력값이 있고 여러 변환 과정(트리밍, 필터링, 비교)을 거쳐 BLAST 히트, 유전자 예측, 기능 어노테이션과 같은 출력값이 생성되는 그래프입니다. <code>make</code>가 여러분의 작업을 문서화하고 완전한 기능을 갖춘 분석 파이프라인을 만드는 데 얼마나 광범위하게 활용될 수 있는지 알면 놀라실 것입니다.</p>
 </section>
 <section id="make를-사용하여-c-프로그램-컴파일하기" class="level1">
 <h1>make를 사용하여 C 프로그램 컴파일하기</h1>
@@ -10113,7 +10108,7 @@ n = \operatorname{len}(s) - k + 1
 <p>이제 새로운 프로그램이 컴파일되었습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb922"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb922-1"><a href="#cb922-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./hello</span>
 <span id="cb922-2"><a href="#cb922-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Hola,</span> World!</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>이는 아주 사소한 예제라 시간을 얼마나 절약해 주는지 의아할 수 있습니다. C 언어나 다른 언어로 된 실제 프로젝트는 함수들을 기술하는 헤더(<code>.h</code> 파일)와 함께 여러 개의 <code>.c</code> 파일을 갖게 될 것이고, 다른 <code>.c</code> 파일들이 이들을 사용할 것입니다. C 컴파일러는 각 <code>.c</code> 파일을 <code>.o</code>(출력) 파일로 변환한 다음 이들을 하나의 실행 파일로 연결(link)해야 합니다. 수십 개의 <code>.c</code> 파일이 있고 그중 한 파일의 코드 한 줄을 변경했다고 상상해 보십시오. 모든 코드를 재컴파일하고 연결하기 위해 수십 개의 명령을 직접 입력하고 싶으신가요? 당연히 아닐 것입니다. 여러분은 그러한 동작들을 자동화해 주는 도구를 만들 것입니다.</p>
+<p>이는 아주 사소한 예제라 시간을 얼마나 절약해 주는지 의아할 수 있습니다. C 언어나 다른 언어로 된 실제 프로젝트는 함수들을 기술하는 헤더(<code>.h</code> 파일)와 함께 여러 개의 <code>.c</code> 파일을 갖게 될 것이고 다른 <code>.c</code> 파일들이 이들을 사용할 것입니다. C 컴파일러는 각 <code>.c</code> 파일을 <code>.o</code>(출력) 파일로 변환한 다음 이들을 하나의 실행 파일로 연결(link)해야 합니다. 수십 개의 <code>.c</code> 파일이 있고 그중 한 파일의 코드 한 줄을 변경했다고 상상해 보십시오. 모든 코드를 재컴파일하고 연결하기 위해 수십 개의 명령을 직접 입력하고 싶으신가요? 당연히 아닐 것입니다. 여러분은 그러한 동작들을 자동화해 주는 도구를 만들 것입니다.</p>
 <p><code>Makefile</code>에 새로운 파일을 생성하지 않는 타겟을 추가할 수도 있습니다. 더 이상 필요하지 않은 파일과 디렉토리를 정리하는 <code>clean</code> 타겟을 두는 것이 일반적입니다. 여기서는 <code>hello</code> 실행 파일을 제거하는 <code>clean</code> 타겟을 만들 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb923"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb923-1"><a href="#cb923-1" aria-hidden="true" tabindex="-1"></a><span class="ex">clean:</span></span>
 <span id="cb923-2"><a href="#cb923-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> <span class="at">-f</span> hello</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -10187,7 +10182,7 @@ n = \operatorname{len}(s) - k + 1
 </section>
 <section id="워크플로-작성하기" class="level1">
 <h1>워크플로 작성하기</h1>
-<p><code>app01_makefiles/yeast</code> 디렉토리에는 워크플로를 <code>make</code> 타겟으로 작성하는 방법의 예가 있습니다. 목표는 효모(yeast) 게놈을 다운로드하고 다양한 유전자 유형을 “Dubious”, “Uncharacterized”, “Verified” 등으로 분류하는 것입니다. 이는 <code>wget</code>, <code>grep</code>, <code>awk</code>와 같은 명령줄 도구 모음과 <code>download.sh</code>라는 커스텀 쉘 스크립트를 조합하고, <code>make</code>에 의해 순서대로 실행됨으로써 달성됩니다.</p>
+<p><code>app01_makefiles/yeast</code> 디렉토리에는 워크플로를 <code>make</code> 타겟으로 작성하는 방법의 예가 있습니다. 목표는 효모(yeast) 게놈을 다운로드하고 다양한 유전자 유형을 “Dubious”, “Uncharacterized”, “Verified” 등으로 분류하는 것입니다. 이는 <code>wget</code>, <code>grep</code>, <code>awk</code>와 같은 명령줄 도구 모음과 <code>download.sh</code>라는 커스텀 쉘 스크립트를 조합하고 <code>make</code>에 의해 순서대로 실행됨으로써 달성됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb932"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb932-1"><a href="#cb932-1" aria-hidden="true" tabindex="-1"></a><span class="ex">.PHONY:</span> all fasta genome chr-count chr-size features gene-count verified-genes <span class="dt">\</span></span>
 <span id="cb932-2"><a href="#cb932-2" aria-hidden="true" tabindex="-1"></a>        uncharacterized-genes gene-types terminated-genes test</span>
 <span id="cb932-3"><a href="#cb932-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -10233,16 +10228,16 @@ n = \operatorname{len}(s) - k + 1
 <span id="cb932-43"><a href="#cb932-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb932-44"><a href="#cb932-44" aria-hidden="true" tabindex="-1"></a><span class="ex">test:</span></span>
 <span id="cb932-45"><a href="#cb932-45" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pytest</span> <span class="at">-xv</span> ./test.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>명령어 하나하나에 대해 설명하지는 않겠습니다. 주로 <code>Makefile</code>을 사용하여 워크플로를 만드는 데 얼마나 광범위하게 활용할 수 있는지 보여드리고 싶었습니다. 모든 단계를 문서화했을 뿐만 아니라 <code>make</code> 명령 하나만으로 실행할 수 있습니다. <code>make</code>를 사용하지 않았다면 이를 수행하기 위해 쉘 스크립트를 작성하거나, 파이썬과 같은 더 강력한 언어로 옮겨가야 했을 것입니다. 어느 언어로 작성하든 그 결과물인 프로그램은 아마도 더 길고, 버그가 더 많으며 이해하기 더 어려웠을 것입니다. 때로는 <code>Makefile</code>과 몇 가지 쉘 명령만 있으면 충분합니다.</p>
+<p>명령어 하나하나에 대해 설명하지는 않겠습니다. 주로 <code>Makefile</code>을 사용하여 워크플로를 만드는 데 얼마나 광범위하게 활용할 수 있는지 보여드리고 싶었습니다. 모든 단계를 문서화했을 뿐만 아니라 <code>make</code> 명령 하나만으로 실행할 수 있습니다. <code>make</code>를 사용하지 않았다면 이를 수행하기 위해 쉘 스크립트를 작성하거나, 파이썬과 같은 더 강력한 언어로 옮겨가야 했을 것입니다. 어느 언어로 작성하든 그 결과물인 프로그램은 아마도 더 길고 버그가 더 많으며 이해하기 더 어려웠을 것입니다. 때로는 <code>Makefile</code>과 몇 가지 쉘 명령만 있으면 충분합니다.</p>
 </section>
 <section id="다른-워크플로-관리-도구들" class="level1">
 <h1>다른 워크플로 관리 도구들</h1>
 <p><code>make</code>의 한계에 부딪히게 되면 다른 워크플로 관리 도구로 옮겨가는 것을 선택할 수 있습니다. 선택지는 많습니다. 예를 들면 다음과 같습니다.</p>
 <ul>
 <li><strong>Snakemake</strong>: 파이썬을 사용하여 <code>make</code>의 기본 개념을 확장합니다.</li>
-<li><strong>CWL (Common Workflow Language)</strong>: 설정 파일(bash)에 워크플로와 파라미터를 정의하고, <code>cwltool</code>이나 <code>cwl-runner</code>(둘 다 파이썬으로 구현됨)와 같은 도구를 사용하여 인자를 설명하는 또 다른 설정 파일과 함께 워크플로를 실행합니다.</li>
+<li><strong>CWL (Common Workflow Language)</strong>: 설정 파일(bash)에 워크플로와 파라미터를 정의하고 <code>cwltool</code>이나 <code>cwl-runner</code>(둘 다 파이썬으로 구현됨)와 같은 도구를 사용하여 인자를 설명하는 또 다른 설정 파일과 함께 워크플로를 실행합니다.</li>
 <li><strong>WDL (Workflow Description Language)</strong>: 워크플로와 인자를 기술하기 위해 유사한 접근 방식을 취하며 <code>Cromwell</code> 엔진으로 실행할 수 있습니다.</li>
-<li><strong>Pegasus</strong>: 파이썬 코드를 사용하여 워크플로를 기술하면 이를 XML 파일로 작성하고, 이 XML 파일이 코드를 실행할 엔진의 입력값이 됩니다.</li>
+<li><strong>Pegasus</strong>: 파이썬 코드를 사용하여 워크플로를 기술하면 이를 XML 파일로 작성하고 이 XML 파일이 코드를 실행할 엔진의 입력값이 됩니다.</li>
 <li><strong>Nextflow</strong>: 자바의 서브셋인 <code>Groovy</code>라는 완전한 프로그래밍 언어를 사용하여 워크플로를 작성하며 <code>Nextflow</code> 엔진에 의해 실행됩니다.</li>
 </ul>
 <p>이 모든 시스템은 <code>make</code>와 동일한 기본 아이디어를 따르므로, <code>make</code>가 어떻게 작동하는지, 워크플로의 조각들을 어떻게 작성하는지, 그리고 그들이 어떻게 상호작용하는지 이해하는 것은 여러분이 만들 더 큰 분석 워크플로의 기초가 됩니다.</p>
@@ -10261,7 +10256,7 @@ n = \operatorname{len}(s) - k + 1
 <p><code>PATH</code>는 주어진 명령을 찾기 위해 검색할 디렉토리들을 정의하는 환경 변수입니다. 즉, 제가 <code>foo</code>라고 입력했을 때 쉘이 <code>foo</code>로 실행할 수 있는 내장 명령, 쉘 함수, 명령 별칭 또는 프로그램이 <code>PATH</code>의 어느 곳에도 없다면 이 명령을 찾을 수 없다는 메시지를 받게 됩니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb933"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb933-1"><a href="#cb933-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> foo</span>
 <span id="cb933-2"><a href="#cb933-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-bash:</span> foo: command not found</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>윈도우 파워쉘(shell)에서는 <code>echo $env:Path</code>로 <code>PATH</code>를 확인할 수 있고, 유닉스 플랫폼에서는 <code>echo $PATH</code> 명령을 사용합니다. 두 경로 모두 공백 없이 긴 문자열로 출력되며 윈도우에서는 세미콜론(<code>;</code>)으로, 유닉스에서는 콜론(<code>:</code>)으로 디렉토리 이름들이 구분됩니다. 운영 체제에 경로라는 개념이 없다면 주어진 명령을 찾기 위해 기기의 모든 디렉토리를 검색해야 할 것입니다. 이는 몇 분에서 몇 시간까지 걸릴 수 있으므로 검색 범위를 단 몇 개의 디렉토리로 제한하는 것이 합리적입니다.</p>
+<p>윈도우 파워쉘(shell)에서는 <code>echo $env:Path</code>로 <code>PATH</code>를 확인할 수 있고 유닉스 플랫폼에서는 <code>echo $PATH</code> 명령을 사용합니다. 두 경로 모두 공백 없이 긴 문자열로 출력되며 윈도우에서는 세미콜론(<code>;</code>)으로, 유닉스에서는 콜론(<code>:</code>)으로 디렉토리 이름들이 구분됩니다. 운영 체제에 경로라는 개념이 없다면 주어진 명령을 찾기 위해 기기의 모든 디렉토리를 검색해야 할 것입니다. 이는 몇 분에서 몇 시간까지 걸릴 수 있으므로 검색 범위를 단 몇 개의 디렉토리로 제한하는 것이 합리적입니다.</p>
 <p>다음은 제 매킨토시에서의 경로입니다. <code>PATH</code>라는 리터럴 문자열이 아니라 변수임을 쉘(bash)에 알리기 위해 이름 앞에 달러 기호(<code>$</code>)를 붙여야 함에 유의하십시오. 가독성을 높이기 위해 펄(Perl)을 사용하여 콜론을 줄바꿈으로 바꾸겠습니다. 이 명령은 펄이 설치된 유닉스 명령줄에서만 작동합니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb934"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb934-1"><a href="#cb934-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="va">$PATH</span> <span class="kw">|</span> <span class="fu">perl</span> <span class="at">-pe</span> <span class="st">'s/:/\n/g'</span> <span class="er">(</span><span class="ex">1</span><span class="kw">)</span></span>
 <span id="cb934-2"><a href="#cb934-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/kyclark/.local/bin</span> <span class="er">(</span><span class="ex">2</span><span class="kw">)</span></span>
@@ -10295,7 +10290,7 @@ n = \operatorname{len}(s) - k + 1
 <p>결과적으로 설치 과정에서 컴파일된 바이너리 파일들은 <code>$HOME/.local/bin</code>에 놓이게 됩니다. 헤더 파일, 매뉴얼 페이지 및 기타 지원 데이터도 <code>$HOME/.local</code> 내의 다른 디렉토리에 설치될 수 있습니다.</p>
 <p>로컬 프로그램을 어디에 설치하기로 결정하든, 기존 경로에 더해 해당 디렉토리를 검색하도록 <code>PATH</code>가 업데이트되었는지 확인해야 합니다. 저는 주로 bash 쉘을 사용하는데, 제 홈 디렉토리의 도트 파일 중 하나인 <code>.bashrc</code>(또는 <code>.bash_profile</code>이나 <code>.profile</code>)라는 파일이 있습니다. 제 커스텀 디렉토리를 <code>PATH</code>의 맨 앞에 두기 위해 이 라인을 추가할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb939"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb939-1"><a href="#cb939-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="va">$HOME</span>/.local/bin:<span class="va">$PATH</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>다른 쉘을 사용 중이라면 약간 다른 설정이 필요할 수 있습니다. 최근 매킨토시는 <code>zsh</code>(Z shell)를 기본 쉘로 사용하기 시작했고, 여러분의 HPC 시스템은 또 다른 쉘을 사용하고 있을 수도 있습니다. 이들 모두 <code>PATH</code>라는 개념을 가지고 있으며 어떤 방식으로든 이를 커스터마이징할 수 있게 해줍니다. 윈도우에서는 다음 명령을 사용하여 경로에 디렉토리를 추가할 수 있습니다.</p>
+<p>다른 쉘을 사용 중이라면 약간 다른 설정이 필요할 수 있습니다. 최근 매킨토시는 <code>zsh</code>(Z shell)를 기본 쉘로 사용하기 시작했고 여러분의 HPC 시스템은 또 다른 쉘을 사용하고 있을 수도 있습니다. 이들 모두 <code>PATH</code>라는 개념을 가지고 있으며 어떤 방식으로든 이를 커스터마이징할 수 있게 해줍니다. 윈도우에서는 다음 명령을 사용하여 경로에 디렉토리를 추가할 수 있습니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb940"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb940-1"><a href="#cb940-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="va">$env</span>:Path <span class="ex">+=</span> <span class="st">";~/.local/bin"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>다음은 디렉토리를 만들고 프로그램을 복사하는 방법입니다.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb941"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb941-1"><a href="#cb941-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ~/.local/bin</span>
@@ -10315,7 +10310,7 @@ n = \operatorname{len}(s) - k + 1
 <blockquote class="blockquote">
 <p>우리가 사용하는 도구는 우리의 사고 습관에 지대하고(그리고 교묘한!) 영향을 미치며 결과적으로 우리의 사고 능력에도 영향을 미칩니다. 에츠허르 데이크스트라(Edsger Dijkstra)</p>
 </blockquote>
-<p>이 책은 제가 수년 동안 다시 살펴본 로잘린드(Rosalind) 문제들로부터 영감을 받았습니다. 처음에는 생물학을 더 잘 이해하려고 노력하면서 그다음에는 새로운 프로그래밍 언어를 배우면서 말이죠. 저는 처음에 펄(Perl)로 시도했고, 이후 자바스크립트, 하스켈, 파이썬, 러스트를 사용하여 다양한 성공을 거두며 시도해 왔습니다. 여러분도 알고 있는 다른 언어들을 사용하여 솔루션을 작성해 보시길 권합니다.</p>
+<p>이 책은 제가 수년 동안 다시 살펴본 로잘린드(Rosalind) 문제들로부터 영감을 받았습니다. 처음에는 생물학을 더 잘 이해하려고 노력하면서 그다음에는 새로운 프로그래밍 언어를 배우면서 말이죠. 저는 처음에 펄(Perl)로 시도했고 이후 자바스크립트, 하스켈, 파이썬, 러스트를 사용하여 다양한 성공을 거두며 시도해 왔습니다. 여러분도 알고 있는 다른 언어들을 사용하여 솔루션을 작성해 보시길 권합니다.</p>
 <p>저는 여러분이 자신만의 프로그램에서 재사용할 수 있는 파이썬 패턴들을 보여드리려 노력했습니다. 무엇보다도 타입(types)과 테스트(tests), 그리고 다양한 포맷팅 및 린팅(linting) 도구들이 여러분이 작성하는 프로그램을 획기적으로 개선할 수 있다는 점을 보여드렸기를 바랍니다.</p>
 
 

@@ -412,11 +412,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../research-lab-python/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python 으로 연구실 효율화</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../dl-biology/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">생물학을 위한 딥러닝</span></a>
   </div>
 </li>
@@ -1452,7 +1447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dictionary-딕셔너리" class="level4">
 <h4 class="anchored" data-anchor-id="dictionary-딕셔너리">Dictionary (딕셔너리)</h4>
-<p>순서 없는 키-값 쌍의 컬렉션입니다. 키는 같은 타입이어야 하고, 값도 같은 타입이어야 합니다.</p>
+<p>순서 없는 키-값 쌍의 컬렉션입니다. 키는 같은 타입이어야 하고 값도 같은 타입이어야 합니다.</p>
 <p><strong>파이썬 (dict):</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> {</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: <span class="st">"Alice"</span>,</span>
@@ -1672,7 +1667,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="조건문">조건문</h3>
 <section id="if-else-if-else" class="level4">
 <h4 class="anchored" data-anchor-id="if-else-if-else"><code>if</code>, <code>else if</code>, <code>else</code></h4>
-<p>구문은 유사하지만 Swift는 조건이 한 문장이라도 중괄호 <code>{}</code>를 요구합니다. 조건 주위의 괄호는 선택 사항이고, 명확성을 위해 붙이는 경우도 많습니다.</p>
+<p>구문은 유사하지만 Swift는 조건이 한 문장이라도 중괄호 <code>{}</code>를 요구합니다. 조건 주위의 괄호는 선택 사항이고 명확성을 위해 붙이는 경우도 많습니다.</p>
 <p><strong>파이썬:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> temperature <span class="op">&gt;</span> <span class="dv">30</span>:</span>
@@ -3024,7 +3019,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>동시성은 파이썬과 Swift가 서로 다른 길을 갑니다. 파이썬에서는 GIL (Global Interpreter Lock) 때문에 진정한 멀티스레딩보다 <code>asyncio</code> 모듈을 이용한 비동기 프로그래밍 방식(event loop 기반)이나 멀티프로세싱을 주로 씁니다. 반면 Swift는 <code>async/await</code> 문법을 지원하며 스레드를 기본으로 삼는 동시성 제어가 가능합니다.</p>
 <section id="asyncawait-기본-개념" class="level3">
 <h3 class="anchored" data-anchor-id="asyncawait-기본-개념">Async/Await 기본 개념</h3>
-<p>Swift의 <code>async/await</code>은 파이썬과 유사합니다. 비동기로 작동하는 함수는 <code>async</code>로 표시하고, 그 결과가 반환될 때까지 기다릴 때는 <code>await</code>를 사용합니다.</p>
+<p>Swift의 <code>async/await</code>은 파이썬과 유사합니다. 비동기로 작동하는 함수는 <code>async</code>로 표시하고 그 결과가 반환될 때까지 기다릴 때는 <code>await</code>를 사용합니다.</p>
 <p><strong>파이썬:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
 <span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -3474,7 +3469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>머신 러닝과 스크립팅 생태계의 대명사인 파이썬을 빠르고 안전한 <strong>Swift 안에서</strong> 그대로 쓸 수 있다는 점이 가장 흥미롭습니다.</p>
 <section id="pythonkit-소개" class="level3">
 <h3 class="anchored" data-anchor-id="pythonkit-소개">PythonKit 소개</h3>
-<p><code>PythonKit</code>은 Swift에서 파이썬 인터프리터의 API를 감싸서 파이썬 패키지를 Swift 환경으로 불러오고, 마치 파이썬처럼 문법을 쓸 수 있게 해주는 마법 같은 패키지입니다.</p>
+<p><code>PythonKit</code>은 Swift에서 파이썬 인터프리터의 API를 감싸서 파이썬 패키지를 Swift 환경으로 불러오고 마치 파이썬처럼 문법을 쓸 수 있게 해주는 마법 같은 패키지입니다.</p>
 </section>
 <section id="swift에서-python-pandas-사용하기" class="level3">
 <h3 class="anchored" data-anchor-id="swift에서-python-pandas-사용하기">Swift에서 Python Pandas 사용하기</h3>
